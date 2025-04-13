@@ -1,0 +1,1259 @@
+{% extends "base.html" %}
+{% block title %}Pricing{% endblock title %}
+{% block main %}
+
+<style>
+    .check-color{
+        color: #ffffff;
+        background-color: #008374;
+        padding: 2px 5px;
+        border-radius: 50%;
+    }
+</style>
+    
+    <!-- Section Title -->
+    <div class="container section-title col-md-8 p-0" style="margin-top: 100px;" data-aos="fade-up">
+        <h2 >Pricing</h2>
+        <p>At Optimiseres, we understand that every business has unique needs. That's why we offer tailored pricing based on the services that best match your Amazon goals. Whether you're launching a new product or optimizing your listings and ads, we’re here to help.</p>
+    </div><!-- End Section Title -->
+  
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing section py-5 d-none">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+            <!-- Basic Package -->
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow">
+                <div class="card-header text-center bg-light">
+                    <h3 class="mb-0">Basic</h3>
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="card-price">$199<span class="period">/month</span></h4>
+                    <hr>
+                    <ul class="list-unstyled">
+                    <li><i class="bi bi-check2 text-success me-2"></i>Product Launch Planning</li>
+                    <li><i class="bi bi-check2 text-success me-2"></i>Basic Listing SEO</li>
+                    <li><i class="bi bi-check2 text-success me-2"></i>Weekly Support</li>
+                    <li><i class="bi bi-x-lg text-danger me-2"></i>Custom Add-Ons</li>
+                    </ul>
+                </div>
+                <div class="card-footer text-center bg-light">
+                    <a href="/contact" class="btn btn-primary">Get Started</a>
+                </div>
+                </div>
+            </div>
+
+            <!-- Standard Package -->
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow">
+                <div class="card-header text-center bg-primary text-white">
+                    <h3 class="mb-0">Standard</h3>
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="card-price">$399<span class="period">/month</span></h4>
+                    <hr>
+                    <ul class="list-unstyled">
+                    <li><i class="bi bi-check2 text-success me-2"></i>Advanced Product Launch</li>
+                    <li><i class="bi bi-check2 text-success me-2"></i>Enhanced Listing SEO &amp; Content</li>
+                    <li><i class="bi bi-check2 text-success me-2"></i>Daily Reports &amp; Support</li>
+                    <li><i class="bi bi-check2 text-success me-2"></i>Limited Custom Add-Ons</li>
+                    </ul>
+                </div>
+                <div class="card-footer text-center bg-primary">
+                    <a href="/contact" class="btn btn-light">Get Started</a>
+                </div>
+                </div>
+            </div>
+
+            <!-- Premium Package -->
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow">
+                <div class="card-header text-center bg-dark text-white">
+                    <h3 class="mb-0 text-light">Premium</h3>
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="card-price">$699<span class="period">/month</span></h4>
+                    <hr>
+                    <ul class="list-unstyled">
+                    <li><i class="bi bi-check2 text-success me-2"></i>Comprehensive Amazon Strategy</li>
+                    <li><i class="bi bi-check2 text-success me-2"></i>Full Account Management</li>
+                    <li><i class="bi bi-check2 text-success me-2"></i>Priority Support &amp; Custom Reports</li>
+                    <li><i class="bi bi-check2 text-success me-2"></i>Unlimited Custom Add-Ons</li>
+                    </ul>
+                </div>
+                <div class="card-footer text-center bg-dark">
+                    <a href="/contact" class="btn btn-light">Get Started</a>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Custom Package Option -->
+            <div class="row mt-5">
+            <div class="col-12 text-center">
+                <p class="fs-5">Not sure which plan fits your needs?</p>
+                <a href="/contact" class="btn btn-outline-primary btn-lg">Build Your Custom Package</a>
+            </div>
+            </div>
+        </div>
+    </section><!--/pricing  -->
+
+     <!-- Pricing Section -->
+     <section  class="pricing section my-5 py-5">
+
+        <div class="container my-5" data-aos="zoom-in" data-aos-delay="100">
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                <div class="pricing-item">
+                    <h3>Free Plan</h3>
+                    <div class="icon">
+                    <i class="bi bi-box"></i>
+                    </div>
+                    <h4><sup>$</sup>0<span> / month</span></h4>
+                    <ul>
+                    <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                    <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                    <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                    <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                    <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                </div>
+                </div><!-- End Pricing Item -->
+
+                <div class="col-lg-4">
+                <div class="pricing-item featured">
+                    <h3>Business Plan</h3>
+                    <div class="icon">
+                    <i class="bi bi-rocket"></i>
+                    </div>
+
+                    <h4><sup>$</sup>29<span> / month</span></h4>
+                    <ul>
+                    <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                    <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                    <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                    <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                    <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                </div>
+                </div><!-- End Pricing Item -->
+
+                <div class="col-lg-4">
+                <div class="pricing-item">
+                    <h3>Developer Plan</h3>
+                    <div class="icon">
+                    <i class="bi bi-send"></i>
+                    </div>
+                    <h4><sup>$</sup>49<span> / month</span></h4>
+                    <ul>
+                    <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                    <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                    <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                    <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                    <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                </div>
+                </div><!-- End Pricing Item -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Pricing Section -->
+  
+
+    <main class="d-none">
+        <!-- Pricing Section -->
+        <section  class="pricing section my-0 py-0">
+
+            <div class="my-5 p-3" data-aos="zoom-in" data-aos-delay="500">
+                <h4 class="display-5 text-start fs-4">New Product Launch</h4>
+            </div>
+
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+    
+            <div class="row g-4">
+    
+                <div class="col-lg-4">
+                <div class="pricing-item">
+                    <h3>Free Plan</h3>
+                    <div class="icon">
+                    <i class="bi bi-box"></i>
+                    </div>
+                    <h4><sup>$</sup>0<span> / month</span></h4>
+                    <ul>
+                    <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                    <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                    <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                    <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                    <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                </div>
+                </div><!-- End Pricing Item -->
+    
+                <div class="col-lg-4">
+                <div class="pricing-item featured">
+                    <h3>Business Plan</h3>
+                    <div class="icon">
+                    <i class="bi bi-rocket"></i>
+                    </div>
+    
+                    <h4><sup>$</sup>29<span> / month</span></h4>
+                    <ul>
+                    <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                    <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                    <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                    <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                    <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                </div>
+                </div><!-- End Pricing Item -->
+    
+                <div class="col-lg-4">
+                <div class="pricing-item">
+                    <h3>Developer Plan</h3>
+                    <div class="icon">
+                    <i class="bi bi-send"></i>
+                    </div>
+                    <h4><sup>$</sup>49<span> / month</span></h4>
+                    <ul>
+                    <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                    <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                    <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                    <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                    <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                </div>
+                </div><!-- End Pricing Item -->
+    
+            </div>
+    
+            </div>
+    
+        </section><!-- /Pricing Section -->
+
+        <!-- Pricing Section -->
+        <section  class="pricing section my-0 py-0">
+
+            <div class="my-5 p-3" data-aos="zoom-in" data-aos-delay="500">
+                <h4 class="display-5 text-start fs-4">Operations Management</h4>
+
+            </div>
+
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        
+                <div class="row g-4">
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Free Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-box"></i>
+                    </div>
+                    <h4><sup>$</sup>0<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item featured">
+                    <h3>Business Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-rocket"></i>
+                    </div>
+        
+                    <h4><sup>$</sup>29<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Developer Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-send"></i>
+                    </div>
+                    <h4><sup>$</sup>49<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                </div>
+        
+            </div>
+        
+        </section><!-- /Pricing Section -->
+
+        <!-- Pricing Section -->
+        <section  class="pricing section my-0 py-0">
+
+            <div class="my-5 p-3" data-aos="zoom-in" data-aos-delay="500">
+                <h4 class="display-5 text-start fs-4">SKU Wise Inventory Forecasting</h4>
+            </div>
+
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        
+                <div class="row g-4">
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Free Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-box"></i>
+                    </div>
+                    <h4><sup>$</sup>0<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item featured">
+                    <h3>Business Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-rocket"></i>
+                    </div>
+        
+                    <h4><sup>$</sup>29<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Developer Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-send"></i>
+                    </div>
+                    <h4><sup>$</sup>49<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                </div>
+        
+            </div>
+        
+        </section><!-- /Pricing Section -->
+        <!-- Pricing Section -->
+        <section  class="pricing section my-0 py-0">
+
+            <div class="my-5 p-3" data-aos="zoom-in" data-aos-delay="500">
+                <h4 class="display-5 text-start fs-4">Prime Day/Holiday Season Planning</h4>
+            </div>
+
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        
+                <div class="row g-4">
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Free Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-box"></i>
+                    </div>
+                    <h4><sup>$</sup>0<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item featured">
+                    <h3>Business Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-rocket"></i>
+                    </div>
+        
+                    <h4><sup>$</sup>29<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Developer Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-send"></i>
+                    </div>
+                    <h4><sup>$</sup>49<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                </div>
+        
+            </div>
+        
+        </section><!-- /Pricing Section -->
+    
+        <!-- Pricing Section -->
+        <section  class="pricing section my-0 py-0">
+
+            <div class="my-5 p-3" data-aos="zoom-in" data-aos-delay="500">
+                <!-- <h2 class="display-5 text-">Operations Management</h2> -->
+                <h4 class="display-5 text-start fs-4">Listing Creation & SEO</h4>
+
+                
+            </div>
+
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        
+                <div class="row g-4">
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Free Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-box"></i>
+                    </div>
+                    <h4><sup>$</sup>0<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item featured">
+                    <h3>Business Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-rocket"></i>
+                    </div>
+        
+                    <h4><sup>$</sup>29<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Developer Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-send"></i>
+                    </div>
+                    <h4><sup>$</sup>49<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                </div>
+        
+            </div>
+        
+        </section><!-- /Pricing Section -->
+        <!-- Pricing Section -->
+        <section  class="pricing section my-0 py-0">
+
+            <div class="my-5 p-3" data-aos="zoom-in" data-aos-delay="500">
+                <!-- <h2 class="display-5 text-">Operations Management</h2> -->
+                <h4 class="display-5 text-start fs-4">Video Creation
+                </h4>
+
+                
+            </div>
+
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        
+                <div class="row g-4">
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Free Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-box"></i>
+                    </div>
+                    <h4><sup>$</sup>0<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item featured">
+                    <h3>Business Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-rocket"></i>
+                    </div>
+        
+                    <h4><sup>$</sup>29<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Developer Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-send"></i>
+                    </div>
+                    <h4><sup>$</sup>49<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                </div>
+        
+            </div>
+        
+        </section><!-- /Pricing Section -->
+
+        <!-- Pricing Section -->
+        <section  class="pricing section my-0 py-0">
+
+            <div class="my-5 p-3" data-aos="zoom-in" data-aos-delay="500">
+                <!-- <h2 class="display-5 text-">Operations Management</h2> -->
+                <h4 class="display-5 text-start fs-4">Infographics Creation</h4>
+
+                
+            </div>
+
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        
+                <div class="row g-4">
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Free Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-box"></i>
+                    </div>
+                    <h4><sup>$</sup>0<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item featured">
+                    <h3>Business Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-rocket"></i>
+                    </div>
+        
+                    <h4><sup>$</sup>29<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Developer Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-send"></i>
+                    </div>
+                    <h4><sup>$</sup>49<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                </div>
+        
+            </div>
+        </section>
+    
+        <!-- Pricing Section -->
+        <section  class="pricing section my-0 py-0">
+
+            <div class="my-5 p-3" data-aos="zoom-in" data-aos-delay="500">
+                <!-- <h2 class="display-5 text-">Operations Management</h2> -->
+                <h4 class="display-5 text-start fs-4">Brand Story</h4>
+
+                
+            </div>
+
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        
+                <div class="row g-4">
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Free Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-box"></i>
+                    </div>
+                    <h4><sup>$</sup>0<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item featured">
+                    <h3>Business Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-rocket"></i>
+                    </div>
+        
+                    <h4><sup>$</sup>29<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Developer Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-send"></i>
+                    </div>
+                    <h4><sup>$</sup>49<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                </div>
+        
+            </div>
+        
+        </section><!-- /Pricing Section -->
+    
+        <!-- Pricing Section -->
+        <section  class="pricing section my-0 py-0">
+
+            <div class="my-5 p-3" data-aos="zoom-in" data-aos-delay="500">
+                <!-- <h2 class="display-5 text-">Operations Management</h2> -->
+                <h4 class="display-5 text-start fs-4">A+ Creation
+                </h4>
+
+                
+            </div>
+
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        
+                <div class="row g-4">
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Free Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-box"></i>
+                    </div>
+                    <h4><sup>$</sup>0<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item featured">
+                    <h3>Business Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-rocket"></i>
+                    </div>
+        
+                    <h4><sup>$</sup>29<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Developer Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-send"></i>
+                    </div>
+                    <h4><sup>$</sup>49<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                </div>
+        
+            </div>
+        
+        </section><!-- /Pricing Section -->
+
+        <!-- Pricing Section -->
+        <section  class="pricing section my-0 py-0">
+
+            <div class="my-5 p-3" data-aos="zoom-in" data-aos-delay="500">
+                <!-- <h2 class="display-5 text-">Operations Management</h2> -->
+                <h4 class="display-5 text-start fs-4">Storefront</h4>
+
+                
+            </div>
+
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        
+                <div class="row g-4">
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Free Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-box"></i>
+                    </div>
+                    <h4><sup>$</sup>0<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item featured">
+                    <h3>Business Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-rocket"></i>
+                    </div>
+        
+                    <h4><sup>$</sup>29<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Developer Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-send"></i>
+                    </div>
+                    <h4><sup>$</sup>49<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                </div>
+        
+            </div>
+        
+        </section><!-- /Pricing Section -->
+
+        <!-- Pricing Section -->
+        <section  class="pricing section my-0 py-0">
+
+            <div class="my-5 p-3" data-aos="zoom-in" data-aos-delay="500">
+                <!-- <h2 class="display-5 text-">Operations Management</h2> -->
+                <h4 class="display-5 text-start fs-4">Daily Sales and Spend Data
+                </h4>
+
+                
+            </div>
+
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        
+                <div class="row g-4">
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Free Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-box"></i>
+                    </div>
+                    <h4><sup>$</sup>0<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item featured">
+                    <h3>Business Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-rocket"></i>
+                    </div>
+        
+                    <h4><sup>$</sup>29<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Developer Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-send"></i>
+                    </div>
+                    <h4><sup>$</sup>49<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                </div>
+        
+            </div>
+        
+        </section><!-- /Pricing Section -->
+    
+        <!-- Pricing Section -->
+        <section  class="pricing section my-0 py-0">
+
+            <div class="my-5 p-3" data-aos="zoom-in" data-aos-delay="500">
+                <!-- <h2 class="display-5 text-">Operations Management</h2> -->
+                <h4 class="display-5 text-start fs-4">Monthly Invoice Report</h4>
+
+                
+            </div>
+
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        
+                <div class="row g-4">
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Free Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-box"></i>
+                    </div>
+                    <h4><sup>$</sup>0<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item featured">
+                    <h3>Business Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-rocket"></i>
+                    </div>
+        
+                    <h4><sup>$</sup>29<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Developer Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-send"></i>
+                    </div>
+                    <h4><sup>$</sup>49<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                </div>
+        
+            </div>
+        
+        </section><!-- /Pricing Section -->
+    
+        <!-- Pricing Section -->
+        <section  class="pricing section my-0 py-0">
+
+            <div class="my-5 p-3" data-aos="zoom-in" data-aos-delay="500">
+                <!-- <h2 class="display-5 text-">Operations Management</h2> -->
+                <h4 class="display-5 text-start fs-4">Long Term Storage Fees and Inventory level reports
+                </h4>
+
+                
+            </div>
+
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        
+                <div class="row g-4">
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Free Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-box"></i>
+                    </div>
+                    <h4><sup>$</sup>0<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item featured">
+                    <h3>Business Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-rocket"></i>
+                    </div>
+        
+                    <h4><sup>$</sup>29<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                    <h3>Developer Plan</h3>
+                    <div class="icon">
+                        <i class="bi bi-send"></i>
+                    </div>
+                    <h4><sup>$</sup>49<span> / month</span></h4>
+                    <ul>
+                        <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
+                        <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                        <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
+                        <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+                    </div>
+                </div><!-- End Pricing Item -->
+        
+                </div>
+        
+            </div>
+        
+        </section><!-- /Pricing Section -->
+    </main>
+
+    <main class="my-5">
+        <h2 class="display-6 text-center mb-4">Compare Plans</h2>
+        <div class="table-responsive">
+          <table class="table text-center align-middle">
+            <thead>
+              <tr>
+                <th style="width: 34%;"></th>
+                <th style="width: 22%;">Basic</th>
+                <th style="width: 22%;">Standard</th>
+                <th style="width: 22%;">Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Product Launch Strategy</th>
+                <td>
+                  <svg class="bi" width="24" height="24" role="img" aria-label="Included">
+                    <i class="bi bi-check2 check-color fw-bold"></i>
+                  </svg>
+                </td>
+                <td>
+                  <svg class="bi" width="24" height="24" role="img" aria-label="Included">
+                    <i class="bi bi-check2 check-color fw-bold"></i>
+                  </svg>
+                </td>
+                <td>
+                  <svg class="bi" width="24" height="24" role="img" aria-label="Included">
+                    <i class="bi bi-check2 check-color fw-bold"></i>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Listing SEO &amp; Content</th>
+                <td></td>
+                <td>
+                  <svg class="bi" width="24" height="24" role="img" aria-label="Included">
+                    <i class="bi bi-check2 check-color fw-bold"></i>
+                  </svg>
+                </td>
+                <td>
+                  <svg class="bi" width="24" height="24" role="img" aria-label="Included">
+                    <i class="bi bi-check2 check-color fw-bold"></i>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Dedicated Account Management</th>
+                <td></td>
+                <td>
+                  <svg class="bi" width="24" height="24" role="img" aria-label="Included">
+                    <i class="bi bi-check2 check-color fw-bold"></i>
+                  </svg>
+                </td>
+                <td>
+                  <svg class="bi" width="24" height="24" role="img" aria-label="Included">
+                    <i class="bi bi-check2 check-color fw-bold"></i>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Daily Reporting &amp; Analytics</th>
+                <td></td>
+                <td>
+                  <svg class="bi" width="24" height="24" role="img" aria-label="Included">
+                    <i class="bi bi-check2 check-color fw-bold"></i>
+                  </svg>
+                </td>
+                <td>
+                  <svg class="bi" width="24" height="24" role="img" aria-label="Included">
+                    <i class="bi bi-check2 check-color fw-bold"></i>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Support &amp; Consultation</th>
+                <td>
+                  <svg class="bi" width="24" height="24" role="img" aria-label="Included">
+                    <i class="bi bi-check2 check-color fw-bold"></i>
+                  </svg>
+                </td>
+                <td>
+                  <svg class="bi" width="24" height="24" role="img" aria-label="Included">
+                    <i class="bi bi-check2 check-color fw-bold"></i>
+                  </svg>
+                </td>
+                <td>
+                  <svg class="bi" width="24" height="24" role="img" aria-label="Included">
+                    <i class="bi bi-check2 check-color fw-bold"></i>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Custom Add-Ons</th>
+                <td></td>
+                <td>
+                  <small>Limited</small>
+                </td>
+                <td>
+                  <small>Unlimited</small>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Priority Support</th>
+                <td></td>
+                <td></td>
+                <td>
+                  <svg class="bi" width="24" height="24" role="img" aria-label="Included">
+                    <i class="bi bi-check2 check-color fw-bold"></i>
+                  </svg>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+      
+ 
+
+  <script src="https://bootstrapmade.com/content/vendors/aos/aos.js"></script>
+   
+{% endblock main %}

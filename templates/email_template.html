@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" style="margin:0; padding:0;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>New Inquiry</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    /* General Reset */
+    body, table, td, p {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    /* Container */
+    .wrapper {
+      width: 100%;
+      background-color: #f3f3f3;
+      padding: 30px 0;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    /* Header / Hero Section */
+    .hero {
+      background-color: #008374;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .hero img {
+      width: 120px;
+      height: 120px;
+      display: block;
+      margin: 0 auto 20px;
+      filter: brightness(41.5);
+      background-color: transparent;
+
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    .hero p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #ffffff;
+    }
+
+    /* Content Section */
+    .content {
+      padding: 20px 30px;
+    }
+    .content h2 {
+      font-size: 18px;
+      margin: 0 0 10px;
+      font-weight: 600;
+      color: #333;
+    }
+    .content p {
+      line-height: 1.6;
+      margin: 0 0 20px;
+    }
+    .info-table {
+      width: 100%;
+      border-spacing: 0;
+      background-color: #ffffff;
+    }
+    .info-table th,
+    .info-table td {
+      text-align: left;
+      padding: 12px 8px;
+      border-bottom: 1px solid #eaeaea;
+      vertical-align: top;
+      font-size: 14px;
+    }
+    .info-table th {
+      width: 100px;
+      color: #555;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #008374;
+      text-align: center;
+      padding: 15px;
+    }
+    .footer p {
+      margin: 0;
+      color: #ffffff;
+      font-size: 14px;
+    }
+    .footer a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 30px 0 10px;
+      background-color: #1e88e5;
+      color: white !important;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media only screen and (max-width: 600px) {
+      .content { padding: 20px; }
+      .info-table th,
+      .info-table td { font-size: 14px; }
+    }
+  </style>
+</head>
+<body style="margin:0; padding:0;">
+
+  <!-- Wrapper -->
+  <div class="wrapper">
+
+    <!-- Main email container -->
+    <div class="email-container">
+
+      <!-- Hero / Header -->
+      <div class="hero">
+        <h1>Congratulations</h1>
+        <p>You have a new inquiry from your website</p>
+      </div>
+
+      <!-- Content Area -->
+      <div class="content">
+        <h2>New Contact Request Details</h2>
+        <p>Here is the inquiry that you have received from the <strong>Contact Us</strong> page:</p>
+
+        <!-- Inquiry Details Table -->
+        <table class="info-table">
+          <tr>
+            <th>Name</th>
+            <td>{{name}}</td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td>{{email}}</td>
+          </tr>
+          <tr>
+            <th>Subject</th>
+            <td>{{subject}}</td>
+          </tr>
+          <tr>
+            <th>Message</th>
+            <td>{{message}}</td>
+          </tr>
+        </table>
+
+        <a class="btn" href="mailto:{{email}}">Reply to {{name}}</a>
+    </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>&copy; {{year}} Optimiseres. All rights reserved. | <a href="https://www.optimiseres.com/">Visit Website</a></p>
+      </div>
+
+    </div><!-- /email-container -->
+
+  </div><!-- /wrapper -->
+
+</body>
+</html>

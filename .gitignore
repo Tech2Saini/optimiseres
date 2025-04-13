@@ -1,0 +1,4 @@
+.env
+.venv
+ngrok_server.py
+app.zip

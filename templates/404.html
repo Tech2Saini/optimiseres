@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Page not Found{% endblock title %}
+{% block main %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+
+<style>
+    .error-container ul{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .error-container  ul li {
+        display: inline;
+        margin: 3px;
+    }
+    .error-container ul li a{
+        border: 1px solid gray;
+        padding: 4px 8px;
+        border-radius:100px;
+        transition: background 1s;
+    }
+    .error-container ul li a:hover{
+        background:#008374 ;
+        color: white;
+    }
+</style>
+
+<div class="error-container mt-5">
+  <div class="lottie-animation"></div>
+  <div class="error-content">
+    <h1>404</h1>
+    <p>Oops! The page you are looking for does not exist.</p>
+    <!-- <a href="/" class="btn text-white" style="background-color: #008374;">Go Back to home</a> -->
+    <ul>
+        <li><a href="/" class="active"><i class="bi bi-house me-1 fs-5"></i> Home<br></a></li>
+        <li><a href="/services/"><i class="bi bi-person-gear me-1 fs-5"></i> Services</a></li>
+        <li><a href="/pricing-plan/"><i class="bi bi-currency-rupee me-1 fs-5"></i> Pricing Plan</a></li>
+        <li><a href="/contact/"><i class="bi bi-telephone-forward me-1 fs-5"></i> Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+
+<style>
+    .error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+  }
+
+  .error-content {
+    text-align: center;
+  }
+
+  .error-content h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .error-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .lottie-animation {
+    max-width: 400px;
+    margin-bottom: 2rem;
+  }
+</style>
+
+<script>
+    const animation = lottie.loadAnimation({
+      container: document.querySelector('.lottie-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://lottie.host/d987597c-7676-4424-8817-7fca6dc1a33e/BVrFXsaeui.json'
+    });
+</script>
+
+
+{% endblock main %}
