@@ -122,4 +122,4 @@ def method_not_allowed(e):
     return render_template("404.html",status=405), 405
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(debug=False,host='0.0.0.0')
