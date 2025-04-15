@@ -4,24 +4,30 @@ from datetime import datetime
 import os,requests,json
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
 load_dotenv()
 
+# Load environment variables from .env file
+app = Flask(__name__,static_url_path="/static",static_folder="static")
+
 # Get the authtoken from the .env file
-SITE_KEY= os.getenv('SITE_KEY')
-SECRET_KEY=os.getenv('SECRET_KEY')
 SITE_VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify'
 
-
-app = Flask(__name__,static_url_path="/static",static_folder="static")
-app.secret_key = "bRaUynYLIISQPPOPyy7NWmXvj-MgX0BEr2E5hdldWNY"
+# Load environmental veriables into program for security purpose
+app.secret_key = os.getenv('app_secret_key')
+SITE_KEY= os.getenv('SITE_KEY')
+SECRET_KEY=os.getenv('SECRET_KEY')
+MAIL_USERNAME = os.getenv('MAIL_USERNAME')
+MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
+MAIL_DEFAULT_SENDER = os.getenv('MAIL_DEFAULT_SENDER')
+recipients = os.getenv("RECIPIENT_EMAILS", "")
+recipient_list = [email.strip() for email in recipients.split(",") if email]
 
 app.config['MAIL_SERVER'] = "smtp.gmail.com"
 app.config['MAIL_PORT']  = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = "hackingkali789@gmail.com"
-app.config['MAIL_PASSWORD'] = "liux ysxd bali erau"
-app.config['MAIL_DEFAULT_SENDER'] = ('Optimiseres', 'contact_us@optimiseres.com')
+app.config['MAIL_USERNAME'] = MAIL_USERNAME
+app.config['MAIL_PASSWORD'] = MAIL_PASSWORD
+app.config['MAIL_DEFAULT_SENDER'] = ('Optimiseres',MAIL_DEFAULT_SENDER)
 mail = Mail(app=app)
 
 
@@ -54,6 +60,10 @@ def pricingPlan():
 def pricing():
     return redirect("/pricing-plan/")
 
+def captchaVarification(response=None):
+    return requests.post(url=f"https://www.google.com/recaptcha/api/siteverify?secret={SECRET_KEY}&response={response}").json()
+
+
 @app.route('/contact-us/',methods = ["GET","POST"])
 def contactUs():
 
@@ -67,9 +77,7 @@ def contactUs():
 
         re_captche_response = form.get("g-recaptcha-response")
 
-        verify_responose = requests.post(url=f"https://www.google.com/recaptcha/api/siteverify?secret={SECRET_KEY}&response={re_captche_response}").json()
-
-        # {'success': True, 'challenge_ts': '2025-04-13T12:07:51Z', 'hostname': '127.0.0.1', 'score': 0.9, 'action': 'submit'}
+        verify_responose = captchaVarification(response=re_captche_response)
 
         if verify_responose.get('error-codes',False):
             flash(message= verify_responose['error-codes'],category= "danger")
@@ -100,7 +108,7 @@ def contactPOST():
 
 def send_mail(name,email,subject, message, year):
 
-    msg = Message("Hello Optimiseres",recipients=["hackingkali789@gmail.com",])  # Change this
+    msg = Message("Hello Optimiseres",recipients=os.getenv('recipients'))  # Change this
     msg.html = render_template('email_template.html', name=name,email = email,subject = subject,message = message, year = year)
     
     try:
@@ -122,4 +130,4 @@ def method_not_allowed(e):
     return render_template("404.html",status=405), 405
 
 if __name__=="__main__":
-    app.run(debug=False,host='0.0.0.0')
+    app.run(debug=True,host='0.0.0.0')
