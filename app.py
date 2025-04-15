@@ -64,6 +64,7 @@ def captchaVarification(response=None):
     return requests.post(url=f"https://www.google.com/recaptcha/api/siteverify?secret={SECRET_KEY}&response={response}").json()
 
 
+
 @app.route('/contact-us/',methods = ["GET","POST"])
 def contactUs():
 
