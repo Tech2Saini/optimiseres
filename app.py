@@ -108,7 +108,7 @@ def contactPOST():
 
 def send_mail(name,email,subject, message, year):
 
-    msg = Message("Hello Optimiseres",recipients=os.getenv('recipients'))  # Change this
+    msg = Message("Hello Optimiseres",recipients=recipient_list)  # Change this
     msg.html = render_template('email_template.html', name=name,email = email,subject = subject,message = message, year = year)
     
     try:
