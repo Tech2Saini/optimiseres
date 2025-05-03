@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Quote Request Notification</title>
+    <style type="text/css">
+        /* Base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+        
+        /* Header */
+        .header {
+            padding: 20px;
+            background-color:#008374;
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        
+        /* Content sections */
+        .content {
+            padding: 25px;
+        }
+        
+        .alert-section {
+            background-color: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #343a40;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 5px;
+        }
+        
+        /* Form data */
+        .form-data {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .data-row {
+            margin-bottom: 10px;
+        }
+        
+        .data-label {
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .data-value {
+            margin-top: 3px;
+        }
+        
+        /* CTA button */
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #008374;
+            color: #ffffff !important;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 15px;
+            background-color: #f1f3f5;
+            text-align: center;
+            font-size: 12px;
+            color: #6c757d;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+        }
+        
+        /* Project details box */
+        .project-details {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        
+        /* Responsive styling */
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100%;
+            }
+            .content {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>🔔 NEW QUOTATION REQUEST</h1>
+        </div>
+       
+        <!-- Content Section -->
+        <div class="content">
+            <!-- Alert Section -->
+            <div class="alert-section">
+                <p style="margin: 0;"><strong>Action Required:</strong> A new quotation request has been submitted through your website. Please review the details below and respond to the customer.</p>
+            </div>
+            
+            <!-- Request Overview -->
+            <div class="section">
+                <div class="section-title">REQUEST OVERVIEW</div>
+                <p><strong>Submission Time:</strong> {{context.submission_datetime}}</p>
+            </div>
+            
+            <!-- Client Information Section -->
+            <div class="section">
+                <div class="section-title">CLIENT INFORMATION</div>
+                <div class="form-data">
+                    <div class="data-row">
+                        <div class="data-label">Full Name:</div>
+                        <div class="data-value">{{context.first_name}} {{context.last_name}}</div>
+                    </div>
+                    
+                    <div class="data-row">
+                        <div class="data-label">Email Address:</div>
+                        <div class="data-value"><a href="mailto:{{context.email}}">{{context.email}}</a></div>
+                    </div>
+                    
+                    <div class="data-row">
+                        <div class="data-label">Company:</div>
+                        <div class="data-value">{{context.company}}</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Details Section -->
+            <div class="section">
+                <div class="section-title">PROJECT DETAILS</div>
+                <div class="form-data">
+                    <div class="data-row">
+                        <div class="data-label">Services Needed:</div>
+                        <div class="data-value">{{context.services_needed}}</div>
+                    </div>
+                    
+                    <div class="data-row">
+                        <div class="data-label">Project Timeline:</div>
+                        <div class="data-value">{{context.project_timeline}}</div>
+                    </div>
+                    
+                    <div class="data-row">
+                        <div class="data-label">Project Description:</div>
+                        <div class="project-details">{{context.project_details}}</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Admin Actions -->
+            <div class="section" style="text-align: center;">
+                <p>Please respond to this request within <strong>24 hours</strong> to ensure high customer satisfaction.</p>
+                <a href="mailto:{{context.email}}?subject=RE: Your Quote Request&body=Dear {{context.first_name}},%0D%0A%0D%0AThank you for your interest in our services. I've reviewed your quotation request and..." class="cta-button">Respond to Client</a>
+            </div>
+            
+            <!-- Next Steps & Recommendations -->
+            <div class="section">
+                <div class="section-title">NEXT STEPS & RECOMMENDATIONS</div>
+                <p>Based on the request details, consider the following actions:</p>
+                <ul style="margin-top: 5px; padding-left: 25px;">
+                    <li>Review project scope and timeline to determine appropriate pricing</li>
+                    <li>Check resource availability for the requested timeframe</li>
+                    <li>Prepare a detailed proposal using our standard template</li>
+                    <li>Include relevant case studies that match this project type</li>
+                </ul>
+                <p style="margin-top: 12px;"><strong>Remember:</strong> Responding within 24 hours increases conversion rates by 50%. For complex projects, send an acknowledgment email with an estimated timeframe for the full quotation.</p>
+            </div>
+        </div>
+        
+        <!-- Footer Section -->
+        <div class="footer">
+            <p>This is an automated notification from your website's quotation system.</p>
+            <p>You can manage notification settings in your admin dashboard.</p>
+            <p>© {{context.current_year}} optimiseres </p>
+        </div>
+    </div>
+</body>
+</html>

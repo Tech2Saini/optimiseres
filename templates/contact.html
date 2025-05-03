@@ -31,6 +31,7 @@
     {% endif %}
   {% endwith %}
 
+
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <div class="row gx-lg-0 gy-4">
       <div class="col-lg-4">
@@ -107,6 +108,19 @@
       </div><!-- End Contact Form -->
     </div>
   </div>
+
+  <div class="container my-2">
+    <section class="py-5 bg-ldight text-center">
+      <div class="container">
+        <h5 class="fw-bold mb-2">Thank You for Reaching Out!</h5>
+        <p class="text-muted mb-4">We’ll be in touch within 24 hours to discuss your project in detail.</p>
+  
+        
+      </div>
+    </section>
+  </div>
+ 
+  
 </section><!-- /Contact Section -->
 
 <!-- Google reCAPTCHA v3 Script -->
@@ -145,12 +159,5 @@
   }
 </script>
 
-<script>
-  $(document).ready(function(){
-    $("#contactForm").submit(function(){
-      $("#spinner").removeClass("d-none")
-    });
-  });
-</script>
 
 {% endblock main %}
