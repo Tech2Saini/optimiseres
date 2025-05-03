@@ -27,14 +27,14 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__, static_url_path="/static", static_folder="static")
 
 # Validate required environment variables
-required_env_vars = [
-    'app_secret_key', 'SITE_KEY', 'SECRET_KEY',
-    'MAIL_USERNAME', 'MAIL_PASSWORD', 'MAIL_DEFAULT_SENDER', 'RECIPIENT_EMAILS'
-]
+# required_env_vars = [
+#     'app_secret_key', 'SITE_KEY', 'SECRET_KEY',
+#     'MAIL_USERNAME', 'MAIL_PASSWORD', 'MAIL_DEFAULT_SENDER', 'RECIPIENT_EMAILS'
+# ]
 
-missing_vars = [var for var in required_env_vars if os.getenv(var) is None]
-if missing_vars:
-    raise EnvironmentError(f"Missing required environment variables: {', '.join(missing_vars)}")
+# missing_vars = [var for var in required_env_vars if os.getenv(var) is None]
+# if missing_vars:
+#     raise EnvironmentError(f"Missing required environment variables: {', '.join(missing_vars)}")
 
 # Load environmental variables into program for security purpose
 app.secret_key = os.getenv('app_secret_key')
@@ -302,10 +302,10 @@ def page_not_found(e):
 def method_not_allowed(e):
     return render_template("404.html", status=405), 405
 
-# @app.errorhandler(500)
-# def server_error(e):
-#     logger.error(f"Server error: {str(e)}")
-#     return render_template("500.html", status=500), 500
+@app.errorhandler(500)
+def server_error(e):
+    logger.error(f"Server error: {str(e)}")
+    return render_template("500.html", status=500), 500
 
 # if __name__ == "__main__":
 #     # In production, use a proper WSGI server instead
