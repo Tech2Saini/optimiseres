@@ -33,6 +33,17 @@ MAX_COMPANY_LENGTH = 100
 MAX_PROJECT_DETAILS_LENGTH = 10000
 
 
+# Validate required environment variables
+required_env_vars = [
+    'app_secret_key', 'SITE_KEY', 'SECRET_KEY',
+    'MAIL_USERNAME', 'MAIL_PASSWORD', 'MAIL_DEFAULT_SENDER', 'RECIPIENT_EMAILS'
+]
+
+missing_vars = [var for var in required_env_vars if os.getenv(var) is None]
+if missing_vars:
+    raise EnvironmentError(f"Missing required environment variables: {', '.join(missing_vars)}")
+
+
 # Load environmental veriables into program for security purpose
 app.secret_key = os.getenv('app_secret_key') # app secret key make unique from other apps in same environment
 SITE_KEY= os.getenv('SITE_KEY') # google ceptcha secret key 
@@ -66,8 +77,6 @@ def feviconIco():
 # Handling google ceptch varification with secret,public and response from frontend templates 
 def captchaVarification(response=None):
     return requests.post(url=f"https://www.google.com/recaptcha/api/siteverify?secret={SECRET_KEY}&response={response}").json()
-
-
 
 
 # Main routes

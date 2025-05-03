@@ -307,7 +307,7 @@ def server_error(e):
     logger.error(f"Server error: {str(e)}")
     return render_template("500.html", status=500), 500
 
-# if __name__ == "__main__":
-#     # In production, use a proper WSGI server instead
-#     # For development only:
-#     app.run(debug=False)
+if __name__ == "__main__":
+    # In production, use a proper WSGI server instead
+    # For development only:
+    app.run(debug=False)
