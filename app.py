@@ -125,7 +125,28 @@ def feviconIco():
 
 # Handling google ceptch varification with secret,public and response from frontend templates 
 def captchaVarification(response=None):
-    return requests.post(url=f"https://www.google.com/recaptcha/api/siteverify?secret={SECRET_KEY}&response={response}").json()
+    if not response:
+        return False
+    
+    try:
+        # More secure way to verify reCAPTCHA
+        payload = {
+            'secret': SECRET_KEY,
+            'response': response
+        }
+        verify_response = requests.post(SITE_VERIFY_URL, data=payload).json()
+        
+        # logger.debug(f"reCAPTCHA verification response: {verify_response}")
+        
+        if verify_response.get('error-codes'):
+            # logger.warning(f"reCAPTCHA errors: {verify_response['error-codes']}")
+            return False
+            
+        return verify_response.get('success', False) and verify_response.get('score', 0) >= 0.5
+    except Exception as e:
+        # logger.error(f"reCAPTCHA verification error: {str(e)}")
+        return False
+
 
 
 # Main routes
