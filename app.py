@@ -169,7 +169,7 @@ def contact_us():
 
         # Validate reCAPTCHA
         recaptcha_response = request.form.get("g-recaptcha-response")
-        if not validate_recaptcha(recaptcha_response):
+        if not captchaVarification(recaptcha_response):
             flash("reCAPTCHA verification failed. Please try again.", "danger")
             return redirect(url_for('contact_us'))
 
@@ -248,7 +248,7 @@ def quotation_submission():
 
         # Validate reCAPTCHA
         recaptcha_response = request.form.get("g-recaptcha-response")
-        if not validate_recaptcha(recaptcha_response):
+        if not captchaVarification(recaptcha_response):
             flash("reCAPTCHA verification failed. Please try again.", "danger")
             return redirect(url_for('pricing_plan'))
         
