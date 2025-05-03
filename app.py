@@ -201,5 +201,5 @@ def method_not_allowed(e):
     return render_template("404.html",status=405), 405
 
 # To start the app from same file(The app will not start it execute from other program or file due to line if __name__....:)
-if __name__=="__main__":
-    app.run(debug=True,host='0.0.0.0')
+# if __name__=="__main__":
+#     app.run(debug=False)
