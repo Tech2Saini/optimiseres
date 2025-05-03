@@ -305,7 +305,7 @@ def method_not_allowed(e):
 @app.errorhandler(500)
 def server_error(e):
     logger.error(f"Server error: {str(e)}")
-    return render_template("404.html", status=500), 500
+    return render_template("500.html", status=500), 500
 
 if __name__ == "__main__":
     # In production, use a proper WSGI server instead
