@@ -135,7 +135,7 @@ def captchaVarification(response=None):
             'response': response
         }
         verify_response = requests.post(SITE_VERIFY_URL, data=payload).json()
-        
+        print("The results of google ceptcha is : ",verify_response)
         # logger.debug(f"reCAPTCHA verification response: {verify_response}")
         
         if verify_response.get('error-codes'):
