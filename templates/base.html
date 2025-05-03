@@ -170,6 +170,11 @@
     <script src="/static/scripts/comman.js"></script>
 
     <script>
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
+    </script>
+    <script>
          function sendEmail() {
             // Break the email into parts
             const user = 'contact_us';

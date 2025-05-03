@@ -978,6 +978,12 @@
 
   <!-- Vendor JS Files -->
   <script data-cfasync="false" src="/static/scripts/email-decode.min.js"></script>
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+  </script>
+  
 
   <script src="/static/scripts/bootstrap.bundle.min.js"></script>
   <script src="/static/scripts/validate.js"></script>
