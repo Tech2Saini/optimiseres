@@ -169,7 +169,7 @@ def contact_us():
 
         # Validate reCAPTCHA
         recaptcha_response = request.form.get("g-recaptcha-response")
-        if not captchaVarification(recaptcha_response):
+        if not validate_recaptcha(recaptcha_response):
             flash("reCAPTCHA verification failed. Please try again.", "danger")
             return redirect(url_for('contact_us'))
 
@@ -208,7 +208,7 @@ def send_contact_mail(name, email, subject, message, year):
     try:
         mail.send(msg)
     except Exception as e:
-        logger.error(f"Mail sending error: {str(e)}")
+        # logger.error(f"Mail sending error: {str(e)}")
         raise
 
 @app.route('/pricing-plan/')
@@ -248,7 +248,7 @@ def quotation_submission():
 
         # Validate reCAPTCHA
         recaptcha_response = request.form.get("g-recaptcha-response")
-        if not captchaVarification(recaptcha_response):
+        if not validate_recaptcha(recaptcha_response):
             flash("reCAPTCHA verification failed. Please try again.", "danger")
             return redirect(url_for('pricing_plan'))
         
@@ -256,7 +256,7 @@ def quotation_submission():
             send_quotation_email(form_data)
             flash("Quotation request submitted successfully!", "success")
         except Exception as e:
-            logger.error(f"Quotation email error: {str(e)}")
+            # logger.error(f"Quotation email error: {str(e)}")
             flash("There was an error submitting your request. Please try again later.", "danger")
     
     return redirect(url_for('pricing_plan'))
