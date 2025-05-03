@@ -138,31 +138,32 @@ def services():
 def services2():
     return render_template('services2.html')
 
+
 @app.route('/contact-us/', methods=["GET", "POST"])
 def contact_us():
     if request.method == "POST":
         # Sanitize input
-        name = request.form.get('name', '')
-        email = request.form.get('email', '')
-        subject = request.form.get('subject', '')
-        message = request.form.get('message', '')
+        name = sanitize_input(request.form.get('name', ''))
+        email = sanitize_input(request.form.get('email', ''))
+        subject = sanitize_input(request.form.get('subject', ''))
+        message = sanitize_input(request.form.get('message', ''))
         
-        # # Validate lengths
-        # if not validate_length(name, MAX_NAME_LENGTH):
-        #     flash("Name is too long", "danger")
-        #     return redirect(url_for('contact_us'))
+        # Validate lengths
+        if not validate_length(name, MAX_NAME_LENGTH):
+            flash("Name is too long", "danger")
+            return redirect(url_for('contact_us'))
             
-        # if not validate_length(email, MAX_EMAIL_LENGTH) or not validate_email(email):
-        #     flash("Invalid email address", "danger")
-        #     return redirect(url_for('contact_us'))
+        if not validate_length(email, MAX_EMAIL_LENGTH) or not validate_email(email):
+            flash("Invalid email address", "danger")
+            return redirect(url_for('contact_us'))
             
-        # if not validate_length(subject, MAX_SUBJECT_LENGTH):
-        #     flash("Subject is too long", "danger")
-        #     return redirect(url_for('contact_us'))
+        if not validate_length(subject, MAX_SUBJECT_LENGTH):
+            flash("Subject is too long", "danger")
+            return redirect(url_for('contact_us'))
             
-        # if not validate_length(message, MAX_MESSAGE_LENGTH):
-        #     flash("Message is too long", "danger")
-        #     return redirect(url_for('contact_us'))
+        if not validate_length(message, MAX_MESSAGE_LENGTH):
+            flash("Message is too long", "danger")
+            return redirect(url_for('contact_us'))
 
         # Validate reCAPTCHA
         recaptcha_response = request.form.get("g-recaptcha-response")
@@ -181,7 +182,7 @@ def contact_us():
             )
             flash("Form submitted successfully!", "success")
         except Exception as e:
-            logger.error(f"Email sending error: {str(e)}")
+            # logger.error(f"Email sending error: {str(e)}")
             flash("There was an error sending your message. Please try again later.", "danger")
 
     return render_template('contact.html', SITE_KEY=SITE_KEY)
@@ -208,6 +209,7 @@ def send_contact_mail(name, email, subject, message, year):
         # logger.error(f"Mail sending error: {str(e)}")
         raise
 
+
 @app.route('/pricing-plan/')
 def pricing_plan():
     return render_template('pricing.html', SITE_KEY=SITE_KEY)
@@ -221,27 +223,27 @@ def quotation_submission():
     if request.method == "POST":
         # Sanitize inputs
         form_data = {
-            'first_name': request.form.get('first_name', ''),
-            'last_name': request.form.get('last_name', ''),
-            'email': request.form.get('email', ''),
-            'company': request.form.get('company', ''),
-            'services_needed': request.form.get('services_needed', ''),
-            'project_timeline': request.form.get('project_timeline', ''),
-            'project_details': request.form.get('project_details', ''),
+            'first_name': sanitize_input(request.form.get('first_name', '')),
+            'last_name': sanitize_input(request.form.get('last_name', '')),
+            'email': sanitize_input(request.form.get('email', '')),
+            'company': sanitize_input(request.form.get('company', '')),
+            'services_needed': sanitize_input(request.form.get('services_needed', '')),
+            'project_timeline': sanitize_input(request.form.get('project_timeline', '')),
+            'project_details': sanitize_input(request.form.get('project_details', '')),
         }
         
-        # # Validate inputs
-        # if not validate_email(form_data['email']):
-        #     flash("Invalid email address", "danger")
-        #     return redirect(url_for('pricing_plan'))
+        # Validate inputs
+        if not validate_email(form_data['email']):
+            flash("Invalid email address", "danger")
+            return redirect(url_for('pricing_plan'))
             
-        # if not validate_length(form_data['company'], MAX_COMPANY_LENGTH):
-        #     flash("Company name is too long", "danger")
-        #     return redirect(url_for('pricing_plan'))
+        if not validate_length(form_data['company'], MAX_COMPANY_LENGTH):
+            flash("Company name is too long", "danger")
+            return redirect(url_for('pricing_plan'))
             
-        # if not validate_length(form_data['project_details'], MAX_PROJECT_DETAILS_LENGTH):
-        #     flash("Project details are too long", "danger")
-        #     return redirect(url_for('pricing_plan'))
+        if not validate_length(form_data['project_details'], MAX_PROJECT_DETAILS_LENGTH):
+            flash("Project details are too long", "danger")
+            return redirect(url_for('pricing_plan'))
 
         # Validate reCAPTCHA
         recaptcha_response = request.form.get("g-recaptcha-response")
@@ -285,8 +287,9 @@ def send_quotation_email(form_data):
     try:
         mail.send(msg)
     except Exception as e:
-        logger.error(f"Mail sending error: {str(e)}")
+        # logger.error(f"Mail sending error: {str(e)}")
         raise
+
 
 # Error handlers
 @app.errorhandler(404)
@@ -299,8 +302,8 @@ def method_not_allowed(e):
 
 @app.errorhandler(500)
 def server_error(e):
-    logger.error(f"Server error: {str(e)}")
-    return render_template("500.html", status=500), 500
+    # logger.error(f"Server error: {str(e)}")
+    return render_template("404.html", status=500), 500
 
 if __name__ == "__main__":
 #     # In production, use a proper WSGI server instead
