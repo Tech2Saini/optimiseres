@@ -124,17 +124,6 @@ def feviconIco():
     return redirect('/static/images/favicon.ico')
 
 # Handling google ceptch varification with secret,public and response from frontend templates 
-def captchaVarification(response=None):
-    print("The response of google captch is : :",response)
-    payload = {
-            'secret': SECRET_KEY,
-            'response': response
-        }
-    verify_response = requests.post(SITE_VERIFY_URL, data=payload).json()
-    print("The result google captcha verification is : :",verify_response)
-    return verify_response
-
-
 
 # Main routes
 @app.route('/')
@@ -177,7 +166,7 @@ def contact_us():
 
         # Validate reCAPTCHA
         recaptcha_response = request.form.get("g-recaptcha-response")
-        if not captchaVarification(recaptcha_response):
+        if not validate_recaptcha(recaptcha_response):
             flash("reCAPTCHA verification failed. Please try again.", "danger")
             return redirect(url_for('contact_us'))
 
@@ -256,7 +245,7 @@ def quotation_submission():
 
         # Validate reCAPTCHA
         recaptcha_response = request.form.get("g-recaptcha-response")
-        if not captchaVarification(recaptcha_response):
+        if not validate_recaptcha(recaptcha_response):
             flash("reCAPTCHA verification failed. Please try again.", "danger")
             return redirect(url_for('pricing_plan'))
         
