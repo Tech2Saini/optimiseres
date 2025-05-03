@@ -56,6 +56,64 @@ MAX_MESSAGE_LENGTH = 5000
 MAX_COMPANY_LENGTH = 100
 MAX_PROJECT_DETAILS_LENGTH = 10000
 
+
+
+# Input validation decorator
+def validate_input(**validators):
+    def decorator(f):
+        @wraps(f)
+        def decorated_function(*args, **kwargs):
+            form = request.form
+            for field, validator in validators.items():
+                if field in form:
+                    value = form[field]
+                    if not validator(value):
+                        flash(f"Invalid input for {field}", "danger")
+                        return redirect(url_for(request.endpoint))
+            return f(*args, **kwargs)
+        return decorated_function
+    return decorator
+
+# Validation functions
+def validate_length(value, max_length):
+    return len(value) <= max_length
+
+def validate_email(email):
+    import re
+    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    return re.match(pattern, email) is not None
+
+def validate_recaptcha(response):
+    """Verify the reCAPTCHA response"""
+    if not response:
+        return False
+    
+    try:
+        # More secure way to verify reCAPTCHA
+        payload = {
+            'secret': SECRET_KEY,
+            'response': response
+        }
+        verify_response = requests.post(SITE_VERIFY_URL, data=payload).json()
+        
+        # logger.debug(f"reCAPTCHA verification response: {verify_response}")
+        
+        if verify_response.get('error-codes'):
+            # logger.warning(f"reCAPTCHA errors: {verify_response['error-codes']}")
+            return False
+            
+        return verify_response.get('success', False) and verify_response.get('score', 0) >= 0.5
+    except Exception as e:
+        # logger.error(f"reCAPTCHA verification error: {str(e)}")
+        return False
+
+def sanitize_input(text):
+    """Basic input sanitization"""
+    if text is None:
+        return ""
+    return html.escape(text.strip())
+
+
 # Handling different types of favicon to help bookmark or save the website with icon
 @app.route('/favicon.png')
 def fevicon():
@@ -126,7 +184,7 @@ def contact_us():
             )
             flash("Form submitted successfully!", "success")
         except Exception as e:
-            # logger.error(f"Email sending error: {str(e)}")
+            logger.error(f"Email sending error: {str(e)}")
             flash("There was an error sending your message. Please try again later.", "danger")
 
     return render_template('contact.html', SITE_KEY=SITE_KEY)
@@ -150,7 +208,7 @@ def send_contact_mail(name, email, subject, message, year):
     try:
         mail.send(msg)
     except Exception as e:
-        # logger.error(f"Mail sending error: {str(e)}")
+        logger.error(f"Mail sending error: {str(e)}")
         raise
 
 @app.route('/pricing-plan/')
@@ -198,7 +256,7 @@ def quotation_submission():
             send_quotation_email(form_data)
             flash("Quotation request submitted successfully!", "success")
         except Exception as e:
-            # logger.error(f"Quotation email error: {str(e)}")
+            logger.error(f"Quotation email error: {str(e)}")
             flash("There was an error submitting your request. Please try again later.", "danger")
     
     return redirect(url_for('pricing_plan'))
@@ -230,7 +288,7 @@ def send_quotation_email(form_data):
     try:
         mail.send(msg)
     except Exception as e:
-        # logger.error(f"Mail sending error: {str(e)}")
+        logger.error(f"Mail sending error: {str(e)}")
         raise
 
 # Error handlers
@@ -244,7 +302,7 @@ def method_not_allowed(e):
 
 @app.errorhandler(500)
 def server_error(e):
-    # logger.error(f"Server error: {str(e)}")
+    logger.error(f"Server error: {str(e)}")
     return render_template("500.html", status=500), 500
 
 if __name__ == "__main__":
