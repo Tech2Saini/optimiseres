@@ -393,3 +393,6 @@
 2025-05-03 17:07:20,099 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 17:07:20] "[36mGET /static/scripts/comman.js HTTP/1.1[0m" 304 -
 2025-05-03 17:07:20,418 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 17:07:20] "[36mGET /static/images/site.webmanifest HTTP/1.1[0m" 304 -
 2025-05-03 17:07:20,472 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 17:07:20] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-03 17:22:42,162 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 17:22:42,170 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
