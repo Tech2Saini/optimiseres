@@ -1,7 +1,5 @@
 from flask import Flask, render_template, redirect, request, flash, url_for
 from flask_mail import Mail, Message
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
 
 from datetime import datetime
 import os
@@ -30,13 +28,7 @@ logger = logging.getLogger(__name__)
 
 app = Flask(__name__, static_url_path="/static", static_folder="static")
 
-limiter = Limiter(
-    get_remote_address,
-    app=app,
-    default_limits=["200 per day", "50 per hour"],
-    storage_uri="memory://",  # Uses in-memory storage, no database needed
-    strategy="fixed-window",  # More predictable behavior
-)
+
 
 
 # Validate required environment variables
@@ -159,7 +151,7 @@ def services():
 def services2():
     return render_template('services2.html')
 
-@limiter.limit("5 per hour")
+# @limiter.limit("5 per hour")
 @app.route("/contact-us/", methods=["GET", "POST"])
 def contact_us():
     if request.method == "POST":
@@ -238,7 +230,7 @@ def pricing_plan():
 def pricing_redirect():
     return redirect(url_for('pricing_plan'))
 
-@limiter.limit("3 per hour")
+# @limiter.limit("3 per hour")
 @app.route('/get-quotation/', methods=["POST"])
 def quotation_submission():
     if request.method == "POST":
@@ -325,11 +317,6 @@ def server_error(e):
     logger.error(f"Server error: {str(e)}")
     return render_template("404.html", status=500), 500
 
-# Add a custom error handler
-@app.errorhandler(429)  # Too Many Requests
-def ratelimit_handler(e):
-    flash("Too many requests. Please try again later.", "danger")
-    return redirect(url_for('pricing_plan'))
 
 if __name__ == "__main__":
     # In production, use a proper WSGI server instead
