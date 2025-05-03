@@ -1,6 +1,5 @@
 from flask import Flask, render_template, redirect, request, flash, url_for
 from flask_mail import Mail, Message
-
 from datetime import datetime
 import os
 import requests
@@ -10,7 +9,6 @@ from dotenv import load_dotenv
 import logging
 from functools import wraps
 import html
-
 
 # Load environment variables from .env file
 load_dotenv()
@@ -27,9 +25,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__, static_url_path="/static", static_folder="static")
-
-
-
 
 # Validate required environment variables
 required_env_vars = [
@@ -70,9 +65,6 @@ MAX_SUBJECT_LENGTH = 200
 MAX_MESSAGE_LENGTH = 5000
 MAX_COMPANY_LENGTH = 100
 MAX_PROJECT_DETAILS_LENGTH = 10000
-
-
-
 
 # Input validation decorator
 def validate_input(**validators):
@@ -151,8 +143,7 @@ def services():
 def services2():
     return render_template('services2.html')
 
-# @limiter.limit("5 per hour")
-@app.route("/contact-us/", methods=["GET", "POST"])
+@app.route('/contact-us/', methods=["GET", "POST"])
 def contact_us():
     if request.method == "POST":
         # Sanitize input
@@ -230,7 +221,6 @@ def pricing_plan():
 def pricing_redirect():
     return redirect(url_for('pricing_plan'))
 
-# @limiter.limit("3 per hour")
 @app.route('/get-quotation/', methods=["POST"])
 def quotation_submission():
     if request.method == "POST":
@@ -316,7 +306,6 @@ def method_not_allowed(e):
 def server_error(e):
     logger.error(f"Server error: {str(e)}")
     return render_template("404.html", status=500), 500
-
 
 if __name__ == "__main__":
     # In production, use a proper WSGI server instead
