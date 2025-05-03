@@ -302,10 +302,10 @@ def page_not_found(e):
 def method_not_allowed(e):
     return render_template("404.html", status=405), 405
 
-# @app.errorhandler(500)
-# def server_error(e):
-#     logger.error(f"Server error: {str(e)}")
-#     return render_template("500.html", status=500), 500
+@app.errorhandler(500)
+def server_error(e):
+    logger.error(f"Server error: {str(e)}")
+    return render_template("500.html", status=500), 500
 
 # if __name__ == "__main__":
 #     # In production, use a proper WSGI server instead
