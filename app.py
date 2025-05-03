@@ -13,50 +13,16 @@ import html
 # Load environment variables from .env file
 load_dotenv()
 
-# Set up logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("app.log"),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger(__name__)
+
+# logger = logging.getLogger(__name__)
 
 app = Flask(__name__, static_url_path="/static", static_folder="static")
 
-# Validate required environment variables
-# required_env_vars = [
-#     'app_secret_key', 'SITE_KEY', 'SECRET_KEY',
-#     'MAIL_USERNAME', 'MAIL_PASSWORD', 'MAIL_DEFAULT_SENDER', 'RECIPIENT_EMAILS'
-# ]
-
-# missing_vars = [var for var in required_env_vars if os.getenv(var) is None]
-# if missing_vars:
-#     raise EnvironmentError(f"Missing required environment variables: {', '.join(missing_vars)}")
-
 # Load environmental variables into program for security purpose
-app.secret_key = os.getenv('app_secret_key')
-SITE_KEY = os.getenv('SITE_KEY')  # Google reCAPTCHA site key
-SECRET_KEY = os.getenv('SECRET_KEY')  # Google reCAPTCHA secret key
-MAIL_USERNAME = os.getenv('MAIL_USERNAME')
-MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
-MAIL_DEFAULT_SENDER = os.getenv('MAIL_DEFAULT_SENDER')
-recipients = os.getenv("RECIPIENT_EMAILS", "")
-recipient_list = [email.strip() for email in recipients.split(",") if email]
 
 # reCAPTCHA configuration
 SITE_VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify'
 
-# Mail configuration
-app.config['MAIL_SERVER'] = "smtp.gmail.com"
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = MAIL_USERNAME
-app.config['MAIL_PASSWORD'] = MAIL_PASSWORD
-app.config['MAIL_DEFAULT_SENDER'] = ('Optimiseres', MAIL_DEFAULT_SENDER)
-mail = Mail(app=app)
 
 # Maximum input lengths for security
 MAX_NAME_LENGTH = 100
@@ -66,69 +32,43 @@ MAX_MESSAGE_LENGTH = 5000
 MAX_COMPANY_LENGTH = 100
 MAX_PROJECT_DETAILS_LENGTH = 10000
 
-# Input validation decorator
-def validate_input(**validators):
-    def decorator(f):
-        @wraps(f)
-        def decorated_function(*args, **kwargs):
-            form = request.form
-            for field, validator in validators.items():
-                if field in form:
-                    value = form[field]
-                    if not validator(value):
-                        flash(f"Invalid input for {field}", "danger")
-                        return redirect(url_for(request.endpoint))
-            return f(*args, **kwargs)
-        return decorated_function
-    return decorator
 
-# Validation functions
-def validate_length(value, max_length):
-    return len(value) <= max_length
+# Load environmental veriables into program for security purpose
+app.secret_key = os.getenv('app_secret_key') # app secret key make unique from other apps in same environment
+SITE_KEY= os.getenv('SITE_KEY') # google ceptcha secret key 
+SECRET_KEY=os.getenv('SECRET_KEY') # google ceptcha public key
+MAIL_USERNAME = os.getenv('MAIL_USERNAME') # username/email of mail sender
+MAIL_PASSWORD = os.getenv('MAIL_PASSWORD') # app password for above email
+MAIL_DEFAULT_SENDER = os.getenv('MAIL_DEFAULT_SENDER') # default email of sender
+recipients = os.getenv("RECIPIENT_EMAILS", "") # list of recipients  user or admin who access the form submition in there email inbox
+recipient_list = [email.strip() for email in recipients.split(",") if email] # recipients list
 
-def validate_email(email):
-    import re
-    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-    return re.match(pattern, email) is not None
+#Configuring the flask app to setup the SMTP server to send the emails to admin. 
+#This is useful for admin to aware about activities for website. User are done some activities on contact form or quotation form
+app.config['MAIL_SERVER'] = "smtp.gmail.com"
+app.config['MAIL_PORT']  = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = MAIL_USERNAME
+app.config['MAIL_PASSWORD'] = MAIL_PASSWORD
+app.config['MAIL_DEFAULT_SENDER'] = ('Optimiseres',MAIL_DEFAULT_SENDER)
+mail = Mail(app=app)
 
-def validate_recaptcha(response):
-    """Verify the reCAPTCHA response"""
-    if not response:
-        return False
-    
-    try:
-        # More secure way to verify reCAPTCHA
-        payload = {
-            'secret': SECRET_KEY,
-            'response': response
-        }
-        verify_response = requests.post(SITE_VERIFY_URL, data=payload).json()
-        
-        logger.debug(f"reCAPTCHA verification response: {verify_response}")
-        
-        if verify_response.get('error-codes'):
-            logger.warning(f"reCAPTCHA errors: {verify_response['error-codes']}")
-            return False
-            
-        return verify_response.get('success', False) and verify_response.get('score', 0) >= 0.5
-    except Exception as e:
-        logger.error(f"reCAPTCHA verification error: {str(e)}")
-        return False
 
-def sanitize_input(text):
-    """Basic input sanitization"""
-    if text is None:
-        return ""
-    return html.escape(text.strip())
-
-# Favicon routes
+# Handling different types of favicon to help bookmark or save the website with icon
 @app.route('/favicon.png')
-def favicon_png():
+def fevicon():
     return redirect('/static/images/favicon.png')
 
 @app.route('/favicon.ico')
-def favicon_ico():
+def feviconIco():
     return redirect('/static/images/favicon.ico')
+
+# Handling google ceptch varification with secret,public and response from frontend templates 
+def captchaVarification(response=None):
+    return requests.post(url=f"https://www.google.com/recaptcha/api/siteverify?secret={SECRET_KEY}&response={response}").json()
+
+
+
 
 # Main routes
 @app.route('/')
@@ -147,31 +87,31 @@ def services2():
 def contact_us():
     if request.method == "POST":
         # Sanitize input
-        name = sanitize_input(request.form.get('name', ''))
-        email = sanitize_input(request.form.get('email', ''))
-        subject = sanitize_input(request.form.get('subject', ''))
-        message = sanitize_input(request.form.get('message', ''))
+        name = request.form.get('name', '')
+        email = request.form.get('email', '')
+        subject = request.form.get('subject', '')
+        message = request.form.get('message', '')
         
-        # Validate lengths
-        if not validate_length(name, MAX_NAME_LENGTH):
-            flash("Name is too long", "danger")
-            return redirect(url_for('contact_us'))
+        # # Validate lengths
+        # if not validate_length(name, MAX_NAME_LENGTH):
+        #     flash("Name is too long", "danger")
+        #     return redirect(url_for('contact_us'))
             
-        if not validate_length(email, MAX_EMAIL_LENGTH) or not validate_email(email):
-            flash("Invalid email address", "danger")
-            return redirect(url_for('contact_us'))
+        # if not validate_length(email, MAX_EMAIL_LENGTH) or not validate_email(email):
+        #     flash("Invalid email address", "danger")
+        #     return redirect(url_for('contact_us'))
             
-        if not validate_length(subject, MAX_SUBJECT_LENGTH):
-            flash("Subject is too long", "danger")
-            return redirect(url_for('contact_us'))
+        # if not validate_length(subject, MAX_SUBJECT_LENGTH):
+        #     flash("Subject is too long", "danger")
+        #     return redirect(url_for('contact_us'))
             
-        if not validate_length(message, MAX_MESSAGE_LENGTH):
-            flash("Message is too long", "danger")
-            return redirect(url_for('contact_us'))
+        # if not validate_length(message, MAX_MESSAGE_LENGTH):
+        #     flash("Message is too long", "danger")
+        #     return redirect(url_for('contact_us'))
 
         # Validate reCAPTCHA
         recaptcha_response = request.form.get("g-recaptcha-response")
-        if not validate_recaptcha(recaptcha_response):
+        if not captchaVarification(recaptcha_response):
             flash("reCAPTCHA verification failed. Please try again.", "danger")
             return redirect(url_for('contact_us'))
 
@@ -186,7 +126,7 @@ def contact_us():
             )
             flash("Form submitted successfully!", "success")
         except Exception as e:
-            logger.error(f"Email sending error: {str(e)}")
+            # logger.error(f"Email sending error: {str(e)}")
             flash("There was an error sending your message. Please try again later.", "danger")
 
     return render_template('contact.html', SITE_KEY=SITE_KEY)
@@ -210,7 +150,7 @@ def send_contact_mail(name, email, subject, message, year):
     try:
         mail.send(msg)
     except Exception as e:
-        logger.error(f"Mail sending error: {str(e)}")
+        # logger.error(f"Mail sending error: {str(e)}")
         raise
 
 @app.route('/pricing-plan/')
@@ -226,31 +166,31 @@ def quotation_submission():
     if request.method == "POST":
         # Sanitize inputs
         form_data = {
-            'first_name': sanitize_input(request.form.get('first_name', '')),
-            'last_name': sanitize_input(request.form.get('last_name', '')),
-            'email': sanitize_input(request.form.get('email', '')),
-            'company': sanitize_input(request.form.get('company', '')),
-            'services_needed': sanitize_input(request.form.get('services_needed', '')),
-            'project_timeline': sanitize_input(request.form.get('project_timeline', '')),
-            'project_details': sanitize_input(request.form.get('project_details', '')),
+            'first_name': request.form.get('first_name', ''),
+            'last_name': request.form.get('last_name', ''),
+            'email': request.form.get('email', ''),
+            'company': request.form.get('company', ''),
+            'services_needed': request.form.get('services_needed', ''),
+            'project_timeline': request.form.get('project_timeline', ''),
+            'project_details': request.form.get('project_details', ''),
         }
         
-        # Validate inputs
-        if not validate_email(form_data['email']):
-            flash("Invalid email address", "danger")
-            return redirect(url_for('pricing_plan'))
+        # # Validate inputs
+        # if not validate_email(form_data['email']):
+        #     flash("Invalid email address", "danger")
+        #     return redirect(url_for('pricing_plan'))
             
-        if not validate_length(form_data['company'], MAX_COMPANY_LENGTH):
-            flash("Company name is too long", "danger")
-            return redirect(url_for('pricing_plan'))
+        # if not validate_length(form_data['company'], MAX_COMPANY_LENGTH):
+        #     flash("Company name is too long", "danger")
+        #     return redirect(url_for('pricing_plan'))
             
-        if not validate_length(form_data['project_details'], MAX_PROJECT_DETAILS_LENGTH):
-            flash("Project details are too long", "danger")
-            return redirect(url_for('pricing_plan'))
+        # if not validate_length(form_data['project_details'], MAX_PROJECT_DETAILS_LENGTH):
+        #     flash("Project details are too long", "danger")
+        #     return redirect(url_for('pricing_plan'))
 
         # Validate reCAPTCHA
         recaptcha_response = request.form.get("g-recaptcha-response")
-        if not validate_recaptcha(recaptcha_response):
+        if not captchaVarification(recaptcha_response):
             flash("reCAPTCHA verification failed. Please try again.", "danger")
             return redirect(url_for('pricing_plan'))
         
@@ -258,7 +198,7 @@ def quotation_submission():
             send_quotation_email(form_data)
             flash("Quotation request submitted successfully!", "success")
         except Exception as e:
-            logger.error(f"Quotation email error: {str(e)}")
+            # logger.error(f"Quotation email error: {str(e)}")
             flash("There was an error submitting your request. Please try again later.", "danger")
     
     return redirect(url_for('pricing_plan'))
@@ -290,7 +230,7 @@ def send_quotation_email(form_data):
     try:
         mail.send(msg)
     except Exception as e:
-        logger.error(f"Mail sending error: {str(e)}")
+        # logger.error(f"Mail sending error: {str(e)}")
         raise
 
 # Error handlers
@@ -304,10 +244,10 @@ def method_not_allowed(e):
 
 @app.errorhandler(500)
 def server_error(e):
-    logger.error(f"Server error: {str(e)}")
+    # logger.error(f"Server error: {str(e)}")
     return render_template("500.html", status=500), 500
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
 #     # In production, use a proper WSGI server instead
 #     # For development only:
-#     app.run(debug=False)
+    app.run(debug=False)

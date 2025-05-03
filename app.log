@@ -396,3 +396,51 @@
 2025-05-03 17:22:42,162 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 2025-05-03 17:22:42,170 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 18:48:16,440 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 18:48:16,440 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 18:48:21,949 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:21] "GET / HTTP/1.1" 200 -
+2025-05-03 18:48:22,519 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/styles/aos.css HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,539 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[33mGET /cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js HTTP/1.1[0m" 404 -
+2025-05-03 18:48:22,549 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/styles/custom.css HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,556 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/styles/main.css HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,569 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/styles/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,590 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,596 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/scripts/email-decode.min.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,606 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/styles/glightbox.min.css HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,610 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/styles/swiper-bundle.min.css HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,621 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/scripts/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,630 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/scripts/validate.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,639 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/scripts/aos.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,659 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/scripts/swiper-bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,659 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/scripts/glightbox.min.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,667 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/scripts/purecounter_vanilla.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,672 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/scripts/imagesloaded.pkgd.min.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,672 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/scripts/isotope.pkgd.min.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,720 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/scripts/main.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:22,720 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:22] "[36mGET /static/scripts/comman.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:23,289 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:23] "[36mGET /static/images/site.webmanifest HTTP/1.1[0m" 304 -
+2025-05-03 18:48:23,289 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:23] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,086 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "GET / HTTP/1.1" 200 -
+2025-05-03 18:48:51,160 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/styles/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,169 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/styles/aos.css HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,169 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/styles/glightbox.min.css HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,171 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/styles/custom.css HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,171 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/styles/swiper-bundle.min.css HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,171 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/styles/main.css HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,186 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[33mGET /cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js HTTP/1.1[0m" 404 -
+2025-05-03 18:48:51,198 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,209 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/scripts/email-decode.min.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,209 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/scripts/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,217 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/scripts/validate.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,225 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/scripts/aos.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,233 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/scripts/glightbox.min.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,249 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/scripts/swiper-bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,261 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/scripts/purecounter_vanilla.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,287 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/scripts/imagesloaded.pkgd.min.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,289 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/scripts/isotope.pkgd.min.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,289 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/scripts/comman.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,297 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/scripts/main.js HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,532 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,551 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/images/site.webmanifest HTTP/1.1[0m" 304 -
+2025-05-03 18:48:51,567 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:48:51] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
