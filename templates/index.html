@@ -60,8 +60,6 @@
 </head>
 
 <body class="index-page">
-
-  
   <header id="header" class="header fixed-top">
 
     <div class="branding d-flex align-items-cente">
@@ -76,10 +74,10 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="/" class="active"><i class="bi bi-house me-1 fs-5"></i> Home<br></a></li>
-                    <li><a href="/services/"><i class="bi bi-person-gear me-1 fs-5"></i> Services</a></li>
-                    <li><a href="/pricing-plan/"><i class="bi bi-currency-rupee me-1 fs-5"></i> Pricing Plan</a></li>
-                    <li><a href="/contact/"><i class="bi bi-telephone-forward me-1 fs-5"></i> Contact Us</a></li>
+                    <li><a id="home_page" class="active"  href="/" ><i class="bi bi-house me-1 fs-5"></i> Home<br></a></li>
+                    <li><a id="services_page" href="/services/"><i class="bi bi-person-gear me-1 fs-5"></i> Services</a></li>
+                    <li><a id="pricing_page"  href="/pricing-plan/"><i class="bi bi-currency-rupee me-1 fs-5"></i> Pricing Plan</a></li>
+                    <li><a id="contact_page"  href="/contact/"><i class="bi bi-telephone-forward me-1 fs-5"></i> Contact Us</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -89,8 +87,6 @@
     </div>
 
   </header>
-
- 
 
   <main class="main">
 
@@ -159,62 +155,182 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About Us</h2>
-        <p>Empowering Amazon sellers with personalized, 360° account management solutions.</p>
+        <p>Empowering brands with data‑driven, 360° marketplace management across all leading e‑commerce platforms.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
-
         <div class="row gy-4">
+          
           <!-- Left Column: Company Overview -->
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3>Your Strategic Partner in Amazon Growth</h3>
-            <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/about.jpg" class="img-fluid rounded-4 mb-4" alt="Optimiseres Team in Action">
-            <p>
-              Founded in 2022 by former Amazon professionals, Optimiseres E-Consultancy Private Limited is built on the vision of empowering sellers to scale globally. We bring a wealth of market expertise and data-driven strategies to ensure your products not only stand out but also achieve sustainable growth on Amazon.
-            </p>
-            <p>
-              Our dedicated team works closely with you—from product ideation and launch strategy to daily operations and performance optimization—ensuring every aspect of your Amazon business is finely tuned for success.
-            </p>
-          </div>
-          <!-- Right Column: Core Values & USP -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-            <div class="content ps-0 ps-lg-5">
-              <p class="fst-italic">
-                At Optimiseres, our commitment is to transform your Amazon journey through expert guidance, innovative solutions, and continuous support.
-              </p>
-              <ul>
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span>Personalized Strategies Tailored to Your Business</span>
-                </li>
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span>Data-Driven Insights for Optimal Product Performance</span>
-                </li>
-                <li>
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span>Comprehensive Support from Launch to Growth</span>
-                </li>
-              </ul>
-              <p>
-                With a focus on strategic planning, optimized listings, and proactive operational management, we ensure that you stay ahead in the competitive Amazon marketplace.
-              </p>
-
-              <div class="position-relative mt-4">
-                <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/about-2.jpg" class="img-fluid rounded-4" alt="Optimiseres in Action">
-                <a href="https://youtu.be/p9yY6F8QUjI" class="glightbox pulsating-play-btn"></a>
-              </div>
+            <h3>Your Strategic Growth Partner</h3>
+            <div class="position-relative mt-4">
+              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/about-2.jpg" class="img-fluid rounded-4" alt="Optimiseres in Action">
+              <a href="https://youtu.be/p9yY6F8QUjI" class="glightbox pulsating-play-btn"></a>
             </div>
           </div>
-        </div>
 
+          <!-- Right Column: Core Values & USP as Pointers -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic mb-4">
+                We partner with you at every stage—ensuring your products reach the right customers and deliver maximum ROI.
+              </p>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-start mb-3">
+                  <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
+                  <span>Founded in 2022 by ex‑Amazon professionals</span>
+                </li>
+                <li class="d-flex align-items-start mb-3">
+                  <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
+                  <span>360° marketplace management across Amazon, Flipkart, Myntra, Nykaa, Ajio, Walmart, and more</span>
+                </li>
+                <li class="d-flex align-items-start mb-3">
+                  <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
+                  <span>End‑to‑end support: product selection, listing optimization, inventory planning, A+ content, and ad campaigns</span>
+                </li>
+                <li class="d-flex align-items-start mb-3">
+                  <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
+                  <span>Data‑driven insights and tailored strategies for sustainable growth</span>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
+                  <span>Focus on maximizing ROI and scaling your brand on all major e‑commerce channels</span>
+                </li>
+              </ul>
+          <p class="my-1">Founded in 2022 by ex‑Amazon professionals, Optimiseres E‑Consultancy Private Limited combines deep marketplace expertise with cutting‑edge analytics to drive your brand’s success across Amazon, Flipkart, Myntra, Nykaa, Ajio, Walmart, and more.</p>
+
+            </div>
+          </div>
+
+        </div>
+        
       </div>
 
     </section><!-- /About Section -->
 
+
+    <!-- Brands  Section -->
+    <section class="py-5">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="text-center mb-4 fw-bold">We Help Brands Grow Across</h2>
+        <p class="text-center text-mduted mb-5">From Amazon to Myntra to Walmart — we optimize your presence everywhere your customers shop.</p>
+        <div class="row g-4 justify-content-center">
+          
+          <div class="col-6 col-md-3 text-center">
+            <img src="/static/images/amazona.png" alt="Amazon" class="platform-logo mb-2">
+            <!-- <h6 class="mt-2">Amazon</h6> -->
+          </div>
+          
+          <div class="col-6 col-md-3 text-center">
+            <img src="/static/images/myntra.png" alt="Myntra" class="platform-logo mb-2">
+            <!-- <h6 class="mt-2">Myntra</h6> -->
+          </div>
+          
+          <div class="col-6 col-md-3 text-center">
+            <img src="/static/images/flipkart.png" alt="Flipkart" class="platform-logo mb-2">
+            <!-- <h6 class="mt-2">Flipkart</h6> -->
+          </div>
+          
+          <div class="col-6 col-md-3 text-center">
+            <img src="/static/images/nykaa.png" alt="Nykaa" class="platform-logo mb-2">
+            <!-- <h6 class="mt-2">Nykaa</h6> -->
+          </div>
+          
+          <div class="col-6 col-md-3 text-center">
+            <img src="/static/images/purple.png" alt="Purplle" class="platform-logo mb-2">
+            <!-- <h6 class="mt-2">Purplle</h6> -->
+          </div>
+          
+          <div class="col-6 col-md-3 text-center">
+            <img src="/static/images/ajio.png" alt="Ajio" class="platform-logo mb-2">
+            <!-- <h6 class="mt-2">Ajio</h6> -->
+          </div>
+          
+          <div class="col-6 col-md-3 text-center">
+            <img src="/static/images/tira.png" alt="Tira" class="platform-logo mb-2">
+            <!-- <h6 class="mt-2">Tira</h6> -->
+          </div>
+          
+          <div class="col-6 col-md-3 text-center">
+            <img src="/static/images/walmart.png" alt="Walmart" class="platform-logo mb-2">
+            <!-- <h6 class="mt-2">Walmart</h6> -->
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 align-items-center">
+
+          <div class="col-lg-5">
+            <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/stats-img.svg" alt="" class="img-fluid">
+          </div>
+
+          <div class="col-lg-7">
+
+            <div class="row gy-4">
+
+              <div class="col-lg-6">
+                <div class="stats-item d-flex">
+                  <i class="bi bi-emoji-smile flex-shrink-0"></i>
+                  <div>
+                    <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
+                  </div>
+                </div>
+              </div><!-- End Stats Item -->
+
+              <div class="col-lg-6">
+                <div class="stats-item d-flex">
+                  <i class="bi bi-journal-richtext flex-shrink-0"></i>
+                  <div>
+                    <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
+                  </div>
+                </div>
+              </div><!-- End Stats Item -->
+
+              <div class="col-lg-6">
+                <div class="stats-item d-flex">
+                  <i class="bi bi-headset flex-shrink-0"></i>
+                  <div>
+                    <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
+                  </div>
+                </div>
+              </div><!-- End Stats Item -->
+
+              <div class="col-lg-6">
+                <div class="stats-item d-flex">
+                  <i class="bi bi-people flex-shrink-0"></i>
+                  <div>
+                    <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
+                  </div>
+                </div>
+              </div><!-- End Stats Item -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+    
     <!-- Clients Section -->
     <section id="clients" class="clients section">
-      <div class="container">
+      <h2 class="text-center">Our Trusted Partners</h2>
+
+      <div class="container" id="clients_phone" data-aos="fade-up" data-aos-delay="100">
         <div class="swiper init-swiper">
           <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
           <script type="application/json" class="swiper-config">
@@ -299,73 +415,67 @@
           </div>
         </div>
       </div>
-    </section>
 
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 align-items-center">
-
-          <div class="col-lg-5">
-            <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/stats-img.svg" alt="" class="img-fluid">
-          </div>
-
-          <div class="col-lg-7">
-
-            <div class="row gy-4">
-
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-emoji-smile flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
-                  </div>
+      <div id="clients_desktop" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up" data-aos-delay="100">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex flex-row justify-content-center">
+                <div class="mx-auto">
+                  <img src="https://static.wixstatic.com/media/b51e8d_48ec13c709e44d758d7532661700ca47~mv2.png/v1/fill/w_273,h_133,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_48ec13c709e44d758d7532661700ca47~mv2.png" 
+                  alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
                 </div>
-              </div><!-- End Stats Item -->
-
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-journal-richtext flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
-                  </div>
+                <div class="mx-auto">
+                  <img src="https://static.wixstatic.com/media/b51e8d_5c948fd0f3004d639693b2003cb2b6a0~mv2.png/v1/fill/w_302,h_91,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_5c948fd0f3004d639693b2003cb2b6a0~mv2.png" 
+                  alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
                 </div>
-              </div><!-- End Stats Item -->
-
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-headset flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-people flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-
+              </div>
             </div>
-
-          </div>
-
+            <div class="carousel-item">
+              <div class="d-flex flex-row justify-content-center">
+                <div class="mx-auto">
+                  <img src="https://static.wixstatic.com/media/b51e8d_678ff08f3ea54145a2a6c8001ae0c7e9~mv2.png/v1/fill/w_238,h_113,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_678ff08f3ea54145a2a6c8001ae0c7e9~mv2.png" 
+                  alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
+                </div>
+                <div class="mx-auto">
+                  <img src="https://static.wixstatic.com/media/b51e8d_70b0e56bb78b45beb31f84e2589bfd19~mv2.png/v1/fill/w_238,h_140,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_70b0e56bb78b45beb31f84e2589bfd19~mv2.png" 
+                  alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex flex-row justify-content-center">
+                <div class="mx-auto">
+                  <img src="https://static.wixstatic.com/media/b51e8d_d68b33912b4c4eab9cddb7a6bdd98b9b~mv2.png/v1/fill/w_285,h_113,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_d68b33912b4c4eab9cddb7a6bdd98b9b~mv2.png" 
+                  alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
+                </div>
+                <div class="mx-auto">
+                  <img src="https://static.wixstatic.com/media/b51e8d_cbc1613c9f3a4d28842978863ed1507a~mv2.png/v1/fill/w_255,h_188,al_c,q_85,enc_avif,quality_auto/b51e8d_cbc1613c9f3a4d28842978863ed1507a~mv2.png" 
+                  alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex flex-row justify-content-center">
+                <div class="mx-auto">
+                  <img src="https://static.wixstatic.com/media/b51e8d_11ba74d35395455293f3f988076f731b~mv2.png/v1/fill/w_284,h_99,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_11ba74d35395455293f3f988076f731b~mv2.png" 
+                  alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
+                </div>
+                
+              </div>
+            </div>
         </div>
 
-      </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#clients_desktop" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#clients_desktop" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
 
-    </section><!-- /Stats Section -->
+      </div>
+    </section>
     
     <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section dark-background">
@@ -670,19 +780,20 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Our Team</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Meet Our Experts</h2>
+        <p>A passionate team of marketplace strategists, creative writers, and operations specialists dedicated to your multi‑platform success</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="row gy-4">
+        
+        <div class="row gy-4 team-members">
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/team/team-1.jpg" class="img-fluid" alt="">
-              <h4>Walter White</h4>
-              <span>Web Development</span>
+              <img src="/static/images/arun_kaul.PNG" class="img-fluid" alt="">
+              <h4> Arun Koul</h4>
+              <span>Co-founder & Director</span>
               <div class="social">
                 <a href=""><i class="bi bi-twitter-x"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -694,9 +805,9 @@
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
-              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/team/team-2.jpg" class="img-fluid" alt="">
-              <h4>Sarah Jhinson</h4>
-              <span>Marketing</span>
+              <img src="/static/images/ishank.PNG" class="img-fluid" alt="">
+              <h4>Ishank Jain</h4>
+              <span>Co-founder & Director</span>
               <div class="social">
                 <a href=""><i class="bi bi-twitter-x"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -708,9 +819,9 @@
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/team/team-3.jpg" class="img-fluid" alt="">
-              <h4>William Anderson</h4>
-              <span>Content</span>
+              <img src="/static/images/bhaumik.PNG" class="img-fluid" alt="">
+              <h4>Bhaumik Chokshi</h4>
+              <span>Partner at OptimiseRes</span>
               <div class="social">
                 <a href=""><i class="bi bi-twitter-x"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -722,9 +833,9 @@
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
-              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/team/team-4.jpg" class="img-fluid" alt="">
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
+              <img src="/static/images/jinal.PNG" class="img-fluid" alt="">
+              <h4>Jinal P.</h4>
+              <span> Senior Business Development Manager</span>
               <div class="social">
                 <a href=""><i class="bi bi-twitter-x"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -975,7 +1086,6 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <a role="button" data-aos="fade-up" onclick="shareSite()" class="share-to border shadow-lg d-flex align-items-center justify-content-center"><i class="bi bi-share-fill text-white"></i></a>
 
-
   <!-- Vendor JS Files -->
   <script data-cfasync="false" src="/static/scripts/email-decode.min.js"></script>
   <!-- <script>
@@ -996,11 +1106,12 @@
 
   <!-- Main JS File -->
   <script src="/static/scripts/main.js"></script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"926e4eedc9b047e6","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.1.0","token":"68c5ca450bae485a842ff76066d69420"}' crossorigin="anonymous"></script>
+  <script src="/static/scripts/comman.js"></script>
+      <!-- Bootstrap & jQuery JS -->
+<script>
 
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"926e4eedc9b047e6","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.1.0","token":"68c5ca450bae485a842ff76066d69420"}' crossorigin="anonymous"></script>
-
-<script src="/static/scripts/comman.js"></script>
-
+</script>
 </body>
 
 </html>

@@ -72,10 +72,10 @@
 
                 <nav id="navmenu" class="navmenu">
                     <ul>
-                        <li><a href="/" class="active"><i class="bi bi-house me-1 fs-5"></i> Home<br></a></li>
-                        <li><a href="/services/"><i class="bi bi-person-gear me-1 fs-5"></i> Services</a></li>
-                        <li><a href="/pricing-plan/"><i class="bi bi-currency-rupee me-1 fs-5"></i> Pricing Plan</a></li>
-                        <li><a href="/contact/"><i class="bi bi-telephone-forward me-1 fs-5"></i> Contact Us</a></li>
+                        <li><a id="home_page"  href="/" ><i class="bi bi-house me-1 fs-5"></i> Home<br></a></li>
+                        <li><a id="services_page" href="/services/"><i class="bi bi-person-gear me-1 fs-5"></i> Services</a></li>
+                        <li><a id="pricing_page"  href="/pricing-plan/"><i class="bi bi-currency-rupee me-1 fs-5"></i> Pricing Plan</a></li>
+                        <li><a id="contact_page"  href="/contact/"><i class="bi bi-telephone-forward me-1 fs-5"></i> Contact Us</a></li>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
@@ -175,6 +175,19 @@
         }
     </script> -->
     <script>
+          window.onload = ()=>{
+            console.log("url is :",window.location.href)
+            let url = window.location.href
+            if(url.includes('service')){
+                document.getElementById('services_page').classList.add('active')
+            }
+            else if(url.includes('pricing')){
+                document.getElementById('pricing_page').classList.add('active')
+            }
+            else if(url.includes("contact")){
+                document.getElementById('contact_page').classList.add('active')
+            }
+        }
          function sendEmail() {
             // Break the email into parts
             const user = 'contact_us';
@@ -185,6 +198,7 @@
             alert(mail)
             window.location.href = 'mailto:' + mail;
         }
+        
     </script>
 
 </body>
