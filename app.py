@@ -134,56 +134,52 @@ def home():
 def services():
     return render_template('services.html')
 
-@app.route('/services2/')
-def services2():
-    return render_template('services2.html')
-
 
 @app.route('/contact-us/', methods=["GET", "POST"])
 def contact_us():
-    if request.method == "POST":
-        # Sanitize input
-        name = sanitize_input(request.form.get('name', ''))
-        email = sanitize_input(request.form.get('email', ''))
-        subject = sanitize_input(request.form.get('subject', ''))
-        message = sanitize_input(request.form.get('message', ''))
+    # if request.method == "POST":
+    #     # Sanitize input
+    #     name = sanitize_input(request.form.get('name', ''))
+    #     email = sanitize_input(request.form.get('email', ''))
+    #     subject = sanitize_input(request.form.get('subject', ''))
+    #     message = sanitize_input(request.form.get('message', ''))
         
-        # Validate lengths
-        if not validate_length(name, MAX_NAME_LENGTH):
-            flash("Name is too long", "danger")
-            return redirect(url_for('contact_us'))
+    #     # Validate lengths
+    #     if not validate_length(name, MAX_NAME_LENGTH):
+    #         flash("Name is too long", "danger")
+    #         return redirect(url_for('contact_us'))
             
-        if not validate_length(email, MAX_EMAIL_LENGTH) or not validate_email(email):
-            flash("Invalid email address", "danger")
-            return redirect(url_for('contact_us'))
+    #     if not validate_length(email, MAX_EMAIL_LENGTH) or not validate_email(email):
+    #         flash("Invalid email address", "danger")
+    #         return redirect(url_for('contact_us'))
             
-        if not validate_length(subject, MAX_SUBJECT_LENGTH):
-            flash("Subject is too long", "danger")
-            return redirect(url_for('contact_us'))
+    #     if not validate_length(subject, MAX_SUBJECT_LENGTH):
+    #         flash("Subject is too long", "danger")
+    #         return redirect(url_for('contact_us'))
             
-        if not validate_length(message, MAX_MESSAGE_LENGTH):
-            flash("Message is too long", "danger")
-            return redirect(url_for('contact_us'))
+    #     if not validate_length(message, MAX_MESSAGE_LENGTH):
+    #         flash("Message is too long", "danger")
+    #         return redirect(url_for('contact_us'))
 
-        # Validate reCAPTCHA
-        recaptcha_response = request.form.get("g-recaptcha-response")
-        if not validate_recaptcha(recaptcha_response):
-            flash("reCAPTCHA verification failed. Please try again.", "danger")
-            return redirect(url_for('contact_us'))
+    #     # Validate reCAPTCHA
+    #     recaptcha_response = request.form.get("g-recaptcha-response")
+    #     if not validate_recaptcha(recaptcha_response):
+    #         flash("reCAPTCHA verification failed. Please try again.", "danger")
+    #         return redirect(url_for('contact_us'))
 
-        # Send email
-        try:
-            send_contact_mail(
-                name=name,
-                email=email,
-                subject=subject,
-                message=message,
-                year=datetime.now().year
-            )
-            flash("Form submitted successfully!", "success")
-        except Exception as e:
-            # logger.error(f"Email sending error: {str(e)}")
-            flash("There was an error sending your message. Please try again later.", "danger")
+    #     # Send email
+    #     try:
+    #         send_contact_mail(
+    #             name=name,
+    #             email=email,
+    #             subject=subject,
+    #             message=message,
+    #             year=datetime.now().year
+    #         )
+    #         flash("Form submitted successfully!", "success")
+    #     except Exception as e:
+    #         # logger.error(f"Email sending error: {str(e)}")
+    #         flash("There was an error sending your message. Please try again later.", "danger")
 
     return render_template('contact.html', SITE_KEY=SITE_KEY)
 
@@ -191,23 +187,23 @@ def contact_us():
 def contact_redirect():
     return redirect(url_for('contact_us'))
 
-def send_contact_mail(name, email, subject, message, year):
-    """Send a contact form email to recipients"""
-    msg = Message("New Contact Form Submission - Optimiseres", recipients=recipient_list)
-    msg.html = render_template(
-        'email_template.html', 
-        name=name,
-        email=email,
-        subject=subject,
-        message=message, 
-        year=year
-    )
+# def send_contact_mail(name, email, subject, message, year):
+#     """Send a contact form email to recipients"""
+#     msg = Message("New Contact Form Submission - Optimiseres", recipients=recipient_list)
+#     msg.html = render_template(
+#         'email_template.html', 
+#         name=name,
+#         email=email,
+#         subject=subject,
+#         message=message, 
+#         year=year
+#     )
     
-    try:
-        mail.send(msg)
-    except Exception as e:
-        # logger.error(f"Mail sending error: {str(e)}")
-        raise
+#     try:
+#         mail.send(msg)
+#     except Exception as e:
+#         # logger.error(f"Mail sending error: {str(e)}")
+#         raise
 
 
 @app.route('/pricing-plan/')
@@ -222,13 +218,17 @@ def pricing_redirect():
 def quotation_submission():
     if request.method == "POST":
         # Sanitize inputs
+        # print([item for item in request.form.to_dict(flat=False)])
+        services_needed = request.form.getlist('services_needed')
+        marketplace= request.form.getlist('marketplace')
+
         form_data = {
             'first_name': sanitize_input(request.form.get('first_name', '')),
             'last_name': sanitize_input(request.form.get('last_name', '')),
             'email': sanitize_input(request.form.get('email', '')),
             'company': sanitize_input(request.form.get('company', '')),
-            'services_needed': sanitize_input(request.form.get('services_needed', '')),
-            'project_timeline': sanitize_input(request.form.get('project_timeline', '')),
+            'services_needed': sanitize_input(", ".join(services_needed) if len(services_needed)>0 else ''),
+            'marketplace': sanitize_input(", ".join(marketplace) if len(marketplace)>0 else ''),
             'project_details': sanitize_input(request.form.get('project_details', '')),
         }
         
@@ -270,7 +270,7 @@ def send_quotation_email(form_data):
         'email': form_data.get('email', ''),
         'company': form_data.get('company', 'Not provided'),
         'services_needed': form_data.get('services_needed', ''),
-        'project_timeline': form_data.get('project_timeline', ''),
+        'marketplace': form_data.get('marketplace', ''),
         'project_details': form_data.get('project_details', ''),
         
         # Metadata

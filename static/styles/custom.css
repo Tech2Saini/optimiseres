@@ -23,7 +23,7 @@ body::-webkit-scrollbar-thumb:hover {
     left: 10px !important;
     bottom: 10px;
     z-index: 99999;
-    background-color: #008374;
+    background-color: var(--conrast-color);
     width: 44px;
     height: 44px;
     border-radius: 50px;

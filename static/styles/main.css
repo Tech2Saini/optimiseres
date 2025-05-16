@@ -23,27 +23,29 @@
   /* Background color for the entire website, including individual sections */
   --default-color: #222222;
   /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #172a28;
+  --heading-color: #000000;
   /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #008374;
+  --accent-color: #ff9822;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff;
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff;
   /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+
+  --conrast-color:#ff9822;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff;
+  --nav-color: #ff9822;
   /* The default color of the main navmenu links */
-  --nav-hover-color: #008374;
+  --nav-hover-color: #ff9822;
   /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff;
   /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff;
   /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #01433c;
+  --nav-dropdown-color: #ff9822;
   /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #008374;
   /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
@@ -68,7 +70,7 @@
 }
 
 .accent-background {
-  --background-color: #008374;
+  --background-color: var(--background-color)
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --accent-color: #ffffff;
@@ -246,8 +248,8 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #008374;
-  --heading-color: #ffffff;
+  --background-color: white;
+  --heading-color: #c21010;
   color: var(--default-color);
   transition: all 0.5s;
   z-index: 997;
@@ -312,7 +314,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 55px;
+  max-height: 60px;
   margin-right: 8px;
 }
 
@@ -323,11 +325,7 @@ h6 {
   color: var(--heading-color);
 }
 
-.header .logo span {
-  font-size: 32px;
-  margin-left: 2px;
-  color: var(--nav-hover-color);
-}
+
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
@@ -369,7 +367,7 @@ h6 {
     font-size: 15px;
     padding: 0 2px;
     font-family: var(--nav-font);
-    font-weight: 500;
+    font-weight: 550;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -538,14 +536,14 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
+    font-weight:bold;
   }
 
   .navmenu .active i,
   .navmenu .active:focus i {
     background-color: var(--accent-color);
     color: var(--contrast-color);
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
   }
 
   .navmenu .dropdown ul {
@@ -611,6 +609,7 @@ h6 {
 .footer .footer-about .logo {
   line-height: 1;
   margin-bottom: 25px;
+  width: fit-content;
 }
 
 .footer .footer-about .logo img {
@@ -699,7 +698,6 @@ h6 {
 
 .footer .copyright {
   padding-top: 30px;
-  padding-bottom: 30px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
@@ -917,6 +915,7 @@ section,
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 20px;
+  color: rgb(34, 34, 34);
 }
 
 .hero h2 .accent {
@@ -924,15 +923,15 @@ section,
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
   font-weight: 400;
   margin-bottom: 30px;
 }
 
 .hero .btn-get-started {
   color: var(--contrast-color);
-  background: var(--accent-color);
   font-family: var(--heading-font);
+  background-color: var(--conrast-color);
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -940,12 +939,11 @@ section,
   padding: 14px 40px;
   border-radius: 50px;
   transition: 0.3s;
-  border: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  border: 2px solid var(--accent-color);
 }
 
 .hero .btn-get-started:hover {
-  border-color: color-mix(in srgb, var(--default-color), transparent 60%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
 }
 
 .hero .btn-watch-video {
@@ -964,8 +962,13 @@ section,
   margin-right: 8px;
 }
 
-.hero .btn-watch-video:hover i {
-  color: var(--default-color);
+.hero .btn-watch-video span{
+  transition: 0.3s;
+}
+
+
+.hero .btn-watch-video:hover i,.hero .btn-watch-video:hover span {
+  color: var(--conrast-color);
 }
 
 @media (max-width: 640px) {
@@ -992,7 +995,6 @@ section,
     left: 0;
     right: 0;
     height: calc(50% + 20px);
-    background-color: var(--default-color);
     border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   }
 }
@@ -1001,7 +1003,7 @@ section,
   padding: 60px 30px;
   position: relative;
   overflow: hidden;
-  background:#1e8f83;
+  background:var(--conrast-color);
   box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
@@ -1018,7 +1020,8 @@ section,
 }
 
 .hero .icon-box .title a {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  /* color: color-mix(in srgb, var(--default-color), transparent 20%); */
+  color: white;
   transition: 0.3s;
 }
 
@@ -1029,11 +1032,13 @@ section,
   transition: all 0.3s ease-in-out;
   font-size: 48px;
   line-height: 1;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  /* color: color-mix(in srgb, var(--default-color), transparent 0%); */
+  color: white;
 }
 
 .hero .icon-box:hover {
-  background-color: color-mix(in srgb, var(--background-color), white 10%);
+  background-color: color-mix(in srgb, #eb8509, rgb(209, 128, 6) 15%);
+  margin-top: -10px;
 }
 
 .hero .icon-box:hover .title a,
@@ -1093,9 +1098,12 @@ section,
   height: auto;
 }
 
+.clients .swiper-slide .img-fluid {
+  max-width: unset !important;
+}
 .clients .swiper-slide img {
   transition: 0.3s;
-  width: 120px;
+  width: 140px;
 }
 
 .clients .swiper-slide img:hover {
@@ -1109,8 +1117,9 @@ section,
 }
 
 #clients_phone {
-  display: none;
+  display: block;
 }
+
 
 @media (max-width: 600px) {
   #clients_desktop {
@@ -1575,7 +1584,7 @@ section,
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
-.team .member {
+.team-members .member {
   background-color: var(--surface-color);
   box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -1583,33 +1592,41 @@ section,
   padding: 15px;
   overflow: hidden;
   transition: margin 0.5s;
+  height: fit-content;
   width: 400px;
 }
 
-.team .member img {
+.team-members .member img{
+  transition: transform 0.5s;
+}
+.team-members .member:hover img{
+  transform: scale(1.1);
+}
+
+.team-members .member img {
   border-radius: 15px;
   overflow: hidden;
 }
 
-.team .member .member-content {
+.team-members .member .member-content {
   padding: 0 20px 30px 20px;
 }
 
-.team .member h4 {
+.team-members .member h4 {
   font-weight: 700;
   margin-top: 16px;
   margin-bottom: 2px;
   font-size: 20px;
 }
 
-.team .member span {
+.team-members .member span {
   font-style: italic;
   display: block;
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
-.team .member .social {
+.team-members .member .social {
   margin-top: 15px;
   margin-bottom: 10px;
   display: flex;
@@ -1617,7 +1634,7 @@ section,
   justify-content: space-around;
 }
 
-.team .member .social a {
+.team-members .member .social a {
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   transition: 0.3s;
   border-radius: 50%;
@@ -1629,15 +1646,13 @@ section,
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 60%);
 }
 
-.team .member:hover{
-  margin-top: -10px;
-}
-.team .member .social a:hover {
+
+.team-members .member .social a:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.team .member .social i {
+.team-members .member .social i {
   font-size: 18px;
   margin: 0 2px;
 }

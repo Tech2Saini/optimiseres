@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" >
+<html lang="en" data-bs-these="dark">
 
 <head>
     <meta charset="utf-8">
@@ -73,9 +73,9 @@
                 <nav id="navmenu" class="navmenu">
                     <ul>
                         <li><a id="home_page"  href="/" ><i class="bi bi-house me-1 fs-5"></i> Home<br></a></li>
-                        <li><a id="services_page" href="/services/"><i class="bi bi-person-gear me-1 fs-5"></i> Services</a></li>
-                        <li><a id="pricing_page"  href="/pricing-plan/"><i class="bi bi-currency-rupee me-1 fs-5"></i> Pricing Plan</a></li>
-                        <li><a id="contact_page"  href="/contact/"><i class="bi bi-telephone-forward me-1 fs-5"></i> Contact Us</a></li>
+                        <li><a id="services_page" href="/services/"><i class="bi bi-building-gear me-1 fs-5"></i> Services</a></li>
+                        <li><a id="pricing_page"  href="/pricing-plan/"><i class="bi bi-telephone-forward me-1 fs-5"></i> Contact Us</a></li>
+                        <li><a id="contact_page"  href="/contact/"><i class="bi bi-people me-1 fs-5"></i> Our Clients</a></li>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
@@ -86,7 +86,7 @@
 
     </header>
 
-    <div class="container mt-5">
+    <div class="main-box">
 
         {% block main %}
         {% endblock main %}
@@ -106,9 +106,9 @@
                 <p>Empowering growth with smart solutions. We blend strategy, creativity, and technology to elevate your brand in the digital marketplace.</p>
 
                 <div class="social-links d-flex mt-4">
-                    <a target="_blank" href=""><i class="bi bi-twitter-x"></i></a>
+                    <!-- <a target="_blank" href=""><i class="bi bi-twitter-x"></i></a>
                     <a target="_blank" href=""><i class="bi bi-facebook"></i></a>
-                    <a target="_blank" href=""><i class="bi bi-instagram"></i></a>
+                    <a target="_blank" href=""><i class="bi bi-instagram"></i></a> -->
                     <a target="_blank" href="https://www.linkedin.com/company/optimiseres-e-conusltancy-private-ltd/"><i class="bi bi-linkedin"></i></a>
                 </div>
                 </div>
@@ -137,8 +137,8 @@
                 <p>1157, Sector-10, Panchkula, Haryana</p>
                 <p>Panchkula, Haryana, India - 134109</p>
                 <p>India</p>
-                <p class="mt-4"><strong>Phone:</strong> <a href="tel:7259670592">+91 7259670592</a></p>
-                <p><strong>Email:</strong> <span><a onclick="sendEmail()" role="button" class="__cf_email__" data-cfemail="f59c9b939ab5908d9498859990db969a98">[email&#160;protected]</a></span></p>
+                <p class="mt-4"><strong>Phone:</strong> <a class="text-dark" href="tel:7259670592">+91 7259670592</a></p>
+                <p><strong>Email:</strong> <span><a onclick="sendEmail()" role="button" class="__cf_email__ text-dark" data-cfemail="f59c9b939ab5908d9498859990db969a98">[email&#160;protected]</a></span></p>
                 </div>
     
             </div>
@@ -150,9 +150,7 @@
                 <p class="me-auto">© <span>Copyright</span> <strong class="px-1 sitename">Optimiseres</strong> <span>All Rights
                     Reserved</span></p>
                 <div class="text-center social-links">
-                    <a role="button" onclick="shareSite()">
-                    <i class="bi bi-share-fill"></i>
-                    </a>
+                    
                 </div>
             </div>
         </div>
@@ -163,12 +161,20 @@
     <a href="#" style="z-index: 10;" id="scroll-top" class="scroll-top d-flex align-items-center shadow-lg justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     <a role="button" data-aos="fade-up" onclick="shareSite()" class="share-to border shadow-lg d-flex align-items-center justify-content-center"><i class="bi bi-share-fill text-white"></i></a>
     
-    <script src="/static/scripts/bootstrap.bundle.min.js"></script>
-    <script src="/static/scripts/bootstrap.min.js"></script>
-    <script src="/static/scripts/popper.min.js"></script>
-    <script src="/static/scripts/main.js"></script>
-    <script src="/static/scripts/comman.js"></script>
+  <script src="/static/scripts/bootstrap.bundle.min.js"></script>
+  <script src="/static/scripts/validate.js"></script>
+  <script src="/static/scripts/aos.js"></script>
+  <script src="/static/scripts/glightbox.min.js"></script>
+  <script src="/static/scripts/swiper-bundle.min.js"></script>
+  <script src="/static/scripts/purecounter_vanilla.js"></script>
+  <script src="/static/scripts/imagesloaded.pkgd.min.js"></script>
+  <script src="/static/scripts/isotope.pkgd.min.js"></script>
 
+  <!-- Main JS File -->
+  <script src="/static/scripts/main.js"></script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"926e4eedc9b047e6","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.1.0","token":"68c5ca450bae485a842ff76066d69420"}' crossorigin="anonymous"></script>
+  <script src="/static/scripts/comman.js"></script>
+      <!-- Bootstrap & jQuery JS -->
     <!-- <script>
         if ('scrollRestoration' in history) {
           history.scrollRestoration = 'manual';
