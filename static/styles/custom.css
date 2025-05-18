@@ -5,24 +5,24 @@ body::-webkit-scrollbar {
 
 /* Track */
 body::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--background-color);
 }
 
 /* Handle */
 body::-webkit-scrollbar-thumb {
-    background: #888;
+    background: var(--accent-color);
 }
 
 /* Handle on hover */
 body::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: color-mix(in srgb, var(--accent-color), white 30%);
 }
 
 .share-to {
     position: fixed !important;
     left: 10px !important;
     bottom: 10px;
-    z-index: 99999;
+    z-index: 9;
     background-color: var(--conrast-color);
     width: 44px;
     height: 44px;

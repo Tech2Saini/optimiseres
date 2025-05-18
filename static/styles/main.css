@@ -54,19 +54,58 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f2f9f9;
+ --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #222222;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #000000;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #ff9822;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --conrast-color:#ff9822;
+
+  --nav-mobile-background-color: #ffffff;
+    /* Used as the background color for mobile navigation menu */
+
 }
 .line-text-pointers{
   color: #008374;
 }
+.btn-warning{
+  background-color: var(--conrast-color);
+}
+.btn-warning:hover{
+  background-color: color-mix(in srgb, var(--conrast-color), transparent 30%);
+}
+.quotes-words,.quotes-words a{
+  color: var(--conrast-color)!important;
+  transition: 0.5s;
+}
+.quotes-words a:hover{
+  color:color-mix(in srgb, var(--conrast-color), rgb(255, 169, 70) 60%)!important;
+  transform: scale(1.05);
+}
+.quotes-words .er-btn:hover{
+  background-color: var(--conrast-color)!important;
+  color: white !important;
+  transform: scale(1.05);
+}
+
+.text-muted{
+  color: color-mix(in srgb, var(--default-color) , rgb(136, 136, 136) 80%) !important;
+}
 
 .dark-background {
-  --background-color: #060606;
+  --background-color: #292621;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #252525;
+  --surface-color: #363636;
   --contrast-color: #ffffff;
+  --nav-mobile-background-color: #262d31;
 }
 
 .accent-background {
@@ -248,7 +287,6 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: white;
   --heading-color: #c21010;
   color: var(--default-color);
   transition: all 0.5s;
@@ -315,7 +353,7 @@ h6 {
 
 .header .logo img {
   max-height: 60px;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 .header .logo h1 {
@@ -328,14 +366,15 @@ h6 {
 
 
 .scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 18px #02020240;
 }
 
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-@media (min-width: 1200px) {
+
+@media (min-width:901px) {
   .navmenu {
     padding: 0;
   }
@@ -464,10 +503,14 @@ h6 {
     left: -100%;
     visibility: visible;
   }
+
+  .mobile-nav-toggle{
+    display: none;
+  }
 }
 
 /* Mobile Navigation */
-@media (max-width: 1199px) {
+@media (max-width: 900px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -577,6 +620,7 @@ h6 {
     right: 15px;
     margin-right: 0;
     z-index: 9999;
+    display: block;
   }
 
   .mobile-nav-active .navmenu {
@@ -645,8 +689,8 @@ h6 {
 }
 
 .footer .social-links a:hover {
-  color: var(--default-color);
-  border-color: var(--default-color);
+  color: var(--conrast-color);
+  border-color: var(--conrast-color);
 }
 
 .footer h4 {
@@ -703,6 +747,9 @@ h6 {
 
 .footer .copyright p {
   margin-bottom: 0;
+}
+.footer .copyright p a{
+  color: var(--default-color)!important;
 }
 
 .footer .credits {
@@ -918,8 +965,21 @@ section,
   color: rgb(34, 34, 34);
 }
 
+.hero .header-bold-words{
+  /* font-weight:500 !important; */
+  color: color-mix(in srgb, var(--default-color) , rgb(204, 204, 204) 40%);
+  font-weight: 500;
+}
+.hero .header-quote{
+  color: color-mix(in srgb, var(--default-color) , rgb(204, 204, 204) 20%);
+  font-weight: bolder;
+}
+
 .hero h2 .accent {
   color: var(--conrast-color);
+}
+.hero h2 span {
+  color: var(--default-color);
 }
 
 .hero p {
@@ -1800,6 +1860,40 @@ section,
   border: 3px solid var(--accent-color);
 }
 
+.form-control,.choices__inner,.choices__inner input{
+  /* background-color: color-mix(in srgb, var(--default-color), white 10%); */
+  background-color: transparent !important;
+  color: color-mix(in srgb, var(--default-color), black 20%) !important;
+  border: 1px solid rgba(128, 128, 128, 0.637) !important;
+}
+.choices__inner input{
+  border: none !important;
+}
+.form-control:focus{
+  background-color: transparent;
+}
+.form-control::placeholder{
+  color: color-mix(in srgb, var(--default-color), rgb(97, 97, 97) 80%) !important;
+}
+.border{
+  border: 1px solid #a4a4a44d !important;
+}
+
+.choices__list{
+  /* background-color:var(--default-color); */
+  background-color: color-mix(in srgb, transparent, var(--background-color) 90%);
+  color: var(--default-color);
+}
+.choices__list--dropdown .choices__item--selectable.is-highlighted{
+  background-color: color-mix(in srgb, var(--default-color), var(--background-color) 70%) !important;
+  color: var(--default-color);
+}
+
+.choices__list .choices__item:hover{
+  background-color: color-mix(in srgb, transparent,black 30%) !important;
+}
+
+
 @media (min-width: 992px) {
   .pricing .featured {
     transform: scale(1.15);
@@ -2127,7 +2221,7 @@ section,
   object-fit: contain;
   aspect-ratio: 4/3;
   /* or 1/1 if you want perfectly square */
-  background-color: #ffffff;
+  background-color:var(--surface-color);
   padding: 10px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);

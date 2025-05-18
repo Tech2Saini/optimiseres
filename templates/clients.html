@@ -1,0 +1,224 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock title %}
+
+{% block main %} 
+<style>
+.card{
+   height:100%;
+   border-radius: 0%;
+   border: 0px;
+   background-color: transparent;
+   padding: 15px;
+   margin: 0px;
+   overflow: hidden;
+   transition: 0.5s;
+}
+.col-md-4{
+   padding:0px;
+}
+.card img{
+   width: 50%;
+   margin: auto;
+   transition: 0.5s;
+}
+.card:hover img{
+   transform: scale(1.15);
+   mix-blend-mode:darken;
+   filter: contrast(20px),brightness(80px);
+
+}
+
+</style>
+
+<div class="container mt-5 pt-5 section-title" data-aos="fade-up">
+   <h2>Our Clients</h2>
+   <p>Proudly collaborating with leading brands across diverse industries.</p>
+</div><!-- End Section Title -->
+
+<div class="position-sticky header" style="top: 13%;z-index: 10;" >
+   <div class="d-flex flex-nowrap overflow-auto flex-row p-2">
+      <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('home_decode')">Home Decor</a>
+      <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('aparel_shoes')">Apparel & Shoes</a>
+      <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('watches')">Watches</a>
+      <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('jewelry')">Jewelry</a>
+   </div>
+</div>
+<script>
+   function scrollElement(id){
+      const element = document.getElementById(id);
+      element.scrollIntoView();
+      element.scrollIntoView(false);
+      element.scrollIntoView({ block: "end" });
+      element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+      console.log(element)
+   }
+</script>
+<div class="container mt-5 pt-5" id="home_decode">
+   <div class="my-3 p-0">
+      <h2 class="p-0">Home Linen & Decor</h2>
+   </div>
+   <div class="col-md-12">
+      <div class="row clients">
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300" >
+            <div class="card">
+               <img src="/static/clients/aabo.jpg" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/cottonking.png" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/cricus.jpg" alt="">
+            </div>
+         </div>
+      </div>
+      <div class="row clients">
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/decraft.png" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/guess.png" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/cricus.jpg" alt="">
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="container mt-5 pt-5" id="aparel_shoes">
+   <div class="my-3 p-0">
+      <h2 class="p-0">Apparel & Shoes</h2>
+   </div>
+   <div class="col-md-12">
+      <div class="row clients">
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/aabo.jpg" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/cottonking.png" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/cricus.jpg" alt="">
+            </div>
+         </div>
+      </div>
+      <div class="row clients">
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/decraft.png" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/guess.png" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/cricus.jpg" alt="">
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="container mt-5 pt-5" id="watches">
+   <div class="my-3 p-0">
+      <h2 class="p-0">Watches</h2>
+   </div>
+   <div class="col-md-12">
+      <div class="row clients">
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/aabo.jpg" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/cottonking.png" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/cricus.jpg" alt="">
+            </div>
+         </div>
+      </div>
+      <div class="row clients">
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/decraft.png" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/guess.png" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/cricus.jpg" alt="">
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="container mt-5 pt-5" id="jewelry">
+   <div class="my-3 p-0">
+      <h2 class="p-0">Jewelry</h2>
+   </div>
+   <div class="col-md-12">
+      <div class="row clients">
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/aabo.jpg" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/cottonking.png" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/cricus.jpg" alt="">
+            </div>
+         </div>
+      </div>
+      <div class="row clients">
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/decraft.png" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/guess.png" alt="">
+            </div>
+         </div>
+         <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+               <img src="/static/clients/cricus.jpg" alt="">
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+{% endblock main %}

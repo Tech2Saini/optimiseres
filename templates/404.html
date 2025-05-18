@@ -17,26 +17,24 @@
         border: 1px solid gray;
         padding: 4px 8px;
         border-radius:100px;
-        transition: background 1s;
+        /* transition: background 1s; */
     }
-    .error-container ul li a:hover{
-        background:#008374 ;
-        color: white;
-    }
+
 </style>
 
 <div class="error-container mt-5">
   <div class="lottie-animation"></div>
   <div class="error-content">
-    <h1>404</h1>
-    <p>Oops! The page you are looking for does not exist.</p>
+    <h1 >404</h1>
+    <p class="text-muted">Oops! The page you are looking for does not exist.</p>
     <!-- <a href="/" class="btn text-white" style="background-color: #008374;">Go Back to home</a> -->
-    <ul>
-        <li><a href="/" class="active"><i class="bi bi-house me-1 fs-5"></i> Home<br></a></li>
-        <li><a href="/services/"><i class="bi bi-person-gear me-1 fs-5"></i> Services</a></li>
-        <li><a href="/pricing-plan/"><i class="bi bi-currency-rupee me-1 fs-5"></i> Pricing Plan</a></li>
-        <li><a href="/contact/"><i class="bi bi-telephone-forward me-1 fs-5"></i> Contact Us</a></li>
+    <ul >
+        <li class="quotes-words"><a class="er-btn"  href="/" class="active"><i class="bi bi-house me-1 fs-5"></i> Home<br></a></li>
+        <li class="quotes-words"><a class="er-btn"  href="/services/"><i class="bi bi-person-gear me-1 fs-5"></i> Services</a></li>
+        <li class="quotes-words"><a class="er-btn"  href="/clients/"><i class="bi bi-people me-1 fs-5"></i> Our Clients</a></li>
+        <li class="quotes-words"><a class="er-btn"  href="/contact/"><i class="bi bi-telephone-forward me-1 fs-5"></i> Contact Us</a></li>
     </ul>
+    
   </div>
 </div>
 
@@ -47,7 +45,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
   }
 
   .error-content {

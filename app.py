@@ -206,13 +206,13 @@ def contact_redirect():
 #         raise
 
 
-@app.route('/pricing-plan/')
+@app.route('/clients/')
 def pricing_plan():
-    return render_template('pricing.html', SITE_KEY=SITE_KEY)
+    return render_template('clients.html', SITE_KEY=SITE_KEY)
 
-@app.route('/pricing/')
+@app.route('/our-clients/')
 def pricing_redirect():
-    return redirect(url_for('pricing_plan'))
+    return redirect(url_for('clients'))
 
 @app.route('/get-quotation/', methods=["POST"])
 def quotation_submission():
