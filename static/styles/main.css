@@ -1551,6 +1551,9 @@ section,
     position: static;
     left: auto;
   }
+  .portfolio .portfolio-filters{
+    justify-content:start !important;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1561,12 +1564,13 @@ section,
   margin: 0 auto;
   list-style: none;
   text-align: center;
+  justify-content: center;
 }
 
 .portfolio .portfolio-filters li {
   cursor: pointer;
   display: inline-block;
-  padding: 0;
+  padding: 10px;
   font-size: 18px;
   font-weight: 500;
   margin: 0 10px;
@@ -1659,8 +1663,9 @@ section,
 .team-members .member img{
   transition: transform 0.5s;
 }
-.team-members .member:hover img{
-  transform: scale(1.1);
+.team-members .member:hover{
+  /* transform: scale(1.1); */
+  margin-top: -10px;
 }
 
 .team-members .member img {

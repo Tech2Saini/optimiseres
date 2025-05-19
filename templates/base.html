@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en" data-bs-these="dark">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Optimiseres | {% block title %}{% endblock title %}</title>
 
-    <meta name="title" content="Optimiseres - Your Amazon Growth Partner">
-    <meta name="description" content="Elevate your Amazon business with Optimiseres, a global Amazon Account Management service provider offering personalized, 360° solutions for product launches, listing optimization, operations, and ad management.">
+    <meta name="title" content="Optimiseres - Your E-commerce Growth Partner">
+    <meta name="description" content="Elevate your E-commerce business with Optimiseres, a global Amazon Account Management service provider offering personalized, 360° solutions for product launches, listing optimization, operations, and ad management.">
     <meta name="keywords" content="Amazon account management, Amazon growth, personalized Amazon strategies, product launch, listing SEO, operations support, PPC management, Amazon marketing, seller support">
   
-    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/17248/17248069.png" />
+    <meta property="og:image" content="/static/images/icons/logo.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -18,30 +18,30 @@
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.optimiseres.com/">
-    <meta property="og:title" content="Optimiseres - Your Amazon Growth Partner">
+    <meta property="og:title" content="Optimiseres - Your E-commerce Growth Partner">
     <meta property="og:description" content="Elevate your Amazon business with Optimiseres, a global Amazon Account Management service provider offering personalized, 360° solutions for product launches, listing optimization, operations, and ad management.">
     <meta property="og:image" content="/static/images/favicon.png">
   
     <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="/static/images/icons/logo.png">
     <meta name="twitter:url" content="https://www.optimiseres.com/">
-    <meta name="twitter:title" content="Optimiseres - Your Amazon Growth Partner">
+    <meta name="twitter:title" content="Optimiseres - Your E-commerce Growth Partner">
     <meta name="twitter:description" content="Discover expert Amazon account management with Optimiseres. We provide data-driven strategies and comprehensive support to fuel your Amazon success.">
     <meta name="twitter:image" content="/static/images/favicon.png">
   
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
-    <link rel="shortcut icon" href="/static/images/favicon.ico">
-    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="/static/images/icons/favicon.ico">
+    <link rel="icon" type="image/png" href="/static/images/icons/favicon.png">
 
     <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/icons/apple-touch-icon.png">
 
     <!-- Android Chrome Icons -->
-    <link rel="icon" type="image/png" sizes="192x192" href="/static/images/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/static/images/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/images/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/static/images/icons/android-chrome-512x512.png">
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/static/images/site.webmanifest">
@@ -60,13 +60,11 @@
 <body>
 
     <header id="header" class="header fixed-top">
-
         <div class="branding d-flex align-items-cente">
-
             <div class="container position-relative d-flex align-items-center justify-content-between pe-1">
                 <a href="/" class="logo d-flex align-items-center">
                     <!-- Uncomment the line below if you also wish to use an image logo -->
-                    <img id="header_logo" src="/static/images/logo.png" alt="">
+                    <img id="header_logo" src="/static/images/icons/logo.png" alt="">
                     <h1 class="sitename"></h1>
                     <span>.</span>
                 </a>
@@ -83,9 +81,7 @@
                 </nav>
 
             </div>
-
         </div>
-
     </header>
 
     <div class="main-box">
@@ -95,15 +91,13 @@
         
     </div>
 
-
-
     <footer id="footer" class="footer accent-background mt-3">
 
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-about">
                 <a href="/" class="logo d-flex align-items-center p-2">
-                    <span class="sitename"><img style="transform: scale(1.3);" id="footer_logo" src="/static/images/logo.png" alt=""></span>
+                    <span class="sitename"><img style="transform: scale(1.3);" id="footer_logo" src="/static/images/icons/logo.png" alt=""></span>
                 </a>
                 <p>Empowering growth with smart solutions. We blend strategy, creativity, and technology to elevate your brand in the digital marketplace.</p>
 
@@ -145,7 +139,6 @@
     
             </div>
         </div>
-    
               
         <div class="container copyright text-center">
             <div class="d-flex mb-5">
@@ -160,27 +153,29 @@
     </footer>
     
     <!-- Scroll Top -->
-    <a href="#" style="z-index: 10;" id="scroll-top" class="scroll-top d-flex align-items-center shadow-lg justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a onclick="document.body.scrollIntoView({ block: 'top' });" role="button" style="z-index: 10;" id="scroll-top" class="scroll-top d-flex align-items-center shadow-lg justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     <a role="button" data-aos="fade-up" onclick="shareSite()" class="share-to border shadow-lg d-flex align-items-center justify-content-center"><i class="bi bi-share-fill text-white"></i></a>
     
-  <script src="/static/scripts/bootstrap.bundle.min.js"></script>
-  <script src="/static/scripts/validate.js"></script>
-  <script src="/static/scripts/aos.js"></script>
-  <script src="/static/scripts/glightbox.min.js"></script>
-  <script src="/static/scripts/swiper-bundle.min.js"></script>
-  <script src="/static/scripts/purecounter_vanilla.js"></script>
-  <script src="/static/scripts/imagesloaded.pkgd.min.js"></script>
-  <script src="/static/scripts/isotope.pkgd.min.js"></script>
+    <script src="/static/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/static/scripts/validate.js"></script>
+    <script src="/static/scripts/aos.js"></script>
+    <script src="/static/scripts/glightbox.min.js"></script>
+    <script src="/static/scripts/swiper-bundle.min.js"></script>
+    <script src="/static/scripts/purecounter_vanilla.js"></script>
+    <script src="/static/scripts/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/scripts/isotope.pkgd.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="/static/scripts/main.js"></script>
-  <script src="/static/scripts/comman.js"></script>
-      <!-- Bootstrap & jQuery JS -->
+    <!-- Main JS File -->
+    <script src="/static/scripts/main.js"></script>
+    <script src="/static/scripts/comman.js"></script>
+    
+    <!-- Bootstrap & jQuery JS -->
     <!-- <script>
         if ('scrollRestoration' in history) {
           history.scrollRestoration = 'manual';
         }
     </script> -->
+    
     <script>
         window.onload = ()=>{
             let theme = localStorage.getItem('theme') || 'light';
@@ -232,13 +227,13 @@
             target = document.getElementById("app_theme")
             if (theme == "dark") {
                 target.innerHTML = `<i class="bi bi-toggle-on fs-4 quotes-words"></i><span class="quotes-words mx-1"> <i class="bi bi-moon-stars-fill fs-5"></i> </span>`
-                document.getElementById('header_logo').src = '/static/images/logo2.png'
-                document.getElementById('footer_logo').src = '/static/images/logo2.png'
+                document.getElementById('header_logo').src = '/static/images/icons/logo2.png'
+                document.getElementById('footer_logo').src = '/static/images/icons/logo2.png'
             }
             else{
                 target.innerHTML = ` <i class="bi bi-toggle-off quotes-words fs-4"></i> <span class="quotes-words mx-1"> <i class="bi bi-brightness-high fs-5"></i> </span>`
-                document.getElementById('header_logo').src = '/static/images/logo.png'
-                document.getElementById('footer_logo').src = '/static/images/logo.png'
+                document.getElementById('header_logo').src = '/static/images/icons/logo.png'
+                document.getElementById('footer_logo').src = '/static/images/icons/logo.png'
             }
         }
 

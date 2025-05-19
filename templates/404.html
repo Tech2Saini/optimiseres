@@ -4,42 +4,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
 
 <style>
-    .error-container ul{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    .error-container  ul li {
-        display: inline;
-        margin: 3px;
-    }
-    .error-container ul li a{
-        border: 1px solid gray;
-        padding: 4px 8px;
-        border-radius:100px;
-        /* transition: background 1s; */
-    }
-
-</style>
-
-<div class="error-container mt-5">
-  <div class="lottie-animation"></div>
-  <div class="error-content">
-    <h1 >404</h1>
-    <p class="text-muted">Oops! The page you are looking for does not exist.</p>
-    <!-- <a href="/" class="btn text-white" style="background-color: #008374;">Go Back to home</a> -->
-    <ul >
-        <li class="quotes-words"><a class="er-btn"  href="/" class="active"><i class="bi bi-house me-1 fs-5"></i> Home<br></a></li>
-        <li class="quotes-words"><a class="er-btn"  href="/services/"><i class="bi bi-person-gear me-1 fs-5"></i> Services</a></li>
-        <li class="quotes-words"><a class="er-btn"  href="/clients/"><i class="bi bi-people me-1 fs-5"></i> Our Clients</a></li>
-        <li class="quotes-words"><a class="er-btn"  href="/contact/"><i class="bi bi-telephone-forward me-1 fs-5"></i> Contact Us</a></li>
-    </ul>
-    
-  </div>
-</div>
-
-<style>
-    .error-container {
+  .error-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,7 +32,39 @@
     max-width: 400px;
     margin-bottom: 2rem;
   }
+
+  .error-container ul{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+  }
+  .error-container  ul li {
+      display: inline;
+      margin: 3px;
+  }
+  .error-container ul li a{
+      border: 1px solid gray;
+      padding: 4px 8px;
+      border-radius:100px;
+      /* transition: background 1s; */
+  }
 </style>
+
+<div class="error-container mt-5">
+  <div class="lottie-animation"></div>
+  <div class="error-content">
+    <h1 >404</h1>
+    <p class="text-muted">Oops! The page you are looking for does not exist.</p>
+    <ul >
+        <li class="quotes-words"><a class="er-btn"  href="/" class="active"><i class="bi bi-house me-1 fs-5"></i> Home<br></a></li>
+        <li class="quotes-words"><a class="er-btn"  href="/services/"><i class="bi bi-person-gear me-1 fs-5"></i> Services</a></li>
+        <li class="quotes-words"><a class="er-btn"  href="/clients/"><i class="bi bi-people me-1 fs-5"></i> Our Clients</a></li>
+        <li class="quotes-words"><a class="er-btn"  href="/contact/"><i class="bi bi-telephone-forward me-1 fs-5"></i> Contact Us</a></li>
+    </ul>
+    
+  </div>
+</div>
+
 
 <script>
     const animation = lottie.loadAnimation({

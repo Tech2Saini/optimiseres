@@ -57,7 +57,6 @@ MAX_COMPANY_LENGTH = 100
 MAX_PROJECT_DETAILS_LENGTH = 10000
 
 
-
 # Input validation decorator
 def validate_input(**validators):
     def decorator(f):
@@ -117,11 +116,11 @@ def sanitize_input(text):
 # Handling different types of favicon to help bookmark or save the website with icon
 @app.route('/favicon.png')
 def fevicon():
-    return redirect('/static/images/favicon.png')
+    return redirect('/static/images/icons/favicon.png')
 
 @app.route('/favicon.ico')
 def feviconIco():
-    return redirect('/static/images/favicon.ico')
+    return redirect('/static/images/icons/favicon.ico')
 
 # Handling google ceptch varification with secret,public and response from frontend templates 
 
@@ -133,7 +132,6 @@ def home():
 @app.route('/services/')
 def services():
     return render_template('services.html')
-
 
 @app.route('/contact-us/', methods=["GET", "POST"])
 def contact_us():
@@ -205,13 +203,12 @@ def contact_redirect():
 #         # logger.error(f"Mail sending error: {str(e)}")
 #         raise
 
-
 @app.route('/clients/')
-def pricing_plan():
+def clients_page():
     return render_template('clients.html', SITE_KEY=SITE_KEY)
 
 @app.route('/our-clients/')
-def pricing_redirect():
+def clients_redirect():
     return redirect(url_for('clients'))
 
 @app.route('/get-quotation/', methods=["POST"])
@@ -235,21 +232,21 @@ def quotation_submission():
         # Validate inputs
         if not validate_email(form_data['email']):
             flash("Invalid email address", "danger")
-            return redirect(url_for('pricing_plan'))
+            return redirect(url_for('contact_us'))
             
         if not validate_length(form_data['company'], MAX_COMPANY_LENGTH):
             flash("Company name is too long", "danger")
-            return redirect(url_for('pricing_plan'))
+            return redirect(url_for('contact_us'))
             
         if not validate_length(form_data['project_details'], MAX_PROJECT_DETAILS_LENGTH):
             flash("Project details are too long", "danger")
-            return redirect(url_for('pricing_plan'))
+            return redirect(url_for('contact_us'))
 
         # Validate reCAPTCHA
         recaptcha_response = request.form.get("g-recaptcha-response")
         if not validate_recaptcha(recaptcha_response):
             flash("reCAPTCHA verification failed. Please try again.", "danger")
-            return redirect(url_for('pricing_plan'))
+            return redirect(url_for('contact_us'))
         
         try:
             send_quotation_email(form_data)
@@ -258,7 +255,7 @@ def quotation_submission():
             # logger.error(f"Quotation email error: {str(e)}")
             flash("There was an error submitting your request. Please try again later.", "danger")
     
-    return redirect(url_for('pricing_plan'))
+    return redirect(url_for('contact_us'))
 
 def send_quotation_email(form_data):
     """Send a quotation request email to recipients"""
@@ -289,7 +286,6 @@ def send_quotation_email(form_data):
     except Exception as e:
         # logger.error(f"Mail sending error: {str(e)}")
         raise
-
 
 # Error handlers
 @app.errorhandler(404)
