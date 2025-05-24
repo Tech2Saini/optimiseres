@@ -30,6 +30,23 @@
     .scrollbar-none::-webkit-scrollbar{
         display: none;
     }
+    .scroll-left,.scroll-right{
+        opacity: 1;
+        background: #f79623;
+        color: white;
+        border-radius: 50%;
+        border: 1px solid #80808038;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1px;
+    }
+    .scroll-left:hover,.scroll-right:hover,.scroll-left:active,.scroll-right:active,.scroll-left:focus,.scroll-right:focus{
+        background-color: #ff9f29 !important;
+        color: white !important;
+    }
     
 </style>
 
@@ -39,8 +56,8 @@
 </div><!-- End Section Title -->
 
 <div class="position-sticky clients-navigation position-relative" style="top:80px;z-index: 10;">
-    <button class="border position-absolute rounded-circle btn-warning btn btn-sm bi bi-chevron-left fs-4 scroll-left top-center mx-2"></button>
-    <button class="border rounded-circle btn-warning btn btn-sm bi bi-chevron-right position-absolute fs-4 scroll-right end-0 top-center mx-2"></button>
+    <button class="btn btn-sm bi bi-chevron-left position-absolute fs-4 scroll-left start-0 top-center"></button>
+    <button class="btn btn-sm bi bi-chevron-right position-absolute fs-4 scroll-right end-0 top-center"></button>
     
     <div class="container d-flex flex-nowrap overflow-auto flex-row p-2 scrollbar-none">
         <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('home_Linen')">Home Linen</a>
