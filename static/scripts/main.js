@@ -24,8 +24,8 @@
     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
     
     if (clients_nav != null) {
-      window.scrollY > 100 ? clients_nav.classList.add('header') : clients_nav.classList.remove('header');
-      window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+      window.scrollY > 170 ? clients_nav.classList.add('header') : clients_nav.classList.remove('header');
+      window.scrollY > 170 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
       selectHeader.style.boxShadow = 'none';
     }
     else{

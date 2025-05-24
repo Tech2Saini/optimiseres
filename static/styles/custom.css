@@ -18,7 +18,7 @@ body::-webkit-scrollbar-thumb:hover {
     background: color-mix(in srgb, var(--accent-color), white 30%);
 }
 
-.share-to {
+.share-to,.whatsapp-to {
     position: fixed !important;
     left: 10px !important;
     bottom: 10px;
@@ -27,6 +27,12 @@ body::-webkit-scrollbar-thumb:hover {
     width: 44px;
     height: 44px;
     border-radius: 50px;
-    transition: all 0.4s;
-
+    transition: 0.6s;
+}
+.whatsapp-to{
+    bottom: 60px;
+    transition: 0.3s !important;
+}
+.share-to:hover,.whatsapp-to:hover{
+    background-color: color-mix(in srgb, var(--conrast-color),orange 80%);
 }

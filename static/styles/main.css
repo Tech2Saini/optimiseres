@@ -23,7 +23,7 @@
   /* Background color for the entire website, including individual sections */
   --default-color: #222222;
   /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #000000;
+  --heading-color: #000000bd;
   /* Color for headings, subheadings and title throughout the website */
   --accent-color: #ff9822;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -58,7 +58,7 @@
   /* Background color for the entire website, including individual sections */
   --default-color: #222222;
   /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #000000;
+  --heading-color: #000000bd;
   /* Color for headings, subheadings and title throughout the website */
   --accent-color: #ff9822;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -680,15 +680,15 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid color-mix(in srgb, var(--conrast-color), transparent 50%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color:var(--conrast-color);
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--conrast-color);
+  color: color-mix(in srgb, var(--conrast-color), orange 80%);
   border-color: var(--conrast-color);
 }
 
@@ -815,7 +815,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: color-mix(in srgb, var(--accent-color), orange 80%);
   color: var(--contrast-color);
 }
 
