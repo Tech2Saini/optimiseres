@@ -2,3 +2,5 @@
 .venv
 ngrok_server.py
 test.html
+templates/email_template.html
+icons/
