@@ -180,7 +180,7 @@
     
     <script>
         window.onload = ()=>{
-            let theme = localStorage.getItem('theme') || 'light';
+            let theme = localStorage.getItem('theme') || 'dark';
             toggleThemeBtn(theme)
             UpdateTheme(theme)
 
@@ -211,8 +211,8 @@
         }
 
         function changeTheme(target,theme_toggle=false) {
-            let theme = localStorage.getItem('theme') || 'light';
-            theme = (theme === "dark") ? "light" : "dark";
+            let theme = localStorage.getItem('theme') || 'dark';
+            theme = theme === "dark" ? "light" : "dark";
 
             toggleThemeBtn(theme)
             UpdateTheme(theme)

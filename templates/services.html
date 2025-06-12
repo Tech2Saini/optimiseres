@@ -57,6 +57,10 @@
     opacity: 0;
   }
 
+  .glightbox-clean .gnext,.glightbox-clean .gprev {
+    top:45% !important
+  }
+
 </style>
 <!-- --------------------------------------------------------------------------------------------------------- -->
 
@@ -412,9 +416,185 @@
         </div>
       </div>
       <!-- End Category: DATA REPORTING -->
-  
     </div>
   
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters d-flex flex-row flex-nowrap overflow-auto" data-aos="fade-up" data-aos-delay="100">
+            <li style="min-width: fit-content;font-size: 15px;" data-filter="*" class="filter-active">All</li>
+            <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-app">Infographics</li>
+            <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-product">A+/EBC</li>
+            <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-branding">Store Front</li>
+            <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-books">Ads Banner</li>
+            <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-books">Ads Video</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <button onclick="PreviewPortfolio(this)" data-links='["https://picsum.photos/id/1015/300/200","https://picsum.photos/id/1016/300/200","https://picsum.photos/id/1018/300/200"]' >
+                  <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+                </button>
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">App 1</a></h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+                <div id="glightbox_container">
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <a onclick="PreviewPortfolio(this)" data-links='["https://picsum.photos/id/1020/300/200","https://picsum.photos/id/1021/300/200"]'><img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/product-1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">Product 1</a></h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+                
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <a onclick="PreviewPortfolio(this)" data-links='["https://picsum.photos/id/1024/300/200","https://picsum.photos/id/1025/300/200","https://picsum.photos/id/1026/300/200"]'><img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/branding-1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">Branding 1</a></h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <button onclick="PreviewPortfolio(this)" data-links= '["https://picsum.photos/id/1031/300/200","https://picsum.photos/id/1032/300/200"]'>
+                  <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
+                </button>
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">Books 1</a></h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <button onclick="PreviewPortfolio(this)" data-links='["https://picsum.photos/id/1035/300/200","https://picsum.photos/id/1036/300/200","https://picsum.photos/id/1037/300/200"]'>
+                  <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
+                </button>
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">App 2</a></h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <button onclick="PreviewPortfolio(this)" data-links='["https://picsum.photos/id/1040/300/200","https://picsum.photos/id/1041/300/200"]'>
+                  <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
+                </button>
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">Product 2</a></h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <button onclick="PreviewPortfolio(this)" data-links='["https://picsum.photos/id/1043/300/200","https://picsum.photos/id/1044/300/200"]'>
+                  <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
+                </button>
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">Branding 2</a></h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <button onclick="PreviewPortfolio(this)" data-links='["https://picsum.photos/id/1047/300/200","https://picsum.photos/id/1048/300/200"]'>
+                  <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
+                </button>
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">Books 2</a></h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <button onclick="PreviewPortfolio(this)" data-links='["https://picsum.photos/id/1050/300/200","https://picsum.photos/id/1051/300/200","https://picsum.photos/id/1052/300/200"]'>
+                  <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
+                </button>
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">App 3</a></h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <button onclick="PreviewPortfolio(this)" data-links='["https://picsum.photos/id/1055/300/200","https://picsum.photos/id/1056/300/200"]'>
+                  <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
+                </button>
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">Product 3</a></h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <button onclick="PreviewPortfolio(this)" data-links='["https://picsum.photos/id/1095/300/200","https://picsum.photos/id/1090/300/200"]'>
+                  <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
+                </button>
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">Branding 3</a></h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <button onclick="PreviewPortfolio(this)" data-links='["https://picsum.photos/id/1051/300/200","https://picsum.photos/id/1060/300/200"]'>
+                  <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
+                </button>
+                <div class="portfolio-info">
+                  <h4><a href="portfolio-details.html" title="More Details">Books 3</a></h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!--End Portfolio Container-->
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+
 </section>
 <!-- /Services Section -->
   
@@ -450,5 +630,27 @@
 </script>
 
 
+<script>
+  const PreviewPortfolio = (target) => {
+    let links = JSON.parse(target.dataset.links);
+    let glightbox_container = document.getElementById("glightbox_container");
+    glightbox_container.innerHTML = "";
 
+    let strHtml = "";
+
+    for (let index = 0; index < links.length; index++) {
+      const link = links[index];
+      strHtml += `<a href="${link}" data-gallery="portfolio-gallery-app" class="glightbox"></a>`;
+    }
+
+    glightbox_container.innerHTML = strHtml;
+    
+    // Reinitialize Glightbox
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+    glightbox_container.children[0].click()
+  };
+
+</script>
   {% endblock main %}

@@ -1,589 +1,677 @@
 {% extends "base.html" %}
-{% block title %}  Your E-Commerce Growth Partner {% endblock title %}
+{% block title %} Your E-Commerce Growth Partner {% endblock title %}
 
-{% block main %} 
-  <main class="main">
+{% block main %}
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section accent-background">
+<main class="main">
 
-      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-5 justify-content-between">
-          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h2><span>Welcome to </span><span class="accent">Optimiseres</span></h2>
-            <h6 class="header-quote">Smart moves. Real growth. All things eCom.</h6>
-            <p>From high-impact <span class="header-bold-words">Product Launches</span>, <span class="header-bold-words">Creative Content Creation</span> & <span class="header-bold-words">SEO</span> to <span>Dynamic Ads</span>, <span class="header-bold-words">Performance Marketing</span> and all-round <span class="header-bold-words">eCom Platform Operations</span> — we bring together sharp strategy and hands-on execution — Agile, Data-driven, and built to scale with you.</p>
-            <div class="d-flex">
-              <a href="#about" class="btn-get-started">Get Started</a>
-              <!-- <a href="https://www.youtube.com/watch?v=NrmMk1Myrxc" class="glightbox btn-watch-video d-flex align-items-center">
+  <!-- Hero Section -->
+  <section id="hero" class="hero section accent-background">
+
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-5 justify-content-between">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h2><span>Welcome to </span><span class="accent">Optimiseres</span></h2>
+          <h6 class="header-quote">Smart moves. Real growth. All things eCom.</h6>
+          <p>From high-impact <span class="header-bold-words">Product Launches</span>, <span
+              class="header-bold-words">Creative Content Creation</span> & <span class="header-bold-words">SEO</span> to
+            <span>Dynamic Ads</span>, <span class="header-bold-words">Performance Marketing</span> and all-round <span
+              class="header-bold-words">eCom Platform Operations</span> — we bring together sharp strategy and hands-on
+            execution — Agile, Data-driven, and built to scale with you.</p>
+          <div class="d-flex">
+            <a href="#about" class="btn-get-started">Get Started</a>
+            <!-- <a href="https://www.youtube.com/watch?v=NrmMk1Myrxc" class="glightbox btn-watch-video d-flex align-items-center">
                 <i class="bi bi-play-circle"></i><span>Watch Video</span>
               </a> -->
-            </div>
-          </div>
-          <div class="col-lg-6 order-1 order-lg-2">
-            <img src="/static/images/icons/hero_img.svg" class="img-fluid" alt="Optimiseres Hero Image">
           </div>
         </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+          <img src="/static/images/icons/hero_img.svg" class="img-fluid" alt="Optimiseres Hero Image">
+        </div>
       </div>
+    </div>
 
-      <div class="icon-boxes position-relative" data-aos="fade-up" data-aos-delay="200">
+     <div class="icon-boxes position-relative">
         <div class="container position-relative">
-          <div class="row gy-4 mt-5">
-            <div class="col-xl-3 col-md-6">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-bar-chart"></i></div>
-                <h4 class="title"><a  class="stretched-link">Strategy Planning</a></h4>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-pencil-square"></i></div>
-                <h4 class="title"><a class="stretched-link">Listing Optimization & SEO</a></h4>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-box-seam"></i></div>
-                <h4 class="title"><a  class="stretched-link">Inventory Management</a></h4>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-graph-up"></i></div>
-                <h4 class="title"><a  class="stretched-link">Growth Insights</a></h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About Us</h2>
-        <p>Strategic 360° eCommerce Solutions for Brands Built to Grow.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-        <div class="row gy-4">
-          
-          <!-- Left Column: Company Overview -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3>Your Strategic Growth Partner</h3>
-            <div class="position-relative mt-4">
-              <img src="/static/images/icons/HandShake_img-2.png" class="img-fluid rounded-4" alt="Optimiseres in Action">
-              <!-- <a class="glightbox pulsating-play-btn"></a> -->
-            </div>
-          </div>
-
-          <!-- Right Column: Core Values & USP as Pointers -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-            <div class="content ps-0 ps-lg-5">
-              <p class="fst-italic mb-4">
-                At Optimiseres, our commitment is to transform your eCommerce journey through expert guidance, innovative solutions, and continuous support.
-              </p>
-              <ul class="list-unstyled">
-                <li class="d-flex align-items-start mb-3">
-                  <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
-                  <span>Founded in 2022 by ex‑Amazon professionals</span>
-                </li>
-                <li class="d-flex align-items-start mb-3">
-                  <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
-                  <span>360° marketplace management across Amazon, Flipkart, Myntra, Nykaa, Ajio, Walmart, and more</span>
-                </li>
-                <li class="d-flex align-items-start mb-3">
-                  <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
-                  <span>End‑to‑end support: product selection, listing optimization, inventory planning, A+ content, and ad campaigns</span>
-                </li>
-                <li class="d-flex align-items-start mb-3">
-                  <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
-                  <span>Data‑driven insights and tailored strategies for sustainable growth</span>
-                </li>
-                <li class="d-flex align-items-start">
-                  <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
-                  <span>Focus on maximizing ROI and scaling your brand on all major e‑commerce channels</span>
-                </li>
-              </ul>
-          <p class="my-1">With a focus on strategic planning, optimized listings, proactive operational management, and comprehensive account management across platforms like Amazon, Flipkart, Myntra, Nykaa, and Walmart, we ensure that you stay ahead in the competitive eCommerce marketplace.</p>
-
-            </div>
-          </div>
-
-        </div>
-        
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 align-items-center">
-
-          <div class="col-lg-5">
-            <img src="/static/images/icons/stats_img.svg" alt="" class="img-fluid">
-          </div>
-
-          <div class="col-lg-7">
-
-            <div class="row gy-4">
-
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-emoji-smile flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-journal-richtext flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-headset flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-people flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
-
-    <!-- Brands  Section -->
-    <section class="py-5">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2 class="text-center mb-4 fw-bold">We Help Brands Grow Across</h2>
-        <p class="text-center text-mduted mb-5">From Amazon to Myntra to Walmart — we optimize your presence everywhere your customers shop.</p>
-        <div class="row g-4 justify-content-center">
-          
-          <div class="col-6 col-md-3 text-center">
-            <img src="/static/images/marketplaces/amazona.png" alt="Amazon" class="platform-logo mb-2">
-            <!-- <h6 class="mt-2">Amazon</h6> -->
-          </div>
-          
-          <div class="col-6 col-md-3 text-center">
-            <img src="/static/images/marketplaces/myntra.png" alt="Myntra" class="platform-logo mb-2">
-            <!-- <h6 class="mt-2">Myntra</h6> -->
-          </div>
-          
-          <div class="col-6 col-md-3 text-center">
-            <img src="/static/images/marketplaces/flipkart.png" alt="Flipkart" class="platform-logo mb-2">
-            <!-- <h6 class="mt-2">Flipkart</h6> -->
-          </div>
-          
-          <div class="col-6 col-md-3 text-center">
-            <img src="/static/images/marketplaces/nykaa.png" alt="Nykaa" class="platform-logo mb-2">
-            <!-- <h6 class="mt-2">Nykaa</h6> -->
-          </div>
-          
-          <div class="col-6 col-md-3 text-center">
-            <img src="/static/images/marketplaces/purple.png" alt="Purplle" class="platform-logo mb-2">
-            <!-- <h6 class="mt-2">Purplle</h6> -->
-          </div>
-          
-          <div class="col-6 col-md-3 text-center">
-            <img src="/static/images/marketplaces/ajio.png" alt="Ajio" class="platform-logo mb-2">
-            <!-- <h6 class="mt-2">Ajio</h6> -->
-          </div>
-          
-          <div class="col-6 col-md-3 text-center">
-            <img src="/static/images/marketplaces/tira.png" alt="Tira" class="platform-logo mb-2">
-            <!-- <h6 class="mt-2">Tira</h6> -->
-          </div>
-          
-          <div class="col-6 col-md-3 text-center">
-            <img src="/static/images/marketplaces/walmart.png" alt="Walmart" class="platform-logo mb-2">
-            <!-- <h6 class="mt-2">Walmart</h6> -->
-          </div>
-          
-        </div>
-      </div>
-    </section>
-    
-    <!-- Our Trusted Partners Section -->
-    <section id="clients" class="clients section">
-      <div class="text-center" data-aos="fade-up">
-        <h2 class="mb-3">Our Trusted Partners</h2>
-        <p class="mb-4">Proudly collaborating with top brands across leading eCommerce platforms to drive impactful growth.</p>
-        
-      </div>
-
-      <div class="container" id="clients_phone" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper init-swiper">
-          <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 4000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-
-          <div class="swiper-wrapper align-items-center">
-            <!-- WHP -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/WHP.jpg" alt="WHP" class="img-fluid">
-            </div>
-            
-            <!-- Vintage Vista -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Vintage_Vista.jpg" alt="Vintage Vista" class="img-fluid">
-            </div>
-            
-            <!-- Vinod Cookware -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Vinod_Cookware.jpg" alt="Vinod Cookware" class="img-fluid">
-            </div>
-            
-            <!-- Upside -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Upside.jpg" alt="Upside" class="img-fluid">
-            </div>
-            
-            <!-- Timex -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Timex.jpg" alt="Timex" class="img-fluid">
-            </div>
-            
-            <!-- Tea Leaf -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Tea_Leaf.jpg" alt="Tea Leaf" class="img-fluid">
-            </div>
-            
-            <!-- Taylor and Cirkus-AMZ -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Taylor_and_Cirkus-AMZ.jpg" alt="Taylor and Cirkus-AMZ" class="img-fluid">
-            </div>
-            
-            <!-- Supreme Elegance -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Supreme_Elegance.jpg" alt="Supreme Elegance" class="img-fluid">
-            </div>
-            
-            <!-- Supafuelz -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Supafuelz.jpg" alt="Supafuelz" class="img-fluid">
-            </div>
-            
-            <!-- Srinivasa Textiles -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Srinivasa_Textiles.jpg" alt="Srinivasa Textiles" class="img-fluid">
-            </div>
-            
-            <!-- Sneaker Care -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Sneaker_Care.jpg" alt="Sneaker Care" class="img-fluid">
-            </div>
-            
-            <!-- Purity Home -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Purity_Home.jpg" alt="Purity Home" class="img-fluid">
-            </div>
-            
-            <!-- Pirate -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Pirate.jpg" alt="Pirate" class="img-fluid">
-            </div>
-            
-            <!-- Pearl Linen -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Pearl_Linen.jpg" alt="Pearl Linen" class="img-fluid">
-            </div>
-            
-            <!-- Ozone -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Ozone.jpg" alt="Ozone" class="img-fluid">
-            </div>
-            
-            <!-- Nandan -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Nandan.jpg" alt="Nandan" class="img-fluid">
-            </div>
-            
-          </div>
-
-        </div>
-
-        <div class="swiper init-swiper">
-          <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 4000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-
-          <div class="swiper-wrapper align-items-center">
-            <!-- Client Logos Swiper Slider -->
-            <!-- Aabo Rings -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Aabo_Rings.jpg" alt="Aabo Rings" class="img-fluid">
-            </div>
-
-            <!-- Aevo -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Aevo.jpg" alt="Aevo" class="img-fluid">
-            </div>
-
-            <!-- Binca -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Binca.jpg" alt="Binca" class="img-fluid">
-            </div>
-
-            <!-- Bolbom -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Bolbom.jpg" alt="Bolbom" class="img-fluid">
-            </div>
-
-            <!-- Cacao-FK -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Cacao-FK.jpg" alt="Cacao-FK" class="img-fluid">
-            </div>
-
-            <!-- Cotton Exchange -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Cotton_Exchange.jpg" alt="Cotton Exchange" class="img-fluid">
-            </div>
-
-            <!-- Craftsworth -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Craftsworth.jpg" alt="Craftsworth" class="img-fluid">
-            </div>
-
-            <!-- Crocon -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Crocon.jpg" alt="Crocon" class="img-fluid">
-            </div>
-
-            <!-- Dan River-Sajid Textiles -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Dan_River-Sajid_Textiles.jpg" alt="Dan River-Sajid Textiles" class="img-fluid">
-            </div>
-
-            <!-- Fabdreams US -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Fabdreams_US.jpg" alt="Fabdreams US" class="img-fluid">
-            </div>
-
-            <!-- Fashionking Brands Pvt. Ltd. (cotton king) -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Fashionking_Brand.jpg" alt="Fashionking Brands Pvt. Ltd. (cotton king)" class="img-fluid">
-            </div>
-
-            <!-- Groww Organics -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Groww_Organics.jpg" alt="Groww Organics" class="img-fluid">
-            </div>
-
-            <!-- Happy Wings -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Happy_Wings.jpg" alt="Happy Wings" class="img-fluid">
-            </div>
-
-            <!-- Indocount IN -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Indocount_IN.jpg" alt="Indocount IN" class="img-fluid">
-            </div>
-
-            <!-- Liberty Zeno -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Liberty_Zeno.jpg" alt="Liberty Zeno" class="img-fluid">
-            </div>
-
-            <!-- Metal Magician -->
-            <div class="swiper-slide">
-              <img src="/static/images/clients/Metal_Magician.jpg" alt="Metal Magician" class="img-fluid">
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <div id="clients_desktop" class="carousel slide d-none" data-bs-ride="carousel" data-aos="fade-up" data-aos-delay="100">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="d-flex flex-row justify-content-center">
-                <div class="mx-auto">
-                  <img src="https://static.wixstatic.com/media/b51e8d_48ec13c709e44d758d7532661700ca47~mv2.png/v1/fill/w_273,h_133,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_48ec13c709e44d758d7532661700ca47~mv2.png" 
-                  alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
-                </div>
-                <div class="mx-auto">
-                  <img src="https://static.wixstatic.com/media/b51e8d_5c948fd0f3004d639693b2003cb2b6a0~mv2.png/v1/fill/w_302,h_91,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_5c948fd0f3004d639693b2003cb2b6a0~mv2.png" 
-                  alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="d-flex flex-row justify-content-center">
-                <div class="mx-auto">
-                  <img src="https://static.wixstatic.com/media/b51e8d_678ff08f3ea54145a2a6c8001ae0c7e9~mv2.png/v1/fill/w_238,h_113,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_678ff08f3ea54145a2a6c8001ae0c7e9~mv2.png" 
-                  alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
-                </div>
-                <div class="mx-auto">
-                  <img src="https://static.wixstatic.com/media/b51e8d_70b0e56bb78b45beb31f84e2589bfd19~mv2.png/v1/fill/w_238,h_140,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_70b0e56bb78b45beb31f84e2589bfd19~mv2.png" 
-                  alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="d-flex flex-row justify-content-center">
-                <div class="mx-auto">
-                  <img src="https://static.wixstatic.com/media/b51e8d_d68b33912b4c4eab9cddb7a6bdd98b9b~mv2.png/v1/fill/w_285,h_113,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_d68b33912b4c4eab9cddb7a6bdd98b9b~mv2.png" 
-                  alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
-                </div>
-                <div class="mx-auto">
-                  <img src="https://static.wixstatic.com/media/b51e8d_cbc1613c9f3a4d28842978863ed1507a~mv2.png/v1/fill/w_255,h_188,al_c,q_85,enc_avif,quality_auto/b51e8d_cbc1613c9f3a4d28842978863ed1507a~mv2.png" 
-                  alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="d-flex flex-row justify-content-center">
-                <div class="mx-auto">
-                  <img src="https://static.wixstatic.com/media/b51e8d_11ba74d35395455293f3f988076f731b~mv2.png/v1/fill/w_284,h_99,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_11ba74d35395455293f3f988076f731b~mv2.png" 
-                  alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
+            <div class="row gy-4 mt-5">
+                <div class="col-xl-3 col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="icon"><i class="bi bi-bar-chart"></i></div>
+                                <h4 class="title"><a class="stretched-link">Strategy Planning</a></h4>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="icon"><i class="bi bi-bullseye"></i></div>
+                                <h4 class="title">Strategic Excellence</h4>
+                                <p class="description">Comprehensive market analysis and strategic roadmap development</p>
+                                <ul class="features">
+                                    <li>Market Research</li>
+                                    <li>Competitive Analysis</li>
+                                    <li>Goal Setting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-              </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="icon"><i class="bi bi-pencil-square"></i></div>
+                                <h4 class="title"><a class="stretched-link">Listing Optimization & SEO</a></h4>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="icon"><i class="bi bi-search"></i></div>
+                                <h4 class="title">SEO Mastery</h4>
+                                <p class="description">Boost your visibility with advanced optimization techniques</p>
+                                <ul class="features">
+                                    <li>Keyword Research</li>
+                                    <li>Content Optimization</li>
+                                    <li>Ranking Improvement</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="icon"><i class="bi bi-box-seam"></i></div>
+                                <h4 class="title"><a class="stretched-link">Inventory Management</a></h4>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="icon"><i class="bi bi-boxes"></i></div>
+                                <h4 class="title">Smart Inventory</h4>
+                                <p class="description">Streamlined inventory control and automated stock management</p>
+                                <ul class="features">
+                                    <li>Real-time Tracking</li>
+                                    <li>Automated Alerts</li>
+                                    <li>Demand Forecasting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="icon"><i class="bi bi-graph-up"></i></div>
+                                <h4 class="title"><a class="stretched-link">Growth Insights</a></h4>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="icon"><i class="bi bi-trophy"></i></div>
+                                <h4 class="title">Growth Analytics</h4>
+                                <p class="description">Data-driven insights to accelerate your business growth</p>
+                                <ul class="features">
+                                    <li>Performance Metrics</li>
+                                    <li>Trend Analysis</li>
+                                    <li>ROI Optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-        
+  </section><!-- /Hero Section -->
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#clients_desktop" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#clients_desktop" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+  <!-- About Section -->
+  <section id="about" class="about section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>About Us</h2>
+      <p>Strategic 360° eCommerce Solutions for Brands Built to Grow.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- Left Column: Company Overview -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <h3>Your Strategic Growth Partner</h3>
+          <div class="position-relative mt-4">
+            <img src="/static/images/icons/about_section.png" class="img-fluid rounded-4" alt="Optimiseres in Action">
+            <!-- <a class="glightbox pulsating-play-btn"></a> -->
+          </div>
+        </div>
+
+        <!-- Right Column: Core Values & USP as Pointers -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+          <div class="content ps-0 ps-lg-5">
+            <p class="fst-italic mb-4 mt-3">At Optimiseres, we deliver full-spectrum eCommerce solutions to help your
+              brand thrive across top marketplaces.</p>
+            <ul class="list-unstyled">
+              <li class="d-flex align-items-start mb-3">
+                <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
+                <span>Founded in 2022 by ex-Amazon experts</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
+                <span>Manage Amazon, Flipkart, Myntra, Nykaa, Walmart & more</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
+                <span>Services include listings, inventory, A+ content, and ads</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
+                <span>Strategies tailored to boost ROI and long-term growth</span>
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="bi bi-check-circle-fill line-text-pointers me-2 fs-4"></i>
+                <span>Focus on maximizing ROI and scaling your brand on all major e‑commerce channels</span>
+              </li>
+            </ul>
+            <p class="my-1">With expert planning, optimized listings, and proactive operations, we ensure you stay ahead
+              in the competitive eCommerce space.</p>
+
+          </div>
+        </div>
 
       </div>
-    </section>
-    
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section dark-background">
-      <div class="container">
-        <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/cta-bg.jpg" alt="Call to Action Background">
-        <div class="content row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-10">
-            <div class="text-center">
-              <!-- <a href="https://www.youtube.com/watch?v=NqwESxdAjOQ" class="glightbox play-btn"></a> -->
-               <!-- <span class="p-5 quotes-words "><i class="bi bi-telephone fs-1"></i></span> -->
-              <h3>Accelerate Your E-commerce Growth</h3>
-              <p>
-                Ready to elevate your e-commerce business? Discover how Optimiseres’ personalized, 360° account management transforms strategies into measurable success. Watch our quick overview video or reach out directly for a free consultation.
-              </p>
-              <a class="cta-btn" href="/contact/">Get Started Now</a>
+
+    </div>
+
+  </section><!-- /About Section -->
+
+  <!-- Stats Section -->
+  <section id="stats" class="stats section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4 align-items-center">
+
+        <div class="col-lg-5">
+          <img src="/static/images/icons/stats_img.svg" alt="" class="img-fluid">
+        </div>
+
+        <div class="col-lg-7">
+
+          <div class="row gy-4">
+
+            <div class="col-lg-6">
+              <div class="stats-item d-flex">
+                <i class="bi bi-house-gear flex-shrink-0"></i>
+                <div>
+                  <div class="d-flex">
+                    <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"
+                      class="purecounter"><i class="bi bi-plus"></i></span><span class="fs-3"><sup>+</sup></span>
+                  </div>
+                  <p><strong>Brands</strong> <span>catered</span></p>
+                </div>
+              </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-6">
+              <div class="stats-item d-flex">
+                <i class="bi bi-ui-checks-grid flex-shrink-0"></i>
+                <div>
+                  <div class="d-flex">
+                    <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
+                      class="purecounter"></span><span class="fs-3"><sup>+</sup></span>
+                  </div>
+                  <p><strong>Categories </strong> <span>presence across</span></p>
+                </div>
+              </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-6">
+              <div class="stats-item d-flex">
+                <i class="bi bi-currency-dollar flex-shrink-0"></i>
+                <div>
+                  <div class="d-flex">
+                    <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1"
+                      class="purecounter"></span><span>M<span class="fs-5">+</span></span>
+                  </div>
+                  <p><strong>USD</strong> <span>revenue generated</span></p>
+                </div>
+              </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-6">
+              <div class="stats-item d-flex">
+                <i class="bi bi-graph-up-arrow flex-shrink-0"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="50000" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                  <p><strong>Optimised</strong> <span>lostings</span></p>
+                </div>
+              </div>
+            </div><!-- End Stats Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Stats Section -->
+
+  <!-- Brands  Section -->
+  <section class="py-5">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-center mb-4 fw-bold">We Help Brands Grow Across</h2>
+      <p class="text-center text-mduted mb-5">From Amazon to Myntra to Walmart — we optimize your presence everywhere
+        your customers shop.</p>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-6 col-md-3 text-center">
+          <img src="/static/images/marketplaces/amazona.png" alt="Amazon" class="platform-logo mb-2">
+          <!-- <h6 class="mt-2">Amazon</h6> -->
+        </div>
+
+        <div class="col-6 col-md-3 text-center">
+          <img src="/static/images/marketplaces/myntra.png" alt="Myntra" class="platform-logo mb-2">
+          <!-- <h6 class="mt-2">Myntra</h6> -->
+        </div>
+
+        <div class="col-6 col-md-3 text-center">
+          <img src="/static/images/marketplaces/flipkart.png" alt="Flipkart" class="platform-logo mb-2">
+          <!-- <h6 class="mt-2">Flipkart</h6> -->
+        </div>
+
+        <div class="col-6 col-md-3 text-center">
+          <img src="/static/images/marketplaces/nykaa.png" alt="Nykaa" class="platform-logo mb-2">
+          <!-- <h6 class="mt-2">Nykaa</h6> -->
+        </div>
+
+        <div class="col-6 col-md-3 text-center">
+          <img src="/static/images/marketplaces/purple.png" alt="Purplle" class="platform-logo mb-2">
+          <!-- <h6 class="mt-2">Purplle</h6> -->
+        </div>
+
+        <div class="col-6 col-md-3 text-center">
+          <img src="/static/images/marketplaces/ajio.png" alt="Ajio" class="platform-logo mb-2">
+          <!-- <h6 class="mt-2">Ajio</h6> -->
+        </div>
+
+        <div class="col-6 col-md-3 text-center">
+          <img src="/static/images/marketplaces/tira.png" alt="Tira" class="platform-logo mb-2">
+          <!-- <h6 class="mt-2">Tira</h6> -->
+        </div>
+
+        <div class="col-6 col-md-3 text-center">
+          <img src="/static/images/marketplaces/walmart.png" alt="Walmart" class="platform-logo mb-2">
+          <!-- <h6 class="mt-2">Walmart</h6> -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Trusted Partners Section -->
+  <section id="clients" class="clients section">
+    <div class="text-center" data-aos="fade-up">
+      <h2 class="mb-3">Our Trusted Partners</h2>
+      <p class="mb-4">Proudly collaborating with top brands across leading eCommerce platforms to drive impactful
+        growth.</p>
+
+    </div>
+
+    <div class="container" id="clients_phone" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper init-swiper">
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 4000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+
+        <div class="swiper-wrapper align-items-center">
+          <!-- WHP -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/WHP.jpg" alt="WHP" class="img-fluid">
+          </div>
+
+          <!-- Vintage Vista -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Vintage_Vista.jpg" alt="Vintage Vista" class="img-fluid">
+          </div>
+
+          <!-- Vinod Cookware -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Vinod_Cookware.jpg" alt="Vinod Cookware" class="img-fluid">
+          </div>
+
+          <!-- Upside -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Upside.jpg" alt="Upside" class="img-fluid">
+          </div>
+
+          <!-- Timex -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Timex.jpg" alt="Timex" class="img-fluid">
+          </div>
+
+          <!-- Tea Leaf -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Tea_Leaf.jpg" alt="Tea Leaf" class="img-fluid">
+          </div>
+
+          <!-- Taylor and Cirkus-AMZ -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Taylor_and_Cirkus-AMZ.jpg" alt="Taylor and Cirkus-AMZ" class="img-fluid">
+          </div>
+
+          <!-- Supreme Elegance -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Supreme_Elegance.jpg" alt="Supreme Elegance" class="img-fluid">
+          </div>
+
+          <!-- Supafuelz -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Supafuelz.jpg" alt="Supafuelz" class="img-fluid">
+          </div>
+
+          <!-- Srinivasa Textiles -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Srinivasa_Textiles.jpg" alt="Srinivasa Textiles" class="img-fluid">
+          </div>
+
+          <!-- Sneaker Care -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Sneaker_Care.jpg" alt="Sneaker Care" class="img-fluid">
+          </div>
+
+          <!-- Purity Home -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Purity_Home.jpg" alt="Purity Home" class="img-fluid">
+          </div>
+
+          <!-- Pirate -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Pirate.jpg" alt="Pirate" class="img-fluid">
+          </div>
+
+          <!-- Pearl Linen -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Pearl_Linen.jpg" alt="Pearl Linen" class="img-fluid">
+          </div>
+
+          <!-- Ozone -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Ozone.jpg" alt="Ozone" class="img-fluid">
+          </div>
+
+          <!-- Nandan -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Nandan.jpg" alt="Nandan" class="img-fluid">
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="swiper init-swiper">
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 4000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+
+        <div class="swiper-wrapper align-items-center">
+          <!-- Client Logos Swiper Slider -->
+          <!-- Aabo Rings -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Aabo_Rings.jpg" alt="Aabo Rings" class="img-fluid">
+          </div>
+
+          <!-- Aevo -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Aevo.jpg" alt="Aevo" class="img-fluid">
+          </div>
+
+          <!-- Binca -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/binca.png" alt="Binca" class="img-fluid">
+          </div>
+
+          <!-- Bolbom -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Bolbom.jpg" alt="Bolbom" class="img-fluid">
+          </div>
+
+          <!-- Cacao-FK -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Cacao-FK.jpg" alt="Cacao-FK" class="img-fluid">
+          </div>
+
+          <!-- Cotton Exchange -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Cotton_Exchange.jpg" alt="Cotton Exchange" class="img-fluid">
+          </div>
+
+          <!-- Craftsworth -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Craftsworth.jpg" alt="Craftsworth" class="img-fluid">
+          </div>
+
+          <!-- Crocon -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Crocon.jpg" alt="Crocon" class="img-fluid">
+          </div>
+
+          <!-- Dan River-Sajid Textiles -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Dan_River-Sajid_Textiles.jpg" alt="Dan River-Sajid Textiles"
+              class="img-fluid">
+          </div>
+
+          <!-- Fabdreams US -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Fabdreams_US.jpg" alt="Fabdreams US" class="img-fluid">
+          </div>
+
+          <!-- Fashionking Brands Pvt. Ltd. (cotton king) -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Fashionking_Brand.jpg" alt="Fashionking Brands Pvt. Ltd. (cotton king)"
+              class="img-fluid">
+          </div>
+
+          <!-- Groww Organics -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Groww_Organics.jpg" alt="Groww Organics" class="img-fluid">
+          </div>
+
+          <!-- Happy Wings -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Happy_Wings.jpg" alt="Happy Wings" class="img-fluid">
+          </div>
+
+          <!-- Indocount IN -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Indocount_IN.jpg" alt="Indocount IN" class="img-fluid">
+          </div>
+
+          <!-- Liberty Zeno -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Liberty_Zeno.jpg" alt="Liberty Zeno" class="img-fluid">
+          </div>
+
+          <!-- Metal Magician -->
+          <div class="swiper-slide">
+            <img src="/static/images/clients/Metal_Magician.jpg" alt="Metal Magician" class="img-fluid">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div id="clients_desktop" class="carousel slide d-none" data-bs-ride="carousel" data-aos="fade-up"
+      data-aos-delay="100">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex flex-row justify-content-center">
+            <div class="mx-auto">
+              <img
+                src="https://static.wixstatic.com/media/b51e8d_48ec13c709e44d758d7532661700ca47~mv2.png/v1/fill/w_273,h_133,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_48ec13c709e44d758d7532661700ca47~mv2.png"
+                alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
+            </div>
+            <div class="mx-auto">
+              <img
+                src="https://static.wixstatic.com/media/b51e8d_5c948fd0f3004d639693b2003cb2b6a0~mv2.png/v1/fill/w_302,h_91,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_5c948fd0f3004d639693b2003cb2b6a0~mv2.png"
+                alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
             </div>
           </div>
         </div>
+        <div class="carousel-item">
+          <div class="d-flex flex-row justify-content-center">
+            <div class="mx-auto">
+              <img
+                src="https://static.wixstatic.com/media/b51e8d_678ff08f3ea54145a2a6c8001ae0c7e9~mv2.png/v1/fill/w_238,h_113,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_678ff08f3ea54145a2a6c8001ae0c7e9~mv2.png"
+                alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
+            </div>
+            <div class="mx-auto">
+              <img
+                src="https://static.wixstatic.com/media/b51e8d_70b0e56bb78b45beb31f84e2589bfd19~mv2.png/v1/fill/w_238,h_140,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_70b0e56bb78b45beb31f84e2589bfd19~mv2.png"
+                alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex flex-row justify-content-center">
+            <div class="mx-auto">
+              <img
+                src="https://static.wixstatic.com/media/b51e8d_d68b33912b4c4eab9cddb7a6bdd98b9b~mv2.png/v1/fill/w_285,h_113,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_d68b33912b4c4eab9cddb7a6bdd98b9b~mv2.png"
+                alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
+            </div>
+            <div class="mx-auto">
+              <img
+                src="https://static.wixstatic.com/media/b51e8d_cbc1613c9f3a4d28842978863ed1507a~mv2.png/v1/fill/w_255,h_188,al_c,q_85,enc_avif,quality_auto/b51e8d_cbc1613c9f3a4d28842978863ed1507a~mv2.png"
+                alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex flex-row justify-content-center">
+            <div class="mx-auto">
+              <img
+                src="https://static.wixstatic.com/media/b51e8d_11ba74d35395455293f3f988076f731b~mv2.png/v1/fill/w_284,h_99,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b51e8d_11ba74d35395455293f3f988076f731b~mv2.png"
+                alt="VINOD Store (Kitchen Utensils)" class="d-block img-fluid">
+            </div>
+
+          </div>
+        </div>
       </div>
-    </section><!-- /Call To Action Section -->
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <button class="carousel-control-prev" type="button" data-bs-target="#clients_desktop" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#clients_desktop" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
+    </div>
+  </section>
+
+  <!-- Call To Action Section -->
+  <section id="call-to-action" class="call-to-action section dark-background">
+    <div class="container">
+      <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/cta-bg.jpg" alt="Call to Action Background">
+      <div class="content row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-xl-10">
+          <div class="text-center">
+            <!-- <a href="https://www.youtube.com/watch?v=NqwESxdAjOQ" class="glightbox play-btn"></a> -->
+            <!-- <span class="p-5 quotes-words "><i class="bi bi-telephone fs-1"></i></span> -->
+            <h3>Accelerate Your E-commerce Growth</h3>
+            <p>
+              Ready to elevate your e-commerce business? Discover how Optimiseres’ personalized, 360° account management
+              transforms strategies into measurable success. Watch our quick overview video or reach out directly for a
+              free consultation.
+            </p>
+            <a class="cta-btn" href="/contact/">Get Started Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- /Call To Action Section -->
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Testimonials</h2>
+      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="swiper init-swiper">
+        <script type="application/json" class="swiper-config">
             {
               "loop": true,
               "speed": 600,
@@ -608,519 +696,393 @@
               }
             }
           </script>
-          <div class="swiper-wrapper">
+        <div class="swiper-wrapper">
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="/static/images/testimonials/gaurav.jpeg" class="testimonial-img" alt="">
-                <h3>Gaurav Durasamy</h3>
-                <h4>Founder (Tailor & Circus)</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Optimiseres helped us scale on Amazon with expert insights, strong support, and reliable reporting. A dedicated team you can count on—highly recommended!</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <p class="full-review d-none">
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  We have been working with Optimiseres team for about 1.5 years now, and are quite happy with the support in helping our brand scale on Amazon. Mr. Arun and his team have been working very closely with us trying to identify opportunities for growth and his inputs has been instrumental to us. They have set processes in place to track reporting and other key metrics on a regular basis which is helping us make decisions in a quick manner. The team has also been available during event / sale times and weekends when support was needed for the brand. Would highly recommend partnering with this team for your Amazon growth journey. testimonial 1 - Gaurav Durasamy ( founder Tailor & Circus)
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="/static/images/testimonials/gaurav.jpeg" class="testimonial-img" alt="">
+              <h3>Gaurav Durasamy</h3>
+              <h4>Founder (Tailor & Circus)</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
-            </div><!-- End testimonial item -->
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Optimiseres helped us scale on Amazon with expert insights, strong support, and reliable
+                  reporting. A dedicated team you can count on—highly recommended!</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <p class="full-review d-none">
+                <i class="bi bi-quote quote-icon-left"></i>
+                We have been working with Optimiseres team for about 1.5 years now, and are quite happy with the support
+                in helping our brand scale on Amazon. Mr. Arun and his team have been working very closely with us
+                trying to identify opportunities for growth and his inputs has been instrumental to us. They have set
+                processes in place to track reporting and other key metrics on a regular basis which is helping us make
+                decisions in a quick manner. The team has also been available during event / sale times and weekends
+                when support was needed for the brand. Would highly recommend partnering with this team for your Amazon
+                growth journey. testimonial 1 - Gaurav Durasamy ( founder Tailor & Circus)
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/testimonials/testimonials-2.jpg"
+                class="testimonial-img" alt="">
+              <h3>Sara Wilsson</h3>
+              <h4>Designer</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
-            </div><!-- End testimonial item -->
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram
+                  malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/testimonials/testimonials-3.jpg"
+                class="testimonial-img" alt="">
+              <h3>Jena Karlis</h3>
+              <h4>Store Owner</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
-            </div><!-- End testimonial item -->
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
+                  tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/testimonials/testimonials-4.jpg"
+                class="testimonial-img" alt="">
+              <h3>Matt Brandon</h3>
+              <h4>Freelancer</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
-            </div><!-- End testimonial item -->
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
+                  minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/testimonials/testimonials-5.jpg"
+                class="testimonial-img" alt="">
+              <h3>John Larson</h3>
+              <h4>Entrepreneur</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
-            </div><!-- End testimonial item -->
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
+                  culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum
+                  quid.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
 
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+
+  </section><!-- /Testimonials Section -->
+
+  <!-- The Team Section -->
+  <section id="team" class="team-members section">
+
+    <!-- Section Title -->
+    <div class="container section-title aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+      <h2>Our Expert Team</h2>
+      <p>Our dedicated professionals drive success across every facet of our operations, leveraging their expertise and
+        collaborative spirit to deliver innovative solutions and exceptional results.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-xl-3 mx-auto text-center col-md-4 d-flex aos-init aos-animate" data-aos="fade-up"
+          data-aos-delay="100">
+          <div class="member">
+            <img src="/static/images/team/arun_kaul.PNG" class="img-fluid" alt="">
+            <span class="my-2">Co-founder & Director</span>
+            <div class="social m-0 d-flex align-items-center gap-3">
+              <h4 class="m-0">Arun Koul</h4>
+              <a href="https://www.linkedin.com/in/arun-koul-3ba00044/" target="_blank"><i
+                  class="bi bi-linkedin"></i></a>
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
+        </div><!-- End Team Member -->
+
+        <div class="col-xl-3 mx-auto text-center col-md-4 d-flex aos-init aos-animate" data-aos="fade-up"
+          data-aos-delay="200">
+          <div class="member">
+            <img src="/static/images/team/ishank.PNG" class="img-fluid" alt="">
+            <span class="my-2">Co-founder & Director</span>
+            <div class="social d-flex align-items-center gap-3 my-0">
+              <h4 class="m-0">Ishank Jain</h4>
+              <a href="https://www.linkedin.com/in/ishank-jain/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div><!-- End Team Member -->
+
+        <div class="col-xl-3 mx-auto  col-md-4 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+          <div class="member text-center">
+            <img src="/static/images/team/bhaumik.PNG" class="img-fluid" alt="">
+            <span class="my-2">Optimisere's Partner</span>
+
+            <div class="social d-flex align-items-center gap-3 my-0">
+              <h4 class="m-0">Bhaumik Chokshi</h4>
+              <a href="https://www.linkedin.com/in/bhaumikchokshi/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div><!-- End Team Member -->
+
+
+
+      </div>
+
+    </div>
+
+    <div class="container mt-5">
+      <div class="row gy-4">
+
+        <!-- Designers -->
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-member">
+            <div class="display-4 fw-bold">05</div>
+            <h4 class="mt-2">Designers</h4>
+            <p>Turning clicks into customers with scroll-stopping visuals.</p>
+          </div>
+        </div>
+
+        <!-- Content Writers -->
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-member">
+            <div class="display-4 fw-bold">02</div>
+            <h4 class="mt-2">Content Writers</h4>
+            <p>Crafting words that convert and stories that sell.</p>
+          </div>
+        </div>
+
+        <!-- Ad Specialists -->
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="team-member">
+            <div class="display-4 fw-bold">08</div>
+            <h4 class="mt-2">Ad Specialists</h4>
+            <p>Masters of the algorithm, turning budgets into breakthroughs.</p>
+          </div>
+        </div>
+
+        <!-- Account Managers -->
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
+          <div class="team-member">
+            <div class="display-4 fw-bold">12</div>
+            <h4 class="mt-2">Account Managers</h4>
+            <p>The e-comm ninjas keeping listings live, orders smooth, and chaos under control.</p>
+          </div>
         </div>
 
       </div>
+    </div>
 
-    </section><!-- /Testimonials Section -->
+  </section><!-- /The Team Section -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+  <!-- Faq Section done-->
+  <section id="faq" class="faq section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+    <div class="container">
+      <div class="row gy-4">
 
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters d-flex flex-row flex-nowrap overflow-auto" data-aos="fade-up" data-aos-delay="100">
-            <li style="min-width: fit-content;font-size: 15px;" data-filter="*" class="filter-active">All</li>
-            <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-app">Infographics</li>
-            <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-product">A+/EBC</li>
-            <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-branding">Store Front</li>
-            <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-books">Ads Banner</li>
-            <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-books">Ads Video</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <a href="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">App 1</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <a href="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/product-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Product 1</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <a href="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/branding-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/branding-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Branding 1</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <a href="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/books-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/books-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Books 1</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <a href="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/app-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/app-2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">App 2</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <a href="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/product-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/product-2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Product 2</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <a href="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/branding-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/branding-2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Branding 2</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <a href="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/books-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/books-2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Books 2</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <a href="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/app-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/app-3.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">App 3</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <a href="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/product-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/product-3.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Product 3</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <a href="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/branding-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/branding-3.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Branding 3</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <a href="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/books-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="https://bootstrapmade.com/content/demo/Impact/assets/img/portfolio/books-3.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Books 3</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="content px-xl-5">
+            <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+            <p>Empowering Your eCommerce Journey: Find Clear Answers and Confident Solutions.</p>
+          </div>
         </div>
 
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!-- The Team Section -->
-    <section id="team" class="team-members section">
-
-      <!-- Section Title -->
-      <div class="container section-title aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-        <h2>Our Expert Team</h2>
-        <p>Our dedicated professionals drive success across every facet of our operations, leveraging their expertise and collaborative spirit to deliver innovative solutions and exceptional results.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-3 mx-auto text-center col-md-4 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/team/team-1.jpg" class="img-fluid" alt="">
-              <h4>Arun Koul</h4>
-              <span>Co-founder & Director</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter-x"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/arun-koul-3ba00044/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+          <div class="faq-container">
+            <div class="faq-item faq-active">
+              <h3><span class="num">1.</span> <span>What exactly do you handle in eCommerce?</span></h3>
+              <div class="faq-content">
+                <p>From strategy to execution — we take care of it all. Product launches, listings, ads, operations,
+                  reporting — everything it takes to grow and scale your brand in today’s digital commerce world.</p>
               </div>
-            </div>
-          </div><!-- End Team Member -->
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
 
-          <div class="col-xl-3 mx-auto text-center col-md-4 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <img src="https://www.bme.jhu.edu/wp-content/uploads/2019/11/UneriAli_ProfilePhoto-600x600.jpg" class="img-fluid" alt="">
-              <h4>Ishank Jain</h4>
-              <span>Co-founder & Director</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter-x"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/ishank-jain/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <div class="faq-item">
+              <h3><span class="num">2.</span> <span>Which platforms do you work across?</span></h3>
+              <div class="faq-content">
+                <p>We work where your customers are — Amazon, Walmart US, Flipkart, Myntra, Nykaa, and more. Our
+                  strategies flex to fit each platform’s rules, algorithms, and opportunities.</p>
               </div>
-            </div>
-          </div><!-- End Team Member -->
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
 
-          <div class="col-xl-3 mx-auto  col-md-4 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-            <div class="member text-center">
-              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/team/team-3.jpg" class="img-fluid" alt="">
-
-              <h4>Bhaumik Chokshi</h4>
-              <span>Optimisere's Partner</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter-x"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+            <div class="faq-item">
+              <h3><span class="num">3.</span> <span>Can you help us launch new products the right way?</span></h3>
+              <div class="faq-content">
+                <p>Absolutely. We craft smart, data-led launch plans — from SEO-optimized listings to creative assets
+                  and ad rollouts — built to create momentum from day one.</p>
               </div>
-            </div>
-          </div><!-- End Team Member -->
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
 
-          
-
-        </div>
-
-      </div>
-
-      <div class="container mt-5">
-          <div class="row gy-4">
-
-            <!-- Designers -->
-            <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="100">
-              <div class="team-member">
-                <div class="display-4 fw-bold">05</div>
-                <h4 class="mt-2">Designers</h4>
-                <p>Turning clicks into customers with scroll-stopping visuals.</p>
+            <div class="faq-item">
+              <h3><span class="num">4.</span> <span> How hands-on is your team?</span></h3>
+              <div class="faq-content">
+                <p>Very. We embed into your business, managing day-to-day ops, optimizing performance, and fine-tuning
+                  strategy — so you’re not just active, but ahead.</p>
               </div>
-            </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
 
-            <!-- Content Writers -->
-            <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
-              <div class="team-member">
-                <div class="display-4 fw-bold">02</div>
-                <h4 class="mt-2">Content Writers</h4>
-                <p>Crafting words that convert and stories that sell.</p>
+            <div class="faq-item">
+              <h3><span class="num">5.</span> <span> Do you work with brands of all sizes?</span></h3>
+              <div class="faq-content">
+                <p>Yes. Whether you're just starting out or scaling globally, we tailor our approach to meet your stage,
+                  category, and ambition — no cookie-cutter playbooks here.</p>
               </div>
-            </div>
-
-            <!-- Ad Specialists -->
-            <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
-              <div class="team-member">
-                <div class="display-4 fw-bold">08</div>
-                <h4 class="mt-2">Ad Specialists</h4>
-                <p>Masters of the algorithm, turning budgets into breakthroughs.</p>
-              </div>
-            </div>
-
-            <!-- Account Managers -->
-            <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
-              <div class="team-member">
-                <div class="display-4 fw-bold">12</div>
-                <h4 class="mt-2">Account Managers</h4>
-                <p>The e-comm ninjas keeping listings live, orders smooth, and chaos under control.</p>
-              </div>
-            </div>
-
-          </div>
-      </div>
-
-    </section><!-- /The Team Section -->
-
-    <!-- Faq Section done-->
-    <section id="faq" class="faq section">
-
-      <div class="container">
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="content px-xl-5">
-              <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
-              <p>Empowering Your eCommerce Journey: Find Clear Answers and Confident Solutions.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <div class="faq-container">
-              <div class="faq-item faq-active">
-                <h3><span class="num">1.</span> <span>What exactly do you handle in eCommerce?</span></h3>
-                <div class="faq-content">
-                  <p>From strategy to execution — we take care of it all. Product launches, listings, ads, operations, reporting — everything it takes to grow and scale your brand in today’s digital commerce world.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">2.</span> <span>Which platforms do you work across?</span></h3>
-                <div class="faq-content">
-                  <p>We work where your customers are — Amazon, Walmart US, Flipkart, Myntra, Nykaa, and more. Our strategies flex to fit each platform’s rules, algorithms, and opportunities.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">3.</span> <span>Can you help us launch new products the right way?</span></h3>
-                <div class="faq-content">
-                  <p>Absolutely. We craft smart, data-led launch plans — from SEO-optimized listings to creative assets and ad rollouts — built to create momentum from day one.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">4.</span> <span> How hands-on is your team?</span></h3>
-                <div class="faq-content">
-                  <p>Very. We embed into your business, managing day-to-day ops, optimizing performance, and fine-tuning strategy — so you’re not just active, but ahead.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">5.</span> <span> Do you work with brands of all sizes?</span></h3>
-                <div class="faq-content">
-                  <p>Yes. Whether you're just starting out or scaling globally, we tailor our approach to meet your stage, category, and ambition — no cookie-cutter playbooks here.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
 
 
-            </div>
           </div>
         </div>
       </div>
+    </div>
 
-    </section><!-- /Faq Section -->
+  </section><!-- /Faq Section -->
 
-    <!-- Recent Posts Section -->
-    <section id="recent-posts" class="recent-posts section">
+  <!-- Recent Posts Section -->
+  <section id="recent-posts" class="recent-posts section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Recent Blog Posts</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Recent Blog Posts</h2>
+      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    </div><!-- End Section Title -->
 
-      <div class="container">
+    <div class="container">
 
-        <div class="row gy-4">
+      <div class="row gy-4">
 
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <article>
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <article>
 
-              <div class="post-img">
-                <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+            <div class="post-img">
+              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/blog/blog-1.jpg" alt=""
+                class="img-fluid">
+            </div>
+
+            <p class="post-category">Politics</p>
+
+            <h2 class="title">
+              <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+            </h2>
+
+            <div class="d-flex align-items-center">
+              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/blog/blog-author.jpg" alt=""
+                class="img-fluid post-author-img flex-shrink-0">
+              <div class="post-meta">
+                <p class="post-author">Maria Doe</p>
+                <p class="post-date">
+                  <time datetime="2022-01-01">Jan 1, 2022</time>
+                </p>
               </div>
+            </div>
 
-              <p class="post-category">Politics</p>
+          </article>
+        </div><!-- End post list item -->
 
-              <h2 class="title">
-                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
-              </h2>
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <article>
 
-              <div class="d-flex align-items-center">
-                <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Maria Doe</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jan 1, 2022</time>
-                  </p>
-                </div>
+            <div class="post-img">
+              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/blog/blog-2.jpg" alt=""
+                class="img-fluid">
+            </div>
+
+            <p class="post-category">Sports</p>
+
+            <h2 class="title">
+              <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
+            </h2>
+
+            <div class="d-flex align-items-center">
+              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/blog/blog-author-2.jpg" alt=""
+                class="img-fluid post-author-img flex-shrink-0">
+              <div class="post-meta">
+                <p class="post-author">Allisa Mayer</p>
+                <p class="post-date">
+                  <time datetime="2022-01-01">Jun 5, 2022</time>
+                </p>
               </div>
+            </div>
 
-            </article>
-          </div><!-- End post list item -->
+          </article>
+        </div><!-- End post list item -->
 
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <article>
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <article>
 
-              <div class="post-img">
-                <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
+            <div class="post-img">
+              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/blog/blog-3.jpg" alt=""
+                class="img-fluid">
+            </div>
+
+            <p class="post-category">Entertainment</p>
+
+            <h2 class="title">
+              <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
+            </h2>
+
+            <div class="d-flex align-items-center">
+              <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/blog/blog-author-3.jpg" alt=""
+                class="img-fluid post-author-img flex-shrink-0">
+              <div class="post-meta">
+                <p class="post-author">Mark Dower</p>
+                <p class="post-date">
+                  <time datetime="2022-01-01">Jun 22, 2022</time>
+                </p>
               </div>
+            </div>
 
-              <p class="post-category">Sports</p>
+          </article>
+        </div><!-- End post list item -->
 
-              <h2 class="title">
-                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
-              </h2>
+      </div><!-- End recent posts list -->
 
-              <div class="d-flex align-items-center">
-                <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Allisa Mayer</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 5, 2022</time>
-                  </p>
-                </div>
-              </div>
+    </div>
 
-            </article>
-          </div><!-- End post list item -->
+  </section><!-- /Recent Posts Section -->
 
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <article>
-
-              <div class="post-img">
-                <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Entertainment</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="https://bootstrapmade.com/content/demo/Impact/assets/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Mark Dower</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-        </div><!-- End recent posts list -->
-
-      </div>
-
-    </section><!-- /Recent Posts Section -->
-
-  </main>
+</main>
 {% endblock main %}
-
