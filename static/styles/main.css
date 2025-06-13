@@ -1113,7 +1113,7 @@ section,
   transform: rotateY(180deg);
 }
 
-.icon-boxes.icon {
+.front-card-icon{
   margin-bottom: 20px;
   padding-top: 10px;
   display: inline-block;
@@ -1123,7 +1123,7 @@ section,
   color: white;
 }
 
-.icon-boxes.title {
+.front-card-title {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 24px;
@@ -1149,26 +1149,26 @@ section,
   color: white;
 }
 
-.icon-boxes .description {
+.flip-card.description {
   font-size: 14px;
   line-height: 1.4;
   opacity: 0.9;
   text-align: center;
 }
 
-.icon-boxes .features {
+.features {
   list-style: none;
   padding: 0;
   margin: 15px 0 0 0;
 }
 
-.icon-boxes.features li {
+.features li {
   font-size: 13px;
   margin-bottom: 5px;
   text-align: start;
 }
 
-.icon-boxes.features li:before {
+.features li:before {
   content: "✓ ";
   font-weight: bold;
   margin-right: 5px;
