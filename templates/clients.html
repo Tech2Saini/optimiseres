@@ -73,20 +73,10 @@
     <div class="container d-flex flex-nowrap overflow-auto flex-row p-2 scrollbar-none">
         <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('home_Linen')">Home Linen</a>
         <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('home_decoder')">Home Decor</a>
-        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('apparel_innerware')">Apparel & Innerware</a>
-        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('kids')">Kids</a>
-        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('kitchen-utensils')">Kitchen Utensils</a>
-        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('automotive-accessories')">Automotive Accessories</a>
-        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('toys-games')">Toys & Games</a>
-        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('shoe-care')">Shoe & Shoe Care</a>
-        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('fertilizer')">Fertilizer</a>
-        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('safes-security')">Safes and Security</a>
-        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('bird-seed')">Bird Seed</a>
-        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('ghee-oils')">Ghee & Oils</a>
-        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('chocolate')">Chocolate</a>
-        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('jewellery-rings')">Jewellery & Rings</a>
-        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('watches')">Watches</a>
-        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('tea')">Tea</a>
+        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('FMCG')">FMCG</a>
+        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('accessories')">Accessories</a>
+        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('apparel')">Apparel</a>
+        <a class="mx-3 btn-outline-warning btn btn-sm rounded-pill" style="min-width: 200px;" role="button" onclick="scrollElement('Others')">Others</a>
     </div>
 
 </div>
@@ -99,7 +89,7 @@
     const rightButton = document.querySelector('.scroll-right');
 
     // Scroll amount in pixels (adjust as needed)
-    const scrollAmount = 200;
+    const scrollAmount = 300;
 
     // Left scroll button functionality
     leftButton.addEventListener('click', function() {
@@ -172,7 +162,7 @@
 <!-- Home Linen -->
 <div class="container mt-5 logo-category" id="home_Linen">
     <div class="my-3 p-0">
-        <h2 class="p-0">Home Linen</h2>
+        <h2 class="p-0"  data-aos="fade-up" data-aos-delay="300">Home Linen</h2>
     </div>
     <div class="col-md-12">
         <div class="row clients">
@@ -230,7 +220,7 @@
 <!-- Home Decor and Metals -->
 <div class="container mt-5 logo-category" id="home_decoder">
     <div class="my-3 p-0">
-        <h2 class="p-0">Home Decor</h2>
+        <h2 class="p-0"  data-aos="fade-up" data-aos-delay="300">Home Decor</h2>
     </div>
     <div class="col-md-12">
         <div class="row clients">
@@ -263,16 +253,101 @@
                     <img src="/static/images/clients/Supreme_Elegance.jpg" alt="Supreme Elegance">
                 </div>
             </div>
+              <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+                <div class="card">
+                    <img src="/static/images/clients/Ozone.jpg" alt="Ozone">
+                </div>
+            </div>
 
         </div>
 
     </div>
 </div>
 
-<!-- Apparel & Innerware -->
-<div class="container mt-5 logo-category" id="apparel_innerware">
+<!--FMCG -->
+<div class="container mt-5 logo-category" id="FMCG">
     <div class="my-3 p-0">
-        <h2 class="p-0">Apparel & Innerware</h2>
+        <h2 class="p-0"  data-aos="fade-up" data-aos-delay="300">FMCG</h2>
+    </div>
+    <div class="col-md-12">
+        <div class="row clients">
+            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+                <div class="card">
+                    <img src="/static/images/clients/Tea_Leaf.jpg" alt="Tea Leaf">
+                </div>
+            </div>
+            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+                <div class="card">
+                    <img src="/static/images/clients/Supafuelz.jpg" alt="Supafuelz">
+                </div>
+            </div>
+             <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="100">
+                <div class="card">
+                    <img src="/static/images/clients/Happy_Wings.jpg" alt="Happy Wings">
+                </div>
+            </div>
+            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="200">
+                <div class="card">
+                    <img src="/static/images/clients/Aevo.jpg" alt="Aevo">
+                </div>
+            </div>
+            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="200">
+                <div class="card">
+                    <img src="/static/images/clients/Cacao-FK.jpg" alt="Cacao-FK">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!--Accessories -->
+<div class="container mt-5 logo-category" id="accessories">
+    <div class="my-3 p-0">
+        <h2 class="p-0"  data-aos="fade-up" data-aos-delay="300">Accessories</h2>
+    </div>
+    <div class="col-md-12">
+        <div class="row clients">
+            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="200">
+                <div class="card">
+                    <img src="/static/images/clients/Upside.jpg" alt="Upside">
+                </div>
+            </div>
+            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+                <div class="card">
+                    <img src="/static/images/clients/Liberty_Zeno.jpg" alt="Liberty Zeno">
+                </div>
+            </div>
+            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
+                <div class="card">
+                    <img src="/static/images/clients/Sneaker_Care.jpg" alt="Sneaker Care">
+                </div>
+            </div>
+            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="100">
+                <div class="card">
+                    <img src="/static/images/clients/Aabo_Rings.jpg" alt="Aabo Rings">
+                </div>
+            </div>
+            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="200">
+                <div class="card">
+                    <img src="/static/images/clients/WHP.jpg" alt="WHP">
+                </div>
+            </div>
+            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="100">
+                <div class="card">
+                    <img src="/static/images/clients/Timex.jpg" alt="Timex">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Apparel -->
+<div class="container mt-5 logo-category" id="apparel">
+    <div class="my-3 p-0">
+        <h2 class="p-0"  data-aos="fade-up" data-aos-delay="300">Apparel</h2>
     </div>
     <div class="col-md-12">
         <div class="row clients">
@@ -302,27 +377,10 @@
     </div>
 </div>
 
-<!-- Kids Protien -->
-<div class="container mt-5 logo-category" id="kids">
+<!-- Others -->
+<div class="container mt-5 logo-category" id="Others">
     <div class="my-3 p-0">
-        <h2 class="p-0">Kids Protien</h2>
-    </div>
-    <div class="col-md-12">
-        <div class="row clients">
-            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
-                <div class="card">
-                    <img src="/static/images/clients/Supafuelz.jpg" alt="Supafuelz">
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- Kitchen Utensils -->
-<div class="container mt-5 logo-category" id="kitchen-utensils">
-    <div class="my-3 p-0">
-        <h2 class="p-0">Kitchen Utensils</h2>
+        <h2 class="p-0"  data-aos="fade-up" data-aos-delay="300" >Others</h2>
     </div>
     <div class="col-md-12">
         <div class="row clients">
@@ -331,192 +389,16 @@
                     <img src="/static/images/clients/Vinod_Cookware.jpg" alt="Vinod Cookware">
                 </div>
             </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- Automotive Accessories -->
-<div class="container mt-5 logo-category" id="automotive-accessories">
-    <div class="my-3 p-0">
-        <h2 class="p-0">Automotive Accessories</h2>
-    </div>
-    <div class="col-md-12">
-        <div class="row clients">
-            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="200">
-                <div class="card">
-                    <img src="/static/images/clients/Upside.jpg" alt="Upside">
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- Toys & Games -->
-<div class="container mt-5 logo-category" id="toys-games">
-    <div class="my-3 p-0">
-        <h2 class="p-0">Toys & Games</h2>
-    </div>
-    <div class="col-md-12">
-        <div class="row clients">
-            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
-                <div class="card">
-                    <img src="/static/images/clients/binca.png" alt="Binca">
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- Shoe Essentials -->
-<div class="container mt-5 logo-category" id="shoe-care">
-    <div class="my-3 p-0">
-        <h2 class="p-0">Shoe Essentials</h2>
-    </div>
-    <div class="col-md-12">
-        <div class="row clients">
-            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
-                <div class="card">
-                    <img src="/static/images/clients/Liberty_Zeno.jpg" alt="Liberty Zeno">
-                </div>
-            </div>
-            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
-                <div class="card">
-                    <img src="/static/images/clients/Sneaker_Care.jpg" alt="Sneaker Care">
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- Fertilizer -->
-<div class="container mt-5 logo-category" id="fertilizer">
-    <div class="my-3 p-0">
-        <h2 class="p-0">Fertilizer</h2>
-    </div>
-    <div class="col-md-12">
-        <div class="row clients">
             <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
                 <div class="card">
                     <img src="/static/images/clients/Groww_Organics.jpg" alt="Groww Organics">
                 </div>
             </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- Safes and Security -->
-<div class="container mt-5 logo-category" id="safes-security">
-    <div class="my-3 p-0">
-        <h2 class="p-0">Safes and Security</h2>
-    </div>
-    <div class="col-md-12">
-        <div class="row clients">
             <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
                 <div class="card">
-                    <img src="/static/images/clients/Ozone.jpg" alt="Ozone">
+                    <img src="/static/images/clients/binca.png" alt="Binca">
                 </div>
             </div>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- Bird Seed -->
-<div class="container mt-5 logo-category" id="bird-seed">
-    <div class="my-3 p-0">
-        <h2 class="p-0">Bird Seed</h2>
-    </div>
-    <div class="col-md-12">
-        <div class="row clients">
-            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="100">
-                <div class="card">
-                    <img src="/static/images/clients/Happy_Wings.jpg" alt="Happy Wings">
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- Ghee & Oils -->
-<div class="container mt-5 logo-category" id="ghee-oils">
-    <div class="my-3 p-0">
-        <h2 class="p-0">Ghee & Oils</h2>
-    </div>
-    <div class="col-md-12">
-        <div class="row clients">
-            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="200">
-                <div class="card">
-                    <img src="/static/images/clients/Aevo.jpg" alt="Aevo">
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- Chocolate -->
-<div class="container mt-5 logo-category" id="chocolate">
-    <div class="my-3 p-0">
-        <h2 class="p-0">Chocolate</h2>
-    </div>
-    <div class="col-md-12">
-        <div class="row clients">
-            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="200">
-                <div class="card">
-                    <img src="/static/images/clients/Cacao-FK.jpg" alt="Cacao-FK">
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- Jewellery & Rings -->
-<div class="container mt-5 logo-category" id="jewellery-rings">
-    <div class="my-3 p-0">
-        <h2 class="p-0">Jewellery & Rings</h2>
-    </div>
-    <div class="col-md-12">
-        <div class="row clients">
-            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="100">
-                <div class="card">
-                    <img src="/static/images/clients/Aabo_Rings.jpg" alt="Aabo Rings">
-                </div>
-            </div>
-            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="200">
-                <div class="card">
-                    <img src="/static/images/clients/WHP.jpg" alt="WHP">
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- Watches -->
-<div class="container mt-5 logo-category" id="watches">
-    <div class="my-3 p-0">
-        <h2 class="p-0">Watches</h2>
-    </div>
-    <div class="col-md-12">
-        <div class="row clients">
-            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="100">
-                <div class="card">
-                    <img src="/static/images/clients/Timex.jpg" alt="Timex">
-                </div>
-            </div>
-
             <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
                 <div class="card">
                     <img src="/static/images/clients/guess.png" alt="">
@@ -527,21 +409,6 @@
     </div>
 </div>
 
-<!-- Tea -->
-<div class="container mt-5 logo-category" id="tea">
-    <div class="my-3 p-0">
-        <h2 class="p-0">Tea</h2>
-    </div>
-    <div class="col-md-12">
-        <div class="row clients">
-            <div class="col-md-4 border" data-aos="fade-up" data-aos-delay="300">
-                <div class="card">
-                    <img src="/static/images/clients/Tea_Leaf.jpg" alt="Tea Leaf">
-                </div>
-            </div>
-        </div>
 
-    </div>
-</div>
 
 {% endblock main %}

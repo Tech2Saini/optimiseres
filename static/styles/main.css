@@ -32,7 +32,7 @@
   --contrast-color: #ffffff;
   /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 
-  --conrast-color:#ff9822;
+  --conrast-color: #ff9822;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -54,7 +54,7 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
- --background-color: #ffffff;
+  --background-color: #ffffff;
   /* Background color for the entire website, including individual sections */
   --default-color: #222222;
   /* Default color used for the majority of the text content across the entire website */
@@ -66,37 +66,44 @@
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff;
   /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-  --conrast-color:#ff9822;
+  --conrast-color: #ff9822;
 
   --nav-mobile-background-color: #ffffff;
-    /* Used as the background color for mobile navigation menu */
+  /* Used as the background color for mobile navigation menu */
 
 }
-.line-text-pointers{
+
+.line-text-pointers {
   color: #008374;
 }
-.btn-warning{
+
+.btn-warning {
   background-color: var(--conrast-color);
 }
-.btn-warning:hover{
+
+.btn-warning:hover {
   background-color: color-mix(in srgb, var(--conrast-color), transparent 30%);
 }
-.quotes-words,.quotes-words a{
-  color: var(--conrast-color)!important;
+
+.quotes-words,
+.quotes-words a {
+  color: var(--conrast-color) !important;
   transition: 0.5s;
 }
-.quotes-words a:hover{
-  color:color-mix(in srgb, var(--conrast-color), rgb(255, 169, 70) 60%)!important;
+
+.quotes-words a:hover {
+  color: color-mix(in srgb, var(--conrast-color), rgb(255, 169, 70) 60%) !important;
   transform: scale(1.05);
 }
-.quotes-words .er-btn:hover{
-  background-color: var(--conrast-color)!important;
+
+.quotes-words .er-btn:hover {
+  background-color: var(--conrast-color) !important;
   color: white !important;
   transform: scale(1.05);
 }
 
-.text-muted{
-  color: color-mix(in srgb, var(--default-color) , rgb(136, 136, 136) 80%) !important;
+.text-muted {
+  color: color-mix(in srgb, var(--default-color), rgb(136, 136, 136) 80%) !important;
 }
 
 .dark-background {
@@ -109,8 +116,7 @@
 }
 
 .accent-background {
-  --background-color: var(--background-color)
-  --default-color: #ffffff;
+  --background-color: var(--background-color) --default-color: #ffffff;
   --heading-color: #ffffff;
   --accent-color: #ffffff;
   --surface-color: #00b6a1;
@@ -137,7 +143,7 @@ a {
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--default-color),var(--background-color) 50%);
+  color: color-mix(in srgb, var(--default-color), var(--background-color) 50%);
   text-decoration: none;
 }
 
@@ -503,7 +509,7 @@ h6 {
     visibility: visible;
   }
 
-  .mobile-nav-toggle{
+  .mobile-nav-toggle {
     display: none;
   }
 }
@@ -578,7 +584,7 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    font-weight:bold;
+    font-weight: bold;
   }
 
   .navmenu .active i,
@@ -682,7 +688,7 @@ h6 {
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--conrast-color), transparent 50%);
   font-size: 16px;
-  color:var(--conrast-color);
+  color: var(--conrast-color);
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -747,8 +753,9 @@ h6 {
 .footer .copyright p {
   margin-bottom: 0;
 }
-.footer .copyright p a{
-  color: var(--default-color)!important;
+
+.footer .copyright p a {
+  color: var(--default-color) !important;
 }
 
 .footer .credits {
@@ -964,19 +971,21 @@ section,
   color: rgb(34, 34, 34);
 }
 
-.hero .header-bold-words{
+.hero .header-bold-words {
   /* font-weight:500 !important; */
-  color: color-mix(in srgb, var(--default-color) , rgb(204, 204, 204) 40%);
+  color: color-mix(in srgb, var(--default-color), rgb(204, 204, 204) 40%);
   font-weight: 500;
 }
-.hero .header-quote{
-  color: color-mix(in srgb, var(--default-color) , rgb(204, 204, 204) 20%);
+
+.hero .header-quote {
+  color: color-mix(in srgb, var(--default-color), rgb(204, 204, 204) 20%);
   font-weight: bolder;
 }
 
 .hero h2 .accent {
   color: var(--conrast-color);
 }
+
 .hero h2 span {
   color: var(--default-color);
 }
@@ -1021,12 +1030,13 @@ section,
   margin-right: 8px;
 }
 
-.hero .btn-watch-video span{
+.hero .btn-watch-video span {
   transition: 0.3s;
 }
 
 
-.hero .btn-watch-video:hover i,.hero .btn-watch-video:hover span {
+.hero .btn-watch-video:hover i,
+.hero .btn-watch-video:hover span {
   color: var(--conrast-color);
 }
 
@@ -1068,7 +1078,7 @@ section,
 .flip-card {
   background-color: transparent;
   perspective: 1000px;
-  height: 280px;
+  height: 270px;
   width: 100%;
 }
 
@@ -1108,12 +1118,12 @@ section,
 }
 
 .flip-card-back {
-  background: color-mix(in srgb,var(--conrast-color), rgb(255, 156, 8) 60%);
+  background: color-mix(in srgb, var(--conrast-color), rgb(255, 156, 8) 60%);
   color: var(--contrast-color);
   transform: rotateY(180deg);
 }
 
-.front-card-icon{
+.front-card-icon {
   margin-bottom: 20px;
   padding-top: 10px;
   display: inline-block;
@@ -1144,27 +1154,28 @@ section,
   font-size: 20px;
   margin-bottom: 10px;
 }
+
 .flip-card-back p {
-  font-size:15px;
+  font-size: 17px;
   color: white;
 }
 
-.flip-card.description {
-  font-size: 14px;
+.flip-card-back .description {
+  font-size: 17px;
   line-height: 1.4;
   opacity: 0.9;
   text-align: center;
+  margin-bottom: 20px !important;
 }
 
 .features {
   list-style: none;
   padding: 0;
-  margin: 15px 0 0 0;
 }
 
 .features li {
-  font-size: 13px;
-  margin-bottom: 5px;
+  font-size: 18px;
+  margin-bottom:3px;
   text-align: start;
 }
 
@@ -1179,8 +1190,8 @@ section,
   transition-delay: 0s;
 }
 
-  /* Hover effect for entire */
-  /*
+/* Hover effect for entire */
+/*
 .icon-boxes div:hover .flip-card-inner {
       transform: rotateY(180deg);
   } */
@@ -1241,6 +1252,7 @@ section,
 .clients .swiper-slide .img-fluid {
   max-width: unset !important;
 }
+
 .clients .swiper-slide img {
   transition: 0.3s;
   width: 140px;
@@ -1631,8 +1643,9 @@ section,
     position: static;
     left: auto;
   }
-  .portfolio .portfolio-filters{
-    justify-content:start !important;
+
+  .portfolio .portfolio-filters {
+    justify-content: start !important;
   }
 }
 
@@ -1740,10 +1753,11 @@ section,
   width: 400px;
 }
 
-.team-members .member img{
+.team-members .member img {
   transition: transform 0.5s;
 }
-.team-members .member:hover{
+
+.team-members .member:hover {
   /* transform: scale(1.1); */
   margin-top: -10px;
 }
@@ -1945,37 +1959,44 @@ section,
   border: 3px solid var(--accent-color);
 }
 
-.form-control,.choices__inner,.choices__inner input{
+.form-control,
+.choices__inner,
+.choices__inner input {
   /* background-color: color-mix(in srgb, var(--default-color), white 10%); */
   background-color: transparent !important;
   color: color-mix(in srgb, var(--default-color), black 20%) !important;
   border: 1px solid rgba(128, 128, 128, 0.637) !important;
 }
-.choices__inner input{
+
+.choices__inner input {
   border: none !important;
 }
-.form-control:focus{
+
+.form-control:focus {
   background-color: transparent;
 }
-.form-control::placeholder{
+
+.form-control::placeholder {
   color: color-mix(in srgb, var(--default-color), rgb(97, 97, 97) 80%) !important;
 }
-.border{
+
+.border {
   border: 1px solid #a4a4a44d !important;
 }
 
-.choices__list{
+.choices__list {
   /* background-color:var(--default-color); */
   background-color: color-mix(in srgb, transparent, var(--background-color) 90%);
   color: var(--default-color);
 }
-.choices__list--dropdown .choices__item--selectable.is-highlighted{
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
   background-color: color-mix(in srgb, var(--default-color), var(--background-color) 70%) !important;
   color: var(--default-color);
 }
 
-.choices__list .choices__item:hover{
-  background-color: color-mix(in srgb, transparent,black 30%) !important;
+.choices__list .choices__item:hover {
+  background-color: color-mix(in srgb, transparent, black 30%) !important;
 }
 
 
@@ -2306,7 +2327,7 @@ section,
   object-fit: contain;
   aspect-ratio: 4/3;
   /* or 1/1 if you want perfectly square */
-  background-color:var(--surface-color);
+  background-color: var(--surface-color);
   padding: 10px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -3104,3 +3125,16 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+
+/* glight box image viewers */
+.gslide-image{
+  overflow-y: scroll !important;
+  max-height: 100vh !important;
+}
+
+.gslide-image img{
+  max-height:unset !important;
+  max-width: unset !important;
+}
+
