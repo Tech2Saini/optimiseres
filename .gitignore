@@ -6,3 +6,4 @@ templates/email_template.html
 demoicon/
 .gitignore
 Dockerfile
+videos.html
