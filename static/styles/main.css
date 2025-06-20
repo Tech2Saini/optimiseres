@@ -3130,7 +3130,7 @@ section,
 /* glight box image viewers */
 .gslide-image{
   overflow-y: scroll !important;
-  max-height: 100vh !important;
+  height: 100vh !important;
   max-width: 45rem;
 }
 
