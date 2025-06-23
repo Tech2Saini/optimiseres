@@ -142,7 +142,7 @@
               
         <div class="container copyright text-center">
             <div class="d-flex mb-5">
-                <p class="me-auto">© <span>Copyright</span> <strong class="px-1 sitename">Optimiseres</strong> <span> | All Rights
+                <p class="me-auto">© <span>Copyright <span id="web_year"></span></span> <strong class="px-1 sitename">Optimiseres</strong> <span> | All Rights
                     Reserved</span></p>
                 <div class="text-center social-links">
                     
@@ -177,10 +177,32 @@
           history.scrollRestoration = 'manual';
         }
     </script> -->
+
+    
     
     <script>
+        function checkFooterScroll() {
+            const footer = document.querySelector("footer");
+            if (!footer) return;
+
+            const footerRect = footer.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // Check if 50% of viewport height has reached the top of footer
+            if (footerRect.top < windowHeight * 0.2) {
+                document.getElementById("footer_logo").classList.add("footer_logo-hide");
+            } else {
+                document.getElementById('footer_logo').classList.remove("footer_logo-hide");
+            }
+        }
+
+        document.getElementById("web_year").innerText = `(${new Date().getFullYear()})`
+
+        // Attach to scroll event
+        window.addEventListener("scroll", checkFooterScroll);
+
         window.onload = ()=>{
-            let theme = localStorage.getItem('theme') || 'dark';
+            let theme = localStorage.getItem('theme') || 'light';
             toggleThemeBtn(theme)
             UpdateTheme(theme)
 
