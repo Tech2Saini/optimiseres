@@ -93,50 +93,39 @@
 
     <footer id="footer" class="footer accent-background mt-3">
 
-        <div class="container footer-top">
+        <div class="container footer-top p-4">
             <div class="row gy-4">
-                <div class="col-lg-5 col-md-12 footer-about">
-                <a href="/" class="logo d-flex align-items-center p-2">
-                    <span class="sitename"><img style="transform: scale(1.3);" id="footer_logo" src="/static/images/icons/logo.png" alt=""></span>
-                </a>
-                <p>Empowering growth with smart solutions. We blend strategy, creativity, and technology to elevate your brand in the digital marketplace.</p>
+                <div class="col-lg-5 col-md-4 footer-about">
+                    <a href="/" class="logo d-flex align-items-center  ">
+                        <span class="sitename"><img style="transform: scale(1.3);" id="footer_logo" src="/static/images/icons/logo.png" alt=""></span>
+                    </a>
+                    <p>Empowering growth with smart solutions. We blend strategy, creativity, and technology to elevate your brand in the digital marketplace.</p>
 
-                <div class="social-links d-flex mt-4">
-                    <!-- <a target="_blank" href=""><i class="bi bi-twitter-x"></i></a>
-                    <a target="_blank" href=""><i class="bi bi-facebook"></i></a>
-                    <a target="_blank" href=""><i class="bi bi-instagram"></i></a> -->
-                    <a target="_blank" href="https://www.linkedin.com/company/optimiseres-e-conusltancy-private-ltd/"><i class="bi bi-linkedin"></i></a>
+                    <div class="social-links d-flex mt-4">
+                        <a target="_blank" class="me-3" href="https://www.linkedin.com/company/optimiseres-e-conusltancy-private-ltd/"><i class="bi bi-linkedin"></i></a>
+                        <div class="phone-social-links d-none flex-row gap-2">
+                            <a target="_blank" class="whatsapp" href="https://api.whatsapp.com/send?phone=7259670592"><i class="bi bi-whatsapp"></i></a>
+                            <a type="button" class="share" onclick="shareSite()"><i class="bi bi-share"></i></a>
+                        </div>
+                    </div>
                 </div>
+                <div class="col-md-4 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul class="d-flex gap-3 flex-wrap justify-content-start">
+                        <li class="p-0 quotes-words"><a href="/">Home</a></li>
+                        <li class="p-0 quotes-words"><a href="/services/">Services</a></li>
+                        <li class="p-0 quotes-words"><a href="/clients/">Our Clients</a></li>
+                        <li class="p-0 quotes-words"><a href="/contact/">Contact Us</a></li>
+                    </ul>
                 </div>
-    
-                <div class="col-lg-2 col-6 footer-links">
-                <h4>Useful Links</h4>
-                <ul>
-                    <li class="quotes-words"><a href="/">Home</a></li>
-                    <li class="quotes-words"><a href="/services/">Services</a></li>
-                    <li class="quotes-words"><a href="/clients/">Our Clients</a></li>
-                    <li class="quotes-words"><a href="/contact/">Contact Us</a></li>
-                </ul>
+                <div class="col-lg-3 col-md-4 footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><a target="_blank" href="https://maps.app.goo.gl/wZjV2FgBsrJ4BPQa9"><i class="bi bi-geo-alt quotes-words"></i></a> 1157, Sector-10, Panchkula, Haryana</p>
+                    <p>Panchkula, Haryana, India - 134109</p>
+                    <p class="fw-bold">India</p>
+                    <p class="d-flex align-items-center"><strong><i class="bi bi-envelope quotes-words fs-5"></i>  </strong> <span><a onclick="sendEmail()" role="button" class="__cf_email__ mx-2" data-cfemail="f59c9b939ab5908d9498859990db969a98">contact_us@optimiseres.com</a></span></p>
+               
                 </div>
-    
-                <div class="col-lg-2 col-6 footer-links">
-                <h4>Our Services</h4>
-                <ul>
-                    <li class="quotes-words"><a href="/services/#account_management">Account Management</a></li>
-                    <li class="quotes-words"><a href="/services/#content_design">Content, Design & Listings</a></li>
-                    <li class="quotes-words"><a href="/services/#data_reporting">Data Reporting</a></li>
-                </ul>
-                </div>
-        
-                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                <h4>Contact Us</h4>
-                <p>1157, Sector-10, Panchkula, Haryana</p>
-                <p>Panchkula, Haryana, India - 134109</p>
-                <p>India</p>
-                <p class="mt-4 d-flex align-items-center"><strong><i class="bi bi-telephone quotes-words fs-5"></i> </strong> <a class="mx-2" href="tel:7259670592">+91 7259670592</a></p>
-                <p class="d-flex align-items-center"><strong><i class="bi bi-envelope quotes-words fs-5"></i>  </strong> <span><a onclick="sendEmail()" role="button" class="__cf_email__ mx-2" data-cfemail="f59c9b939ab5908d9498859990db969a98">contact_us@optimiseres.com</a></span></p>
-                </div>
-    
             </div>
         </div>
               
@@ -144,8 +133,7 @@
             <div class="d-flex mb-5">
                 <p class="me-auto">© <span>Copyright <span id="web_year"></span></span> <strong class="px-1 sitename">Optimiseres</strong> <span> | All Rights
                     Reserved</span></p>
-                <div class="text-center social-links">
-                    
+               <div class="d-flex justify-content-start gap-3">
                 </div>
             </div>
         </div>
@@ -155,8 +143,8 @@
     <!-- Scroll Top -->
     <a onclick="document.body.scrollIntoView({ block: 'top' });" role="button" style="z-index: 10;" id="scroll-top" class="scroll-top d-flex align-items-center shadow-lg justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     
-    <a role="button" data-aos="fade-up" onclick="shareSite()" class="share-to border shadow-lg d-flex align-items-center justify-content-center"><i class="bi bi-share-fill text-white"></i></a>
-    <a data-aos="fade-up" class="whatsapp-to border shadow-lg d-flex align-items-center justify-content-center" target="_blank" href="https://api.whatsapp.com/send?phone=7259670592"><i class="bi bi-whatsapp text-white"></i></i></a>
+    <a role="button" data-aos="fade-up" onclick="shareSite()" class="top-icons share-to border shadow-lg d-flex align-items-center justify-content-center"><i class="bi bi-share-fill text-white"></i></a>
+    <a data-aos="fade-up" class="top-icons whatsapp-to border shadow-lg d-flex align-items-center justify-content-center" target="_blank" href="https://api.whatsapp.com/send?phone=7259670592"><i class="bi bi-whatsapp text-white"></i></i></a>
     
     <script src="/static/scripts/bootstrap.bundle.min.js"></script>
     <script src="/static/scripts/validate.js"></script>
@@ -189,10 +177,10 @@
             const windowHeight = window.innerHeight;
 
             // Check if 50% of viewport height has reached the top of footer
-            if (footerRect.top < windowHeight * 0.2) {
-                document.getElementById("footer_logo").classList.add("footer_logo-hide");
+            if (footerRect.top < windowHeight * 0.4) {
+                document.getElementById("footer_logo").classList.add("footer-logo-hide");
             } else {
-                document.getElementById('footer_logo').classList.remove("footer_logo-hide");
+                document.getElementById('footer_logo').classList.remove("footer-logo-hide");
             }
         }
 
@@ -228,7 +216,7 @@
             const mail = user + '@' + domain;
             
             // Redirect to mailto
-            alert(`${mail}\n\nRedirecting to your email compose window... `)
+            alert(`${mail}\n\nRedirecting to email compose window... `)
             window.location.href = 'mailto:' + mail;
         }
 
@@ -262,15 +250,15 @@
         }
 
         // Disable context menu for all images and videos
-        document.addEventListener('DOMContentLoaded', function () {
-            const elements = document.querySelectorAll('img, video');
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const elements = document.querySelectorAll('img, video');
 
-            elements.forEach(element => {
-            element.addEventListener('contextmenu', function (e) {
-                e.preventDefault();
-            });
-            });
-        });
+        //     elements.forEach(element => {
+        //     element.addEventListener('contextmenu', function (e) {
+        //         e.preventDefault();
+        //     });
+        //     });
+        // });
     </script>
 
 </body>

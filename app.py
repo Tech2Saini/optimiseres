@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, flash, url_for
+from flask import Flask, render_template, redirect, request, flash, url_for,send_from_directory
 from flask_mail import Mail, Message
 from datetime import datetime
 import os
@@ -122,7 +122,11 @@ def fevicon():
 def feviconIco():
     return redirect('/static/images/icons/favicon.ico')
 
-# Handling google ceptch varification with secret,public and response from frontend templates 
+@app.route('/static/<path:filename>')
+def static_files(filename):
+    response = send_from_directory(app.static_folder, filename)
+    response.cache_control.max_age = 31536000  # 1 year
+    return response
 
 # Main routes
 @app.route('/')

@@ -3,72 +3,57 @@
 
 {% block main %}
 <style>
-  .service-item {
-    cursor: default;
+  /* Enhanced mobile scrolling fix */
+  .glightbox-container .gslide-image {
+    height: 100vh !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* Ensure touch events work for scrolling */
+    touch-action: pan-y !important;
+    padding-top: 10px;
   }
 
-  .service-item .card-back {
-    position: absolute;
-    transform: translateY(100%);
-    transition: 0.5s;
-    top: 0%;
-    left: 0px;
-    padding: 5px 30px;
-    opacity: 0;
-    background-color: color-mix(in srgb, #ff9822 30%, transparent 70%);
-    height: 100%;
-    margin: 0px;
+  .glightbox-container .gslide-image img {
+    max-height: unset !important;
+    height: auto;
+    max-width: 47rem;
+    object-fit: contain;
+    /* Allow touch events to bubble up for scrolling */
+    touch-action: pan-y !important;
+    pointer-events: auto;
   }
 
-  .service-item .card-back i,
-  .service-item .card-back h3,
-  .service-item .card-back p {
-    color: var(--contrast-color) !important;
+  /* Mobile-specific enhancements */
+  @media (max-width: 768px) {
+    .glightbox-container .gslide-image {
+      /* Better mobile scrolling */
+      overscroll-behavior-y: contain;
+      margin-top: 20px;
+      padding-bottom: 30px;
+    }
+
+    /* Ensure the slide content doesn't interfere with scrolling */
+    .glightbox-container .gslide-media {
+      touch-action: pan-y !important;
+    }
+
+    .glightbox-container .gslide {
+      touch-action: pan-y !important;
+    }
   }
 
-  .service-item .card-back h3 {
-    padding: 0px;
-    border-bottom: 4px solid color-mix(in srgb, black, transparent 90%) !important;
+  /* Hide next/prev buttons */
+  .glightbox-button-prev,
+  .glightbox-button-next {
+    display: none !important;
   }
 
-  .service-item .card-front {
-    transition: 0.5s;
-  }
-
-  .service-item:hover .card-front {
-    /* transform: translateY(-100%); */
-    /* opacity: 0; */
-    transform: scale(1.1);
-  }
-
-  .service-item .card-front .click-to {
-    color: rgb(207, 207, 207);
-  }
-
-  /* .service-item:hover .card-back{
-    background-color:color-mix(in srgb, #ff9822 100%, transparent 0%);
-    transform: translateY(0%);
-    opacity: 1;
-  } */
-
-  .services .service-item:hover .icon:before {
-    background: color-mix(in srgb, var(--accent-color), #00000030 50%);
-  }
-
-  .service-item .card-back.active {
-    background-color: color-mix(in srgb, #ff9822 100%, transparent 0%);
-    transform: translateY(0%);
-    opacity: 1;
-  }
-
-  .service-item .card-front.active {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  .glightbox-clean .gnext,
-  .glightbox-clean .gprev {
-    top: 45% !important
+  /* Ensure proper z-index for scroll areas */
+  .glightbox-container .gslide-image {
+    z-index: 1;
   }
 
   .isotope-item button {
@@ -77,197 +62,144 @@
     padding: 0px;
   }
 
+  .isotope-item button img {
+    transition: 1s;
+  }
+
   .portfolio-item button {
-    height: 16rem;
+    max-height: 14rem;
     overflow: hidden;
   }
 </style>
 <!-- --------------------------------------------------------------------------------------------------------- -->
 
 <!-- Services Section -->
-<section id="services" class="services section mt-5">
+<section id="services" class="services section mt-5 pb-0">
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2>Our Services</h2>
-    <p>Empowering your business on Amazon with our comprehensive service solutions</p>
+    <p>Empowering your e-commerce growth across leading marketplaces with our comprehensive and performance-driven
+      service solutions</p>
   </div><!-- End Section Title -->
 
   <!-- Category: ACCOUNT MANAGEMENT -->
   <div class="container">
 
     <div class="category-section mt-3" data-aos="fade-up" data-aos-delay="50" id="account_management">
-      <h3 class="mb-4">Account Management</h3>
-      <div class="row gy-4">
+      <!-- <h3 class="mb-4">Account Management</h3> -->
+      <div class="row gy-0">
 
         <!-- Service Item: New Product Launch -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
               <div class="icon">
                 <i class="bi bi-box-seam"></i>
               </div>
               <h3>New Product Launch</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
+              <p class="click-to">Identify the optimal product range to sell on Amazon using competitor research and
+                market insights. </p>
             </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
-              <div class="icon">
-                <i class="bi bi-box-seam"></i>
-              </div>
-              <h3>New Product Launch</h3>
-              <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p>
-            </div>
+
           </div>
         </div>
 
         <!-- Service Item: SKU Wise Inventory Forecasting -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
               <div class="icon">
                 <i class="bi bi-calculator"></i>
               </div>
               <h3>SKU Wise Inventory Forecasting</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
+              <p class="click-to">Forecast sales and inventory using Excel and specialized software to maximize
+                profitability.</p>
             </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
-              <div class="icon">
-                <i class="bi bi-calculator"></i>
-              </div>
-              <h3>SKU Wise Inventory Forecasting</h3>
-              <p>Forecast sales and inventory using Excel and specialized software to maximize profitability.</p>
-            </div>
+
           </div>
         </div>
 
         <!-- Service Item: Prime Day/Holiday Season Planning -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
               <div class="icon">
                 <i class="bi bi-calendar-event"></i>
               </div>
               <h3>Prime Day/Holiday Planning</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
+              <p class="click-to">Develop monthly sales targets and inventory plans for peak seasonal events.</p>
             </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
-              <div class="icon">
-                <i class="bi bi-calendar-event"></i>
-              </div>
-              <h3>Prime Day/Holiday Planning</h3>
-              <p>Develop monthly sales targets and inventory plans for peak seasonal events.</p>
-            </div>
+
           </div>
         </div>
 
         <!-- Service Item: Operations Management -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
               <div class="icon">
                 <i class="bi bi-truck"></i>
               </div>
               <h3>Operations Management</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
+              <p class="click-to">Handle shipment creation and generate required barcodes for efficient product
+                fulfillment.</p>
             </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
-              <div class="icon">
-                <i class="bi bi-truck"></i>
-              </div>
-              <h3>Operations Management</h3>
-              <p>Handle shipment creation and generate required barcodes for efficient product fulfillment.</p>
-            </div>
+
           </div>
         </div>
 
         <!-- Service Item: PPC Management & Optimization -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
               <div class="icon">
                 <i class="bi bi-graph-up-arrow"></i>
               </div>
               <h3>PPC Management & Optimization</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
+              <p class="click-to">Create and optimize manual and automatic campaigns along with strategic bid
+                management.</p>
             </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
-              <div class="icon">
-                <i class="bi bi-graph-up-arrow"></i>
-              </div>
-              <h3>PPC Management & Optimization</h3>
-              <p>Create and optimize manual and automatic campaigns along with strategic bid management.</p>
-            </div>
+
           </div>
         </div>
 
-      </div>
-    </div>
-    <!-- End Category: ACCOUNT MANAGEMENT -->
 
-    <!-- Category: CONTENT, DESIGN & LISTINGS -->
-    <div class="category-section mt-3 mt-5" data-aos="fade-up" data-aos-delay="50" id="content_design">
-      <h3 class="mb-4">Content, Design & Listings</h3>
-      <div class="row gy-4">
 
         <!-- Service Item: Listing Creation & SEO -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
               <div class="icon">
                 <i class="bi bi-pencil-square"></i>
               </div>
               <h3>Listing Creation & SEO</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
+              <p class="click-to">Create optimized product listings with targeted keywords to boost search rankings and
+                engagement.</p>
             </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
-              <div class="icon">
-                <i class="bi bi-pencil-square"></i>
-              </div>
-              <h3>Listing Creation & SEO</h3>
-              <p>Create optimized product listings with targeted keywords to boost search rankings and engagement.</p>
-            </div>
+
           </div>
         </div>
 
         <!-- Service Item: Infographics Creation -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
               <div class="icon">
                 <i class="bi bi-image"></i>
               </div>
               <h3>Infographics Creation</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
+              <p class="click-to">Develop visually appealing infographics that highlight the key features of your
+                products.</p>
             </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
-              <div class="icon">
-                <i class="bi bi-image"></i>
-              </div>
-              <h3>Infographics Creation</h3>
-              <p>Develop visually appealing infographics that highlight the key features of your products.</p>
-            </div>
+
           </div>
         </div>
 
         <!-- Service Item: A+ Content Creation -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
-              <div class="icon">
-                <i class="bi bi-card-text"></i>
-              </div>
-              <h3>A+ Content Creation</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
-            </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
               <div class="icon">
                 <i class="bi bi-card-text"></i>
               </div>
@@ -278,17 +210,9 @@
         </div>
 
         <!-- Service Item: Video Creation -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
-              <div class="icon">
-                <i class="bi bi-camera-reels"></i>
-              </div>
-              <h3>Video Creation</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
-            </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
               <div class="icon">
                 <i class="bi bi-camera-reels"></i>
               </div>
@@ -299,21 +223,14 @@
         </div>
 
         <!-- Service Item: Brand Story -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
               <div class="icon">
                 <i class="bi bi-book"></i>
               </div>
               <h3>Brand Story</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
-            </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
-              <div class="icon">
-                <i class="bi bi-book"></i>
-              </div>
-              <h3>Brand Story</h3>
+
               <p>Craft a compelling brand narrative that resonates with your audience and drives cross-selling
                 opportunities.</p>
             </div>
@@ -321,72 +238,42 @@
         </div>
 
         <!-- Service Item: Storefront -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
               <div class="icon">
                 <i class="bi bi-shop"></i>
               </div>
               <h3>Storefront</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
-            </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
-              <div class="icon">
-                <i class="bi bi-shop"></i>
-              </div>
-              <h3>Storefront</h3>
+
               <p>Design and launch a brand storefront on Amazon to showcase your entire product portfolio.</p>
             </div>
           </div>
         </div>
 
-      </div>
-    </div>
-    <!-- End Category: CONTENT, DESIGN & LISTINGS -->
-
-    <!-- Category: DATA REPORTING -->
-    <div class="category-section mt-3 mt-5" data-aos="fade-up" data-aos-delay="50" id="data_reporting">
-      <h3 class="mb-4">Data Reporting</h3>
-      <div class="row gy-4">
-
         <!-- Service Item: Daily Sales & Spend Data -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
               <div class="icon">
                 <i class="bi bi-bar-chart-line"></i>
               </div>
               <h3>Daily Sales & Spend Data</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
-            </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
-              <div class="icon">
-                <i class="bi bi-bar-chart-line"></i>
-              </div>
-              <h3>Daily Sales & Spend Data</h3>
+
               <p>Receive daily insights on sales and ad spend via instant communication channels.</p>
             </div>
           </div>
         </div>
 
         <!-- Service Item: Long-Term Storage & Inventory Reporting -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
               <div class="icon">
                 <i class="bi bi-archive"></i>
               </div>
               <h3>Long-Term Storage & Inventory Reporting</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
-            </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
-              <div class="icon">
-                <i class="bi bi-archive"></i>
-              </div>
-              <h3>Long-Term Storage & Inventory Reporting</h3>
+
               <p>Obtain monthly reports detailing inventory levels and storage fee analysis for informed
                 decision-making.</p>
             </div>
@@ -394,42 +281,28 @@
         </div>
 
         <!-- Service Item: Monthly Invoice Report -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
               <div class="icon">
                 <i class="bi bi-receipt"></i>
               </div>
               <h3>Monthly Invoice Report</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
-            </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
-              <div class="icon">
-                <i class="bi bi-receipt"></i>
-              </div>
-              <h3>Monthly Invoice Report</h3>
+
               <p>Receive consolidated invoicing reports summarizing revenue metrics per order on a monthly basis.</p>
             </div>
           </div>
         </div>
 
         <!-- Service Item: Monthly Invoice Report -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-item rounded position-relative overflow-hidden">
             <div class="card-front">
               <div class="icon">
                 <i class="bi bi-diagram-3"></i>
               </div>
               <h3>API integration & reporting dashboard.</h3>
-              <p class="click-to">Click to read... <i class="bi bi-chevron-down"></i></p>
-            </div>
-            <!-- <p>Identify the optimal product range to sell on Amazon using competitor research and market insights.</p> -->
-            <div class="card-back">
-              <div class="icon">
-                <i class="bi bi-diagram-3"></i>
-              </div>
-              <h3>API integration & reporting dashboard.</h3>
+
               <p>Connect systems and visualize key metrics with custom API integrations and comprehensive reporting
                 dashboards.</p>
             </div>
@@ -437,12 +310,12 @@
         </div>
 
       </div>
+      <!-- End Category: DATA REPORTING -->
     </div>
-    <!-- End Category: DATA REPORTING -->
   </div>
 
   <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio section">
+  <section id="portfolio" class="portfolio section pb-0">
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
@@ -456,36 +329,38 @@
       <div class="isotope-layout" data-default-filter=".filter-infographics" data-layout="masonry"
         data-sort="original-order">
 
-        <ul class="portfolio-filters isotope-filters d-flex flex-row flex-nowrap overflow-auto" data-aos="fade-up" data-aos-delay="100">
-          <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-infographics" class="filter-active"> Infographics</li>
+        <ul class="portfolio-filters isotope-filters d-flex flex-row flex-nowrap overflow-auto" data-aos="fade-up"
+          data-aos-delay="100">
+          <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-infographics" class="filter-active">
+            Infographics</li>
           <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-aplus">A+/EBC</li>
           <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-storefront">Store Front</li>
-          <!-- <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-videos">Videos</li> -->
+          <li style="min-width: fit-content;font-size: 15px;" data-filter=".filter-videos">Videos</li>
+          <!-- <li style="min-width: fit-content;font-size: 15px;" class="btn text-white btn-warning rounded-pill" data-filter=".filter-storefronts">Dashboard</li> -->
         </ul><!-- End Portfolio Filters -->
 
-        <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="row gy-3 w-100 py-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
           <!-- infographics -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-infographics">
-            <div class="portfolio-content h-100">
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-infographics">
+            <div class="portfolio-content h-100 rounded">
               <button onclick="PreviewPortfolio(this)"
-                data-links='["/static/images/portfolios/infographics/accessories1.jpg", "/static/images/portfolios/infographics/accessories2.jpg"]'>
-                <img src="/static/images/portfolios/infographics/accessories1.jpg" class="img-fluid" alt="">
+                data-links='["/static/images/portfolios/infographics/accessories1.webp", "/static/images/portfolios/infographics/accessories2.webp"]'>
+                <img loading="lazy" src="/static/images/portfolios/infographics/accessories1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Accessories</h4>
                 <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
               </div>
-              <div id="glightbox_container">
-              </div>
+
             </div>
           </div><!-- End Portfolio Item -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-infographics">
-            <div class="portfolio-content h-100">
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-infographics">
+            <div class="portfolio-content h-100 rounded">
               <button onclick="PreviewPortfolio(this)"
-                data-links='["/static/images/portfolios/infographics/apparel1.jpg"]'>
-                <img src="/static/images/portfolios/infographics/apparel1.jpg" class="img-fluid" alt="">
+                data-links='["/static/images/portfolios/infographics/apparel1.webp"]'>
+                <img loading="lazy" src="/static/images/portfolios/infographics/apparel1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Apparel</h4>
@@ -495,11 +370,11 @@
             </div>
           </div><!-- End Portfolio Item -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-infographics">
-            <div class="portfolio-content h-100">
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-infographics">
+            <div class="portfolio-content h-100 rounded">
               <button onclick="PreviewPortfolio(this)"
-                data-links='["/static/images/portfolios/infographics/decor1.jpg","/static/images/portfolios/infographics/decor2.jpg"]'>
-                <img src="/static/images/portfolios/infographics/decor1.jpg" class="img-fluid" alt="">
+                data-links='["/static/images/portfolios/infographics/decor1.webp","/static/images/portfolios/infographics/decor2.webp"]'>
+                <img loading="lazy" src="/static/images/portfolios/infographics/decor1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Decor</h4>
@@ -508,11 +383,11 @@
             </div>
           </div><!-- End Portfolio Item -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-infographics">
-            <div class="portfolio-content h-100">
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-infographics">
+            <div class="portfolio-content h-100 rounded">
               <button onclick="PreviewPortfolio(this)"
-                data-links='["/static/images/portfolios/infographics/food1.jpg","/static/images/portfolios/infographics/food2.jpg","/static/images/portfolios/infographics/food3.jpg","/static/images/portfolios/infographics/food4.jpg"]'>
-                <img src="/static/images/portfolios/infographics/food1.jpg" class="img-fluid" alt="">
+                data-links='["/static/images/portfolios/infographics/food1.webp","/static/images/portfolios/infographics/food2.webp","/static/images/portfolios/infographics/food3.webp","/static/images/portfolios/infographics/food4.webp"]'>
+                <img loading="lazy" src="/static/images/portfolios/infographics/food1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Food</h4>
@@ -521,11 +396,11 @@
             </div>
           </div><!-- End Portfolio Item -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-infographics">
-            <div class="portfolio-content h-100">
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-infographics">
+            <div class="portfolio-content h-100 rounded">
               <button onclick="PreviewPortfolio(this)"
-                data-links='["/static/images/portfolios/infographics/homelinen1.jpg","/static/images/portfolios/infographics/homelinen2.jpg","/static/images/portfolios/infographics/homelinen3.jpg","/static/images/portfolios/infographics/homelinen4.jpg"]'>
-                <img src="/static/images/portfolios/infographics/homelinen1.jpg" class="img-fluid" alt="">
+                data-links='["/static/images/portfolios/infographics/homelinen1.webp","/static/images/portfolios/infographics/homelinen2.webp","/static/images/portfolios/infographics/homelinen3.webp","/static/images/portfolios/infographics/homelinen4.webp"]'>
+                <img loading="lazy" src="/static/images/portfolios/infographics/homelinen1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Home Linen</h4>
@@ -534,11 +409,11 @@
             </div>
           </div><!-- End Portfolio Item -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-infographics">
-            <div class="portfolio-content h-100">
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-infographics">
+            <div class="portfolio-content h-100 rounded">
               <button onclick="PreviewPortfolio(this)"
-                data-links='["/static/images/portfolios/infographics/others1.jpg","/static/images/portfolios/infographics/others2.jpg"]'>
-                <img src="/static/images/portfolios/infographics/others1.jpg" class="img-fluid" alt="">
+                data-links='["/static/images/portfolios/infographics/others1.webp","/static/images/portfolios/infographics/others2.webp"]'>
+                <img loading="lazy" src="/static/images/portfolios/infographics/others1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Others</h4>
@@ -549,12 +424,11 @@
           <!-- end of infographics -->
 
           <!-- A+/EBC -->
-                    
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-aplus">
-            <div class="portfolio-content h-100">
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-aplus">
+            <div class="portfolio-content h-100 rounded">
               <button onclick="PreviewPortfolio(this)"
-                data-links='["/static/images/portfolios/a+/apparel1.jpg","/static/images/portfolios/a+/apparel2.jpg"]'>
-                <img src="/static/images/portfolios/a+/apparel1.jpg" class="img-fluid" alt="">
+                data-links='["/static/images/portfolios/a+/apparel1.webp","/static/images/portfolios/a+/apparel2.webp"]'>
+                <img loading="lazy" data-draggable="false" src="/static/images/portfolios/a+/apparel1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Apparel</h4>
@@ -562,11 +436,10 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-aplus">
-            <div class="portfolio-content h-100">
-              <button onclick="PreviewPortfolio(this)"
-                data-links='["/static/images/portfolios/a+/bedding1.jpg"]'>
-                <img src="/static/images/portfolios/a+/bedding1.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-aplus">
+            <div class="portfolio-content h-100 rounded">
+              <button onclick="PreviewPortfolio(this)" data-links='["/static/images/portfolios/a+/bedding1.webp"]'>
+                <img loading="lazy" src="/static/images/portfolios/a+/bedding1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Bedding</h4>
@@ -574,11 +447,11 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-aplus">
-            <div class="portfolio-content h-100">
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-aplus">
+            <div class="portfolio-content h-100 rounded">
               <button onclick="PreviewPortfolio(this)"
-                data-links='["/static/images/portfolios/a+/jewellery.jpg","/static/images/portfolios/a+/jewellery2.jpg"]'>
-                <img src="/static/images/portfolios/a+/jewellery.jpg" class="img-fluid" alt="">
+                data-links='["/static/images/portfolios/a+/jewellery.webp","/static/images/portfolios/a+/jewellery2.webp"]'>
+                <img loading="lazy" src="/static/images/portfolios/a+/jewellery.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Jewellery</h4>
@@ -586,11 +459,11 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-aplus">
-            <div class="portfolio-content h-100">
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-aplus">
+            <div class="portfolio-content h-100 rounded">
               <button onclick="PreviewPortfolio(this)"
-                data-links='["/static/images/portfolios/a+/shoes1.jpg","/static/images/portfolios/a+/shoes2.jpg","/static/images/portfolios/a+/shoes3.jpg"]'>
-                <img src="/static/images/portfolios/a+/shoes1.jpg" class="img-fluid" alt="">
+                data-links='["/static/images/portfolios/a+/shoes1.webp","/static/images/portfolios/a+/shoes2.webp","/static/images/portfolios/a+/shoes3.webp"]'>
+                <img loading="lazy" src="/static/images/portfolios/a+/shoes1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Shoes</h4>
@@ -598,11 +471,11 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-aplus">
-            <div class="portfolio-content h-100">
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-aplus">
+            <div class="portfolio-content h-100 rounded">
               <button onclick="PreviewPortfolio(this)"
-                data-links='["/static/images/portfolios/a+/towel1.jpg","/static/images/portfolios/a+/towel2.jpg"]'>
-                <img src="/static/images/portfolios/a+/towel1.jpg" class="img-fluid" alt="">
+                data-links='["/static/images/portfolios/a+/towel1.webp","/static/images/portfolios/a+/towel2.webp"]'>
+                <img loading="lazy" src="/static/images/portfolios/a+/towel1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Towel</h4>
@@ -610,11 +483,11 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-aplus">
-            <div class="portfolio-content h-100">
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-aplus">
+            <div class="portfolio-content h-100 rounded">
               <button onclick="PreviewPortfolio(this)"
-                data-links='["/static/images/portfolios/a+/watch1.jpg","/static/images/portfolios/a+/watch2.jpg"]'>
-                <img src="/static/images/portfolios/a+/watch1.jpg" class="img-fluid" alt="">
+                data-links='["/static/images/portfolios/a+/watch1.webp","/static/images/portfolios/a+/watch2.webp"]'>
+                <img loading="lazy" src="/static/images/portfolios/a+/watch1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Watch</h4>
@@ -624,15 +497,14 @@
           <!-- end of A+ -->
 
           <!-- Store Front -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-storefront">
-            <div class="portfolio-content h-100">
-              <button onclick="PreviewPortfolio(this)"
-                data-links='[
-                  "/static/images/portfolios/storefront/accessories1.jpg",
-                  "/static/images/portfolios/storefront/accessories2.jpg",
-                  "/static/images/portfolios/storefront/accessories3.jpg"
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-storefront">
+            <div class="portfolio-content h-100 rounded">
+              <button onclick="PreviewPortfolio(this)" data-links='[
+                  "/static/images/portfolios/storefront/accessories1.webp",
+                  "/static/images/portfolios/storefront/accessories2.webp",
+                  "/static/images/portfolios/storefront/accessories3.webp"
                 ]'>
-                <img src="/static/images/portfolios/storefront/accessories1.jpg" class="img-fluid" alt="">
+                <img loading="lazy" src="/static/images/portfolios/storefront/accessories1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Accessories</h4>
@@ -640,14 +512,13 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-storefront">
-            <div class="portfolio-content h-100">
-              <button onclick="PreviewPortfolio(this)"
-                data-links='[
-                  "/static/images/portfolios/storefront/aparrel1.jpg",
-                  "/static/images/portfolios/storefront/aparrel2.jpg"
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-storefront">
+            <div class="portfolio-content h-100 rounded">
+              <button onclick="PreviewPortfolio(this)" data-links='[
+                  "/static/images/portfolios/storefront/aparrel1.webp",
+                  "/static/images/portfolios/storefront/aparrel2.webp"
                 ]'>
-                <img src="/static/images/portfolios/storefront/aparrel1.jpg" class="img-fluid" alt="">
+                <img loading="lazy" src="/static/images/portfolios/storefront/aparrel1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Aparrel</h4>
@@ -655,14 +526,13 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-storefront">
-            <div class="portfolio-content h-100">
-              <button onclick="PreviewPortfolio(this)"
-                data-links='[
-                  "/static/images/portfolios/storefront/food1.jpg",
-                  "/static/images/portfolios/storefront/food2.jpg"
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-storefront">
+            <div class="portfolio-content h-100 rounded">
+              <button onclick="PreviewPortfolio(this)" data-links='[
+                  "/static/images/portfolios/storefront/food1.webp",
+                  "/static/images/portfolios/storefront/food2.webp"
                 ]'>
-                <img src="/static/images/portfolios/storefront/food1.jpg" class="img-fluid" alt="">
+                <img loading="lazy" src="/static/images/portfolios/storefront/food1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Food</h4>
@@ -670,16 +540,15 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-storefront">
-            <div class="portfolio-content h-100">
-              <button onclick="PreviewPortfolio(this)"
-                data-links='[
-                  "/static/images/portfolios/storefront/homelinen1.jpg",
-                  "/static/images/portfolios/storefront/homelinen2.jpg",
-                  "/static/images/portfolios/storefront/homelinen3.jpg",
-                  "/static/images/portfolios/storefront/homelinen4.jpg"
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-storefront">
+            <div class="portfolio-content h-100 rounded">
+              <button onclick="PreviewPortfolio(this)" data-links='[
+                  "/static/images/portfolios/storefront/homelinen1.webp",
+                  "/static/images/portfolios/storefront/homelinen2.webp",
+                  "/static/images/portfolios/storefront/homelinen3.webp",
+                  "/static/images/portfolios/storefront/homelinen4.webp"
                 ]'>
-                <img src="/static/images/portfolios/storefront/homelinen1.jpg" class="img-fluid" alt="">
+                <img loading="lazy" src="/static/images/portfolios/storefront/homelinen1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Home Linen</h4>
@@ -687,14 +556,13 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-storefront">
-            <div class="portfolio-content h-100">
-              <button onclick="PreviewPortfolio(this)"
-                data-links='[
-                  "/static/images/portfolios/storefront/other1.jpg",
-                  "/static/images/portfolios/storefront/other2.jpg"
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-storefront">
+            <div class="portfolio-content h-100 rounded">
+              <button onclick="PreviewPortfolio(this)" data-links='[
+                  "/static/images/portfolios/storefront/other1.webp",
+                  "/static/images/portfolios/storefront/other2.webp"
                 ]'>
-                <img src="/static/images/portfolios/storefront/other1.jpg" class="img-fluid" alt="">
+                <img loading="lazy" src="/static/images/portfolios/storefront/other1.webp" class="img-fluid" alt="">
               </button>
               <div class="portfolio-info">
                 <h4>Other</h4>
@@ -703,6 +571,98 @@
           </div>
           <!-- end of stor front -->
 
+          <!-- Videos -->
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-videos">
+            <div class="portfolio-content h-100">
+              <button onclick="PreviewPortfolio(this)"
+                data-links='["/static/images/portfolios/videos/bathtowels,towelset,bathsheet.mp4"]'>
+                <img loading="lazy" src="/static/images/portfolios/videos/gifs/bathtowelstowelsetbathsheet.gif" class="img-fluid"
+                  alt="">
+              </button>
+              <div class="portfolio-info">
+                <h4>Video - 1 </h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-videos">
+            <div class="portfolio-content h-100">
+              <button onclick="PreviewPortfolio(this)"
+                data-links='["/static/images/portfolios/videos/iconnectcalling+.mp4"]'>
+                <img loading="lazy" src="/static/images/portfolios/videos/gifs/iconnectcalling.gif" class="img-fluid" alt="">
+              </button>
+              <div class="portfolio-info">
+                <h4>Video - 2</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-videos">
+            <div class="portfolio-content h-100">
+              <button onclick="PreviewPortfolio(this)"
+                data-links='["/static/images/portfolios/videos/kitchentowels,dishtowels_.mp4"]'>
+                <img loading="lazy" src="/static/images/portfolios/videos/gifs/kitchentowelsdishtowels.gif" class="img-fluid" alt="">
+              </button>
+              <div class="portfolio-info">
+                <h4>Video - 3</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-videos">
+            <div class="portfolio-content h-100">
+              <button onclick="PreviewPortfolio(this)"
+                data-links='["/static/images/portfolios/videos/linensheetlistingvideo.mp4"]'>
+                <img loading="lazy" src="/static/images/portfolios/videos/gifs/linensheetlistingvideo.gif" class="img-fluid" alt="">
+              </button>
+              <div class="portfolio-info">
+                <h4>Video - 4</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-videos">
+            <div class="portfolio-content h-100">
+              <button onclick="PreviewPortfolio(this)"
+                data-links='["/static/images/portfolios/videos/smallbrothersrakhiupdated.mp4"]'>
+                <img loading="lazy" src="/static/images/portfolios/videos/gifs/smallbrothersrakhiupdated.gif" class="img-fluid" alt="">
+              </button>
+              <div class="portfolio-info">
+                <h4>Video - 5</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-videos">
+            <div class="portfolio-content h-100">
+              <button onclick="PreviewPortfolio(this)"
+                data-links='["/static/images/portfolios/videos/thistleseed.mp4"]'>
+                <img loading="lazy" src="/static/images/portfolios/videos/gifs/thistleseed.gif" class="img-fluid" alt="">
+              </button>
+              <div class="portfolio-info">
+                <h4>Video - 6</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item overflow-hidden isotope-item shadow filter-videos">
+            <div class="portfolio-content h-100">
+              <button onclick="PreviewPortfolio(this)"
+                data-links='["/static/images/portfolios/videos/whpvalentinesponsoredadvideo.mp4"]'>
+                <img loading="lazy" src="/static/images/portfolios/videos/gifs/whpvalentinesponsoredadvideo.gif" class="img-fluid"
+                  alt="">
+              </button>
+              <div class="portfolio-info">
+                <h4>Video - 7</h4>
+              </div>
+            </div>
+          </div>
+          <!-- end of videos -->
+        </div><!--End Portfolio Container-->
+      </div>
+
+      <div id="glightbox_container">
+      </div>
 
     </div>
 
@@ -743,13 +703,12 @@
   });
 </script>
 
-
 <script>
+  let lightbox;
   const PreviewPortfolio = (target) => {
     let links = JSON.parse(target.dataset.links);
     let glightbox_container = document.getElementById("glightbox_container");
-    glightbox_container.innerHTML = "";
-
+    glightbox_container.innerHTML = ""
     let strHtml = "";
 
     for (let index = 0; index < links.length; index++) {
@@ -757,14 +716,135 @@
       strHtml += `<a href="${link}" data-gallery="portfolio-gallery-app" class="glightbox"></a>`;
     }
 
+    console.log("Strhtml : ", strHtml)
     glightbox_container.innerHTML = strHtml;
+    setupGlightBox()
+    // glightbox_container.children[0].click()
+    console.log(glightbox_container.innerHTML)
 
-    // Reinitialize Glightbox
-    const lightbox = GLightbox({
-      selector: '.glightbox'
-    });
-    glightbox_container.children[0].click()
   };
 
+  const setupGlightBox = () => {
+    lightbox = GLightbox({
+      selector: '.glightbox',
+      touchNavigation: false, // Disable touch navigation to prevent conflicts
+      loop: false,
+      zoomable: true,
+      closeOnOutsideClick: true,
+      autoplayVideos: true,
+      videos: {
+        autoplay: true,
+        mute: false,
+        controls: true,
+        stopOnClose: true
+      },
+      moreText: '',
+      plyr: {
+        css: 'https://cdn.plyr.io/3.6.8/plyr.css',
+        js: 'https://cdn.plyr.io/3.6.8/plyr.polyfilled.js',
+      },
+      // Custom callback to handle mobile scrolling
+      onOpen: function () {
+        // Add custom touch handling for mobile
+        if (window.innerWidth <= 768) {
+          const slideImage = document.querySelector('.gslide-image');
+          if (slideImage) {
+            let startY = 0;
+            let isScrolling = true;
+
+            slideImage.addEventListener('touchstart', function (e) {
+              startY = e.touches[0].clientY;
+              isScrolling = true;
+            }, { passive: true });
+
+            slideImage.addEventListener('touchmove', function (e) {
+              if (!isScrolling) {
+                const currentY = e.touches[0].clientY;
+                const diffY = Math.abs(currentY - startY);
+
+                // If vertical movement is detected, allow scrolling
+                if (diffY > 10) {
+                  isScrolling = true;
+                  // Prevent GLightbox from handling this touch event
+                  return
+                  // e.stopPropagation();
+                }
+              }
+            }, { passive: false });
+          }
+        }
+      }
+    });
+
+    lightbox.open()
+  }
+
+  // Additional mobile scroll fix
+  document.addEventListener('DOMContentLoaded', function () {
+    // Override GLightbox touch events for better mobile scrolling
+    if ('ontouchstart' in window) {
+      document.addEventListener('touchstart', function (e) {
+        const glightboxContainer = e.target.closest('.glightbox-container');
+        const slideImage = e.target.closest('.gslide-image');
+
+        if (glightboxContainer && slideImage) {
+          let startY = e.touches[0].clientY;
+          let startX = e.touches[0].clientX;
+
+          function handleTouchMove(moveEvent) {
+            const currentY = moveEvent.touches[0].clientY;
+            const currentX = moveEvent.touches[0].clientX;
+
+            const diffY = Math.abs(currentY - startY);
+            const diffX = Math.abs(currentX - startX);
+
+            // If vertical movement is greater than horizontal, allow scrolling
+            if (diffY > diffX && diffY > 10) {
+              moveEvent.stopPropagation();
+              // Allow natural scrolling
+              slideImage.scrollTop += (startY - currentY) * 0.5;
+            }
+          }
+
+          function handleTouchEnd() {
+            document.removeEventListener('touchmove', handleTouchMove);
+            document.removeEventListener('touchend', handleTouchEnd);
+          }
+
+          document.addEventListener('touchmove', handleTouchMove, { passive: false });
+          document.addEventListener('touchend', handleTouchEnd);
+        }
+      });
+    }
+  });
+
+
+  // 📱 Mobile swipe gesture handling
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  document.addEventListener('touchstart', e => {
+    const container = document.querySelector('.glightbox-container');
+    if (!container) return;
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  document.addEventListener('touchend', e => {
+    const container = document.querySelector('.glightbox-container');
+    if (!container) return;
+    touchEndX = e.changedTouches[0].screenX;
+    const diffX = touchEndX - touchStartX;
+
+    if (Math.abs(diffX) > 50) {
+      if (diffX > 0) {
+        lightbox.prevSlide();
+      } else {
+        lightbox.nextSlide();
+      }
+    }
+  }, { passive: true });
+
 </script>
+
+
 {% endblock main %}

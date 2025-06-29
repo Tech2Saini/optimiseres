@@ -2,8 +2,10 @@
 .venv
 ngrok_server.py
 test.html
-templates/email_template.html
-demoicon/
 .gitignore
 Dockerfile
 videos.html
+test_glightbox.html
+templates/email_template.html
+renaming.py
+demoicon/
